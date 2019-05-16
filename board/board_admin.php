@@ -7,21 +7,19 @@
 ?>
 <html>
 <head>
-<title>留言板</title>
+<title>管理員留言板</title>
 </head>
 <style>
     body{
         text-align:center;
         background-image:url( 'board.jpg' );
         background-size:cover;
-        
     }
     #div1{
         position:absolute;
         left:50%;
         margin-left:-150px;
         margin-top:30px;
-
     }
     #btn{
         font-size: 32px;
@@ -34,6 +32,8 @@
 <input type = "button" name = "send" id = "btn" value = "留言" onclick = "javascript:location.href='sendmsg.php'">
 <input type = "button" name = "logout" id = "btn" value = "登出" onclick = "javascript:location.href='index.php'">
 <input type = "button" name = "logout" id = "btn" value = "修改密碼" onclick = "javascript:location.href='midifypw.php'">
+<input type = "button" name = "delete" id = "btn" value = "刪除留言" onclick = "javascript:location.href='delete.php'">
+<input type = "button" name = "delete" id = "btn" value = "修改留言" onclick = "javascript:location.href='modifymsg.php'">
 <div id = "div1">
     <?php
         echo '<table border = "1">';
@@ -47,3 +47,5 @@
 </div>
 </body>
 </html>
+
+    

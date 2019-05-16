@@ -1,101 +1,93 @@
 <?php
-session_start();
-//error_reporting(0);
-
-$error_flag = FALSE;
-$notfound_flag = FALSE;
-
-class MyDB extends SQLite3
-{
-    function __construct()
-    {
-      $this->open('../../database.db');
-    }
-}
-$db = new MyDB();
-if(!$db){
-    echo $db->lastErrorMsg();
-} else {
-    //echo "Opened database successfully\n";
-}
-
-$sql = 'SELECT * from USERS where USERNAME="'.$_POST["username"].'";';
-
-$ret = $db->query($sql);
-
-while($row = $ret->fetchArray(SQLITE3_ASSOC)){
-
-    if(empty($_POST["username"])==FALSE && empty($_POST["passwords"])==FALSE){
-
-        $username=$_POST["username"];
-        $passwords=$_POST["passwords"];
-        if($row["USERNAME"]==$_POST["username"]){
-
-            if($row["PASSWORDS"]==$_POST["passwords"]){
-                $_SESSION["USERNAME"]=$_POST["username"];
-                $_SESSION["PASSWORDS"]=$_POST["passwords"];
-                $_SESSION["NAMES"]=$row["NAMES"];
-                $_SESSION["GENDER"]=$row["GENDER"];
-                $_SESSION["ID"]=$row["ID"];
-                header('Location: member.php');
-
-            }else{
-                $error_flag = TRUE;
-                break;
-            }
-
-        }else{
-            $notfound_flag = TRUE;
-        }
-
-    }else{
-
-    }
-    $db->close();
-
-}
-
+    header("Content-Type: text/html; charset=utf-8");
+    session_start();
 ?>
-
-<!DOCTYPE html>
 <html>
-  <head>
-    <title>會員登入</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  </head>
-  <body style="background:url(background.png); background-size:cover">
-    <br><br><br><br><br><br>
-
-    <div class="container">
-      <div class="col-md-6 col-md-offset-3">
-        <div class="row jumbotron">
-          <h2 class="text-center">會員登入</h2><br/>
-          <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
-            <input class="form-control input-lg"  type="text" name="username" required="TRUE" placeholder="Enter Username"/><br/>
-            <input class="form-control input-lg"  type="password" name="passwords" required="TRUE" placeholder="Enter Password"/><br/>
-            <input class="btn btn-primary btn-lg btn-block" type="submit" value="登入"/>
-            <a class="btn btn-default btn-lg btn-block" href="register.php">會員註冊</a>
-            <a href="http://140.114.87.219/~s106062133/board/forget_password.php">忘記密碼？</a>            
-          </form>
-          <br/>
-          <?php if($error_flag){ ?>
-            <div class="alert alert-danger alert-dismissible" role="alert">
-              <button class="close" type="button" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button> 密碼錯誤！
-            </div>
-          <?php }?>
-
-          <?php if($notfound_flag){ ?>
-            <div class="alert alert-danger alert-dismissible" role="alert">
-              <button class="close" type="button" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button> 未找到本使用者！
-            </div>
-          <?php }?>
-        </div>
-      </div>
-    </div>
-    <p style="text-align:center">Host Username: admin</p>
-    <p style="text-align:center">Host Password: admin</p>
-  </body>
+<style>
+    #a {
+        width:300px; 
+        height:300px; 
+        /*margin:30px auto 0;*/ 
+        text-align:left; 
+        font-size :40fpx;
+        position : absolute;
+        left :50%;
+        top :50%;
+        margin-top:-140px;
+        margin-left:-150px;
+        color: white;
+    }
+    #b{
+        width:300px; 
+        height:300px; 
+        /*margin:30px auto 0;*/ 
+        text-align:left; 
+        font-size :40fpx;
+        position : absolute;
+        left :50%;
+        top :50%;
+        margin-top:0px;
+        margin-left:-150px;
+        color:white;
+    
+        
+    }
+    #p{
+        text-align: center;
+        font-size : 10vw;
+        font-weight: bold;
+        margin-block-start:-1em;
+        margin-block-end:auto;
+        margin-inline-start:-1em;
+        margin-inline-end:-1em;
+    }
+    a:link{
+        color:white;
+    }
+    a:visited{
+        color:#66ccff;
+    }
+    
+</style>
+<body background = "img103.png">
+<div id = "a">
+    <h1 id = "p">留言板</h1>
+    <form method = "POST" >
+    account  :
+    <input type = "text" name = "id" style ="width 100px;height:30px" value = "admin"><br>
+    password:
+    <input type = "password" name = "pw" style ="width 100px;height:30px" value = "admin"><br>
+    <input type = "submit" value = "sign in">
+    <input type = "button" value = "sign up" onclick = "javascript:location.href='createaccount.php'">
+    <form>
+</div>
+<div id = "b">
+    <a href = "forgetpw.php">forget password</a>
+</div>
+</body>
 </html>
+<?php
+    if($_SERVER['REQUEST_METHOD'] == "POST"){
+        require_once('login.php');
+        $dsn = 'mysql:host=localhost;dbname=s106062131';
+        $dbh = new PDO($dsn,$CFG['username'],$CFG['pw']);
+        $sth = $dbh->prepare('select count(*) as r from users where id = ? and pw = ? ;');
+        $sth->execute(array($_POST['id'],$_POST['pw']));
+        $result = $sth->fetch(PDO::FETCH_ASSOC);
+        if($result['r'] == 1){
+            $_SESSION['login'] = $_POST['id'];
+            if($_POST['id'] == 'admin'){
+                $url = "board_admin.php";
+            }
+            else $url = "board.php";
+            echo "<script type='text/javascript'>";
+            echo "window.location.href='$url'";
+            echo "</script>"; 
+        }
+        else {
+            $_SESSION['login'] = '';
+            echo "<script>alert('something wrong')</script>";
+            $error = "something wrong";
+            echo $error;
+        }
+    }
