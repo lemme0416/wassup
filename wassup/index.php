@@ -3,68 +3,61 @@
     session_start();
 ?>
 <html>
-<style>
-    #a {
-        width:300px; 
-        height:300px; 
-        /*margin:30px auto 0;*/ 
-        text-align:left; 
-        font-size :40fpx;
-        position : absolute;
-        left :50%;
-        top :50%;
-        margin-top:-140px;
-        margin-left:-150px;
-        color: white;
-    }
-    #b{
-        width:300px; 
-        height:300px; 
-        /*margin:30px auto 0;*/ 
-        text-align:left; 
-        font-size :40fpx;
-        position : absolute;
-        left :50%;
-        top :50%;
-        margin-top:0px;
-        margin-left:-150px;
-        color:white;
-    
+    <head>
+        <title>WassUp!</title>
+        <link rel="shortcut icon" href="https://imgur.com/G4KMHP3.png" type="image/x-icon" />
         
-    }
-    #p{
-        text-align: center;
-        font-size : 10vw;
-        font-weight: bold;
-        margin-block-start:-1em;
-        margin-block-end:auto;
-        margin-inline-start:-1em;
-        margin-inline-end:-1em;
-    }
-    a:link{
-        color:white;
-    }
-    a:visited{
-        color:#66ccff;
-    }
-    
-</style>
-<body background = "img103.png">
-<div id = "a">
-    <h1 id = "p">留言板</h1>
-    <form method = "POST" >
-    account  :
-    <input type = "text" name = "id" style ="width 100px;height:30px" value = "admin"><br>
-    password:
-    <input type = "password" name = "pw" style ="width 100px;height:30px" value = "admin"><br>
-    <input type = "submit" value = "sign in">
-    <input type = "button" value = "sign up" onclick = "javascript:location.href='createaccount.php'">
-    <form>
-</div>
-<div id = "b">
-    <a href = "forgetpw.php">forget password</a>
-</div>
-</body>
+        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+        
+        <link rel="stylesheet" href="index_style.css">
+        
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>        
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        
+        <script src="mousemove.js"></script>
+    </head>
+    <body>
+        <img src="https://imgur.com/OCPuJWd.png" id="weed_img" onclick="weed(this)" >
+        <img src="https://imgur.com/OCPuJWd.png">
+        <img src="https://imgur.com/OCPuJWd.png">
+        <img src="https://imgur.com/OCPuJWd.png">
+        <img src="https://imgur.com/OCPuJWd.png">
+        
+        <img src="https://imgur.com/OCPuJWd.png">
+        <img src="https://imgur.com/OCPuJWd.png">
+        <img src="https://imgur.com/OCPuJWd.png">
+        <img src="https://imgur.com/OCPuJWd.png">
+        <img src="https://imgur.com/OCPuJWd.png">
+        
+        <img src="https://imgur.com/OCPuJWd.png">
+        <img src="https://imgur.com/OCPuJWd.png">
+
+        <ul class="text-animation hidden">
+            <li>W</li>
+            <li>a</li>
+            <li>s</li>
+            <li>s</li>
+            <li>U</li>
+            <li>p</li>
+            <li>!</li>
+        </ul>
+        <form class="box" method = "POST" >
+            <input type = "text" name = "id" required="TRUE" placeholder="USERNAME"><br>
+            <input type = "password" name = "pw" required="TRUE" placeholder="PASSWORD"><br>
+            <input type = "submit" value = "SIGN IN">
+            <input type = "button" value = "SIGN UP" onclick = "javascript:location.href='createaccount.php'">
+            <a href = "forgetpw.php">Forget Password?</a>
+        </form>
+        <script type="text/javascript">
+            $(function(){
+                setTimeout(function(){
+                    $('.text-animation').removeClass('hidden');
+                }, 500);
+            });
+        </script>
+        <audio id="music"src="Dr. Dre - The Next Episode ft. Snoop Dogg, Kurupt, Nate Dogg.mp3" loop style="visibility: hidden"></audio>
+    </body>
 </html>
 <?php
     if($_SERVER['REQUEST_METHOD'] == "POST"){
@@ -81,13 +74,12 @@
             }
             else $url = "home.html";
             echo "<script type='text/javascript'>";
-            echo "window.location.href='$url'";
+                echo "window.location.href='$url'";
             echo "</script>"; 
         }
         else {
             $_SESSION['login'] = '';
-            echo "<script>alert('something wrong')</script>";
-            $error = "something wrong";
-            echo $error;
+            // echo "<script>alert('Need Help?')</script>";
+
         }
     }
