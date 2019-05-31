@@ -13,7 +13,7 @@ body{
 .text-animation li{
   display: inline-block;
   font-family: 'Montserrat';
-  font-weight: bold;
+  font-weight: 900;
   font-style:oblique;
   font-size: 5em;
   color: white;
