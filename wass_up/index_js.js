@@ -29,6 +29,7 @@ function weed() {
         x = 1;
         for(i=0;i<12;i++) change_all_img[i].src = "https://imgur.com/o0W8f4A.png"
         document.getElementsByTagName("body")[0].style.background = "green"
+        document.getElementsByTagName("body")[0].style.cursor = "snoop_cursor.gif"
         $('.box').css('background', 'green');
         document.getElementById("music").play();
     }
@@ -36,6 +37,7 @@ function weed() {
         x = 0;
         for(i=0;i<12;i++) change_all_img[i].src = "https://imgur.com/OCPuJWd.png"
         document.getElementsByTagName("body")[0].style.background = "red"
+        document.getElementsByTagName("body")[0].style.cursor = "default"
         $('.box').css('background', 'red');
         document.getElementById("music").pause();
 
