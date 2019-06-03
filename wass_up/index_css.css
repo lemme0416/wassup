@@ -52,10 +52,11 @@ img:nth-child(11){position:absolute; top: 40%; left: 8%;}
 img:nth-child(12){position:absolute; top: 70%; left: 27%;}
 
 .box{
-  width: 300px;
-  padding: 40px;
+  width: 23%;
+  padding: 1%;
+  padding-bottom: 4%;
   position: absolute;
-  top: 50%;
+  top: 53%;
   left: 50%;
   border: 2px rgb(255, 255, 255) solid;
   border-radius: 10px;
@@ -79,7 +80,7 @@ img:nth-child(12){position:absolute; top: 70%; left: 27%;}
   border: 2px solid rgb(255, 255, 255);
   background-color: rgb(255, 255, 255);
   padding: 14px 10px;
-  width: 200px;
+  width: 60%;
   outline: none;
   color: rgb(0, 0, 0);
   border-radius: 24px;
@@ -88,7 +89,7 @@ img:nth-child(12){position:absolute; top: 70%; left: 27%;}
 
 }
 .box input[type = "text"]:focus,.box input[type = "password"]:focus{
-  width: 280px;
+  width: 80%;
   border-color: rgb(255, 255, 255);
 }
 .box input[type = "submit"]{
