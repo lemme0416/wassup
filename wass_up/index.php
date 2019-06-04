@@ -67,23 +67,30 @@
         $sth = $dbh->prepare('select * from users where id = ? ;');
         $sth->execute(array($_POST['id']));
         $result = $sth->fetch(PDO::FETCH_ASSOC);
-        if($result['pw'] == $_POST['pw']){
-            $_SESSION['login'] = $_POST['id'];
-            if($_POST['id'] == 'admin'){
-                $url = "home.html";
+        if($result['id'] == $_POST['id']){
+            if($result['pw'] == $_POST['pw']){
+                $_SESSION['login'] = $_POST['id'];
+                if($_POST['id'] == 'admin'){
+                    $url = "home.html";
+                }
+                else $url = "home.html";
+                echo "<script type='text/javascript'>";
+                    echo "window.location.href='$url'";
+                echo "</script>";                 
             }
-            else $url = "home.html";
-            echo "<script type='text/javascript'>";
-                echo "window.location.href='$url'";
-            echo "</script>"; 
+            else {
+                $_SESSION['login'] = '';
+                echo "<script>alert('wrong pw?')</script>";
+
+
+
+                //dsfads
+            }
         }
-        else {
+        else{
             $_SESSION['login'] = '';
-            echo "<script>alert('wrong pw?')</script>";
-
-
-
-            //dsfads
+            echo "<script>alert('no this id?')</script>";
         }
+
     }
 ?>
