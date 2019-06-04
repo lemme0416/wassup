@@ -64,10 +64,10 @@
         require_once('login.php');
         $dsn = 'mysql:host=localhost;dbname=wassup';
         $dbh = new PDO($dsn,$CFG['username'],$CFG['pw']);
-        $sth = $dbh->prepare('select count(*) as r from users where id = ? and pw = ? ;');
-        $sth->execute(array($_POST['id'],$_POST['pw']));
+        $sth = $dbh->prepare('select * from users where id = ? ;');
+        $sth->execute(array($_POST['id']));
         $result = $sth->fetch(PDO::FETCH_ASSOC);
-        if($result['r'] == 1){
+        if($result['pw'] == $_POST['pw']){
             $_SESSION['login'] = $_POST['id'];
             if($_POST['id'] == 'admin'){
                 $url = "home.html";
@@ -79,10 +79,11 @@
         }
         else {
             $_SESSION['login'] = '';
-            // echo "<script>alert('Need Help?')</script>";
+            echo "<script>alert('wrong pw?')</script>";
 
 
 
             //dsfads
         }
     }
+?>
