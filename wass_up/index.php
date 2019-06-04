@@ -1,8 +1,6 @@
 <?php
     header("Content-Type: text/html; charset=utf-8");
     session_start();
-    $error_flag = FALSE;
-    $notfound_flag = FALSE;
 ?>
 <html>
     <head>
@@ -45,16 +43,8 @@
             <li>!</li>
         </ul>
         <form class="box" method = "POST" >
-            <input type = "text" name = "id" required="TRUE" placeholder="USERNAME">
-            <?php if($notfound_flag){ ?>
-                <p>no this id!</p>
-            <?php }?>
-            <br>
-            <input type = "password" name = "pw" id = "password" required="TRUE" placeholder="PASSWORD">
-            <?php if($error_flag){ ?>
-                <p>wrong pw?</p>
-            <?php }?>
-            <br>
+            <input type = "text" name = "id" required="TRUE" placeholder="USERNAME"><br>
+            <input type = "password" name = "pw" id = "password" required="TRUE" placeholder="PASSWORD"><br>
             <input type = "submit" value = "SIGN IN">
             <input type = "button" value = "SIGN UP" onclick = "javascript:location.href='createaccount.php'">
             <a href = "forgetpw.php">Forget Password?</a>
@@ -81,16 +71,13 @@
                     }
                     else {
                         $_SESSION['login'] = '';
-                        $error_flag = TRUE;
-                        // echo "<script>alert('wrong pw?')</script>";
+                        echo "<script>alert('wrong pw?')</script>";
 
                     }
                 }
                 else{
                     $_SESSION['login'] = '';
-                    $notfound_flag = TRUE;
-
-                    // echo "<script>alert('no this id?')</script>";
+                    echo "<script>alert('no this id?')</script>";
                 }
 
             }
