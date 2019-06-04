@@ -10,11 +10,8 @@
         <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
         
         <link rel="stylesheet" href="index_css.css">
-
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>        
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
         
@@ -63,8 +60,8 @@
                 $sth = $dbh->prepare('select * from users where id = ? ;');
                 $sth->execute(array($_POST['id']));
                 $result = $sth->fetch(PDO::FETCH_ASSOC);
-                if($result['id'] == $_POST['id']){ // whether have this id
-                    if($result['pw'] == $_POST['pw']){ // passwrord correct or not
+                if($result['id'] == $_POST['id']){     // Whether have this id
+                    if($result['pw'] == $_POST['pw']){ // Passwrord correct or not
                         $_SESSION['login'] = $_POST['id'];
                         if($_POST['id'] == 'admin'){
                             $url = "home.html";
@@ -77,7 +74,7 @@
                     else {
                         $_SESSION['login'] = '';
                         $error_flag = TRUE;
-                        // echo "<script>alert('wrong pw?')</script>";
+                        echo "<script>alert('wrong pw?')</script>";
 
                     }
                 }
@@ -85,22 +82,11 @@
                     $_SESSION['login'] = '';
                     $notfound_flag = TRUE;
 
-                    // echo "<script>alert('no this id?')</script>";
+                    echo "<script>alert('no this id?')</script>";
                 }
 
             }
-        ?>        
-        <?php if($error_flag){ ?>
-            <div class="alert alert-danger alert-dismissible" role="alert">
-              <button class="close" type="button" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button> 密碼錯誤！
-            </div>
-        <?php }?>
-
-        <?php if($notfound_flag){ ?>
-            <div class="alert alert-danger alert-dismissible" role="alert">
-              <button class="close" type="button" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button> 未找到本使用者！
-            </div>
-          <?php }?>
+        ?>
         <script type="text/javascript">
             $(function(){
                 setTimeout(function(){
