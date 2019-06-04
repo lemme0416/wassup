@@ -50,12 +50,49 @@
             <a href = "forgetpw.php">Forget Password?</a>
         </form>
         <br>
+        <?php
+            $error_flag = FALSE;
+            $notfound_flag = FALSE;
+            if($_SERVER['REQUEST_METHOD'] == "POST"){
+                require_once('login.php');
+                $dsn = 'mysql:host=localhost;dbname=wassup';
+                $dbh = new PDO($dsn,$CFG['username'],$CFG['pw']);
+                $sth = $dbh->prepare('select * from users where id = ? ;');
+                $sth->execute(array($_POST['id']));
+                $result = $sth->fetch(PDO::FETCH_ASSOC);
+                if($result['id'] == $_POST['id']){ // whether have this id
+                    if($result['pw'] == $_POST['pw']){ // passwrord correct or not
+                        $_SESSION['login'] = $_POST['id'];
+                        if($_POST['id'] == 'admin'){
+                            $url = "home.html";
+                        }
+                        else $url = "home.html";
+                        echo "<script type='text/javascript'>";
+                            echo "window.location.href='$url'";
+                        echo "</script>";                 
+                    }
+                    else {
+                        $_SESSION['login'] = '';
+                        $error_flag = TRUE;
+                        // echo "<script>alert('wrong pw?')</script>";
+
+                    }
+                }
+                else{
+                    $_SESSION['login'] = '';
+                    $notfound_flag = TRUE;
+
+                    // echo "<script>alert('no this id?')</script>";
+                }
+
+            }
+        ?>        
         <?php if($error_flag){ ?>
             <div class="alert alert-danger alert-dismissible" role="alert">
               <button class="close" type="button" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button> 密碼錯誤！
             </div>
         <?php }?>
-        
+
         <?php if($notfound_flag){ ?>
             <div class="alert alert-danger alert-dismissible" role="alert">
               <button class="close" type="button" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button> 未找到本使用者！
@@ -71,40 +108,3 @@
         <audio id="music"src="Dr. Dre - The Next Episode ft. Snoop Dogg, Kurupt, Nate Dogg.mp3" loop style="visibility: hidden"></audio>
     </body>
 </html>
-<?php
-    $error_flag = FALSE;
-    $notfound_flag = FALSE;
-    if($_SERVER['REQUEST_METHOD'] == "POST"){
-        require_once('login.php');
-        $dsn = 'mysql:host=localhost;dbname=wassup';
-        $dbh = new PDO($dsn,$CFG['username'],$CFG['pw']);
-        $sth = $dbh->prepare('select * from users where id = ? ;');
-        $sth->execute(array($_POST['id']));
-        $result = $sth->fetch(PDO::FETCH_ASSOC);
-        if($result['id'] == $_POST['id']){ // whether have this id
-            if($result['pw'] == $_POST['pw']){ // passwrord correct or not
-                $_SESSION['login'] = $_POST['id'];
-                if($_POST['id'] == 'admin'){
-                    $url = "home.html";
-                }
-                else $url = "home.html";
-                echo "<script type='text/javascript'>";
-                    echo "window.location.href='$url'";
-                echo "</script>";                 
-            }
-            else {
-                $_SESSION['login'] = '';
-                $error_flag = TRUE;
-                // echo "<script>alert('wrong pw?')</script>";
-
-            }
-        }
-        else{
-            $_SESSION['login'] = '';
-            $notfound_flag = TRUE;
-
-            // echo "<script>alert('no this id?')</script>";
-        }
-
-    }
-?>
