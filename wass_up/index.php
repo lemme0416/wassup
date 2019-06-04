@@ -49,6 +49,18 @@
             <input type = "button" value = "SIGN UP" onclick = "javascript:location.href='createaccount.php'">
             <a href = "forgetpw.php">Forget Password?</a>
         </form>
+        <br>
+        <?php if($error_flag){ ?>
+            <div class="alert alert-danger alert-dismissible" role="alert">
+              <button class="close" type="button" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button> 密碼錯誤！
+            </div>
+        <?php }?>
+        
+        <?php if($notfound_flag){ ?>
+            <div class="alert alert-danger alert-dismissible" role="alert">
+              <button class="close" type="button" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button> 未找到本使用者！
+            </div>
+          <?php }?>
         <script type="text/javascript">
             $(function(){
                 setTimeout(function(){
@@ -60,6 +72,8 @@
     </body>
 </html>
 <?php
+    $error_flag = FALSE;
+    $notfound_flag = FALSE;
     if($_SERVER['REQUEST_METHOD'] == "POST"){
         require_once('login.php');
         $dsn = 'mysql:host=localhost;dbname=wassup';
@@ -67,8 +81,8 @@
         $sth = $dbh->prepare('select * from users where id = ? ;');
         $sth->execute(array($_POST['id']));
         $result = $sth->fetch(PDO::FETCH_ASSOC);
-        if($result['id'] == $_POST['id']){
-            if($result['pw'] == $_POST['pw']){
+        if($result['id'] == $_POST['id']){ // whether have this id
+            if($result['pw'] == $_POST['pw']){ // passwrord correct or not
                 $_SESSION['login'] = $_POST['id'];
                 if($_POST['id'] == 'admin'){
                     $url = "home.html";
@@ -80,16 +94,16 @@
             }
             else {
                 $_SESSION['login'] = '';
-                echo "<script>alert('wrong pw?')</script>";
+                $error_flag = TRUE;
+                // echo "<script>alert('wrong pw?')</script>";
 
-
-
-                //dsfads
             }
         }
         else{
             $_SESSION['login'] = '';
-            echo "<script>alert('no this id?')</script>";
+            $notfound_flag = TRUE;
+
+            // echo "<script>alert('no this id?')</script>";
         }
 
     }
