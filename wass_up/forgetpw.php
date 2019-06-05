@@ -10,7 +10,7 @@ security question: <input type = "date" name = "security"><br>
 </body>
 <?php
     require_once('login.php');
-    $dsn = 'mysql:host=localhost;dbname=s106062131';
+    $dsn = 'mysql:host=localhost;dbname=wassup';
     $dbh = new PDO($dsn,$CFG['username'],$CFG['pw']);   
     $sth = $dbh->prepare('select count(*) as r from users where id = ? and problem = ? ;');
     $sth->execute(array($_POST['id'],$_POST['security']));
