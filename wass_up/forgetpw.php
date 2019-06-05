@@ -17,7 +17,7 @@ security question: <input type = "date" name = "security"><br>
     $result = $sth->fetch(PDO::FETCH_ASSOC);
     if($result['r'] == 1 ){
         $_SESSION['login'] = $_POST['id'];
-        $url = "modifypw.php"
+        $url = "modifypw.php";
         echo "<script type='text/javascript'>";
         echo "window.location.href='$url'";
         echo "</script>";
