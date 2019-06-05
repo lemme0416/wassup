@@ -1,14 +1,18 @@
 body{
   background-size: cover;
   background: red;
+  margin: 0px;
 }
 .text-animation{
   list-style: none;
-  position: absolute;
-  left: 48%;
-  top: 8%;
-  transform: translateX(-50%) translateY(-50%);
 
+  width: 377px;
+  position: absolute;
+  top: 8%;
+  left: 50%;
+  /* margin: 40px auto 5px auto;  */
+  padding: 0px;
+  transform: translateX(-50%) translateY(-50%);
 }
 .text-animation li{
   display: inline-block;
@@ -36,54 +40,36 @@ body{
 .text-animation.hidden li:nth-child(6){transform: translateY(-350px);}
 .text-animation.hidden li:nth-child(7){transform: translateY(-400px);}
 
-img:nth-child(1){position:absolute; top: 30%; left: 20%;}
-img:nth-child(2){position:absolute; top: 60%; left: 90%;}
-img:nth-child(3){position:absolute; top: 80%; left: 10%;}
-img:nth-child(4){position:absolute; top: 10%; left: 10%;}
-img:nth-child(5){position:absolute; top: 10%; left: 80%;}
-
-img:nth-child(6){position:absolute; top: 40%; left: 70%;}
-img:nth-child(7){position:absolute; top: 60%; left: 40%;}
-img:nth-child(8){position:absolute; top: 80%; left: 80%;}
-img:nth-child(9){position:absolute; top: 70%; left: 40%;}
-img:nth-child(10){position:absolute; top: 35%; left: 85%;}
-
-img:nth-child(11){position:absolute; top: 40%; left: 8%;}
-img:nth-child(12){position:absolute; top: 70%; left: 27%;}
-
 .box{
-  width: 23%;
-  padding: 1%;
-  padding-bottom: 4%;
+  width: 350px;
   position: absolute;
-  top: 53%;
+  top: 56%;
   left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  /* margin: 40px auto 10px auto; */
+  padding: 30px;
+  padding-bottom: 60px;
   border: 2px rgb(255, 255, 255) solid;
-  border-radius: 10px;
-  transform: translate(-50%,-50%);
+  border-radius: 30px;
   background: #ff0000;  /* fallback for old browsers */        
+  overflow: hidden;
   text-align: center;
+  z-index: 2;
 }
-.box h1{
-  color: white;
-  text-transform: uppercase;
-  font-weight: 500;
-  font-family: 'Montserrat';
 
-}
 .box input[type = "text"],.box input[type = "password"]{
+  width: 60%;
   border:0;
+  border: 2px solid rgb(255, 255, 255);
   background: none;
+  background-color: rgb(255, 255, 255);
   display: block;
   margin: 20px auto;
   text-align: center;
-  border: 2px solid rgb(255, 255, 255);
-  background-color: rgb(255, 255, 255);
   padding: 14px 10px;
-  width: 60%;
   outline: none;
   color: rgb(0, 0, 0);
-  border-radius: 24px;
+  border-radius: 100px;
   transition: 0.25s;
   font-family: 'Montserrat';
 
@@ -93,7 +79,6 @@ img:nth-child(12){position:absolute; top: 70%; left: 27%;}
   border-color: rgb(255, 255, 255);
 }
 .box input[type = "submit"]{
-  border:0;
   background: none;
   display: block;
   margin: 20px auto;
@@ -113,7 +98,6 @@ img:nth-child(12){position:absolute; top: 70%; left: 27%;}
   color: black;
 }
 .box input[type = "button"]{
-  border:0;
   background: none;
   display: block;
   margin: 20px auto;
@@ -133,8 +117,38 @@ img:nth-child(12){position:absolute; top: 70%; left: 27%;}
   color: black;
 }
 
-a:link{
+.box a:link{
   color: white;
   font-family: 'Montserrat';
   font-size: 12px;
+}
+.box a:visited {
+  color: white;
+  font-family: 'Montserrat';
+  font-size: 12px;
+  }
+
+img:nth-child(1){position:absolute; top: 240px; left: 300px; z-index: 0;}
+img:nth-child(2){position:absolute; top: 480px; left: 1350px;}
+img:nth-child(3){position:absolute; top: 640px; left: 150px;}
+img:nth-child(4){position:absolute; top: 80px; left: 150px;}
+img:nth-child(5){position:absolute; top: 80px; left: 1200px;}
+
+img:nth-child(6){position:absolute; top: 320px; left: 1050px;}
+img:nth-child(7){position:absolute; top: 480px; left: 1200px;}
+img:nth-child(8){position:absolute; top: 150px; left: 1400px;}
+img:nth-child(9){position:absolute; top: 480px; left: 300px;}
+img:nth-child(10){position:absolute; top: 280px; left: 1275px;}
+
+img:nth-child(11){position:absolute; top: 320px; left: 120px;}
+img:nth-child(12){position:absolute; top: 560px; left: 405px;}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) {
+  .box{
+    border: 0px;
+  }
+  img{
+    display: none;
+  }
 }
