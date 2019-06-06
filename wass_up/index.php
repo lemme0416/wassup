@@ -50,7 +50,7 @@
                 <input type = "text" name = "id" required="TRUE" placeholder="E-mail Address"><br>
                 <input type = "password" name = "pw" required="TRUE" placeholder="PASSWORD"><br>
                 <input type = "submit" value = "SIGN IN">
-                <input type = "button" value = "SIGN UP" onclick = "javascript:location.href='createaccount.php'">
+                <input type = "button" value = "SIGN UP" onclick = "javascript:location.href='create_account.php'">
                 <a href = "forgetpw.php">Forget Password?</a>
             </form>
         </div>
