@@ -27,7 +27,7 @@ Your browser does not support the audio element.
     function playendedhandler(){
         i++;
         if(i >narr.length)i = 0;
-        myaudio.src = narr[i]+".mp3";
+        myaudio.src = "./music/"+narr[i]+".mp3";
     }
     xmlhttp.open("GET", "music.php?x=" + dbParam, true);
     xmlhttp.send();
