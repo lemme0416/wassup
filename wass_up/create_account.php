@@ -9,7 +9,8 @@ PW:<input type = "password" name = "pw"><br>
 nickname:<input type ="text" name = "nkn"><br>
 gender:<input type = "text" name = "sex"><br>
 security word<input type = "text" name = "security"><br>
-<input type = "submit" value ="create"><input type = "button" value = "return" onclick = "javascript:location.href='index.php'">
+ <!-- 案submit 創帳號 案return回首頁 -->
+<input type = "submit" value ="create"><input type = "button" value = "return" onclick = "javascript:location.href='index.php'"> 
 </form>
 </body>
 <?php
