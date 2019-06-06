@@ -54,7 +54,6 @@ body{
   background: #ff0000;  /* fallback for old browsers */        
   overflow: hidden;
   text-align: center;
-  z-index: 2;
 }
 
 .box input[type = "text"],.box input[type = "password"]{
@@ -128,7 +127,7 @@ body{
   font-size: 12px;
   }
 
-img:nth-child(1){position:absolute; top: 240px; left: 300px; z-index: 0;}
+img:nth-child(1){position:absolute; top: 240px; left: 300px;}
 img:nth-child(2){position:absolute; top: 480px; left: 1350px;}
 img:nth-child(3){position:absolute; top: 640px; left: 150px;}
 img:nth-child(4){position:absolute; top: 80px; left: 150px;}
@@ -143,7 +142,6 @@ img:nth-child(10){position:absolute; top: 280px; left: 1275px;}
 img:nth-child(11){position:absolute; top: 320px; left: 120px;}
 img:nth-child(12){position:absolute; top: 560px; left: 405px;}
 
-/* Small devices (landscape phones, 576px and up) */
 @media (max-width: 1350px) {
   .box{
     border: 0px;
