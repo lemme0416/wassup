@@ -1,0 +1,37 @@
+<html>
+<body>
+<audio id ="music" preload="true" controls = "true" loop = false>
+Your browser does not support the audio element.
+</audio>
+
+</body>
+<script>
+    var obj, dbParam, xmlhttp, myObj, x, txt = "", i=0;
+    var narr = [];
+    obj = { "table":"music", "limit":10 };
+    dbParam = JSON.stringify(obj);
+    xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+        
+        if (this.readyState == 4 && this.status == 200) {
+            myobj = JSON.parse(this.responseText);
+            for(x in myobj){
+                narr.push(myobj[x].music);
+            }
+            //document.getElementById("music").src = this.responseText;
+        }
+    };
+    var myaudio = document.getElementById("music")
+    myaudio.addEventListener('ended',playendedhandler, false);
+    myaudio.play();
+    function playendedhandler(){
+        i++;
+        if(i >narr.length)i = 0;
+        myaudio.src = narr[i]+".mp3";
+    }
+    xmlhttp.open("GET", "music.php?x=" + dbParam, true);
+    xmlhttp.send();
+    </script>
+    
+
+</html>
