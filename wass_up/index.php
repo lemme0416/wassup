@@ -51,7 +51,7 @@
                 <input type = "password" name = "pw" required="TRUE" placeholder="PASSWORD"><br>
                 <input type = "submit" value = "SIGN IN">
                 <input type = "button" value = "SIGN UP" onclick = "javascript:location.href='create_account.php'">
-                <a href = "forgetpw.php">Forget Password?</a>
+                <a href = "forget_pw.php">Forget Password?</a>
             </form>
         </div>
         <script type="text/javascript">
