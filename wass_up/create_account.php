@@ -4,10 +4,10 @@ session_start();
 ?>
 <body background = "pw.jpg">
 <form method="POST">
-ID:<input type = "text" name = "id"><br>
-PW:<input type = "password" name = "pw"><br>
-nickname:<input type ="text" name = "nkn"><br>
-gender:<input type = "text" name = "sex"><br>
+ID:<input type = "text" name = "id" require = "true"><br>
+PW:<input type = "password" name = "pw" require = "true"><br>
+nickname:<input type ="text" name = "nkn" require = "true"><br>
+gender:<input type = "text" name = "sex" require = "true"><br>
 security word<input type = "text" name = "security"><br>
  <!-- 案submit 創帳號 案return回首頁 -->
 <input type = "submit" value ="create"><input type = "button" value = "return" onclick = "javascript:location.href='index.php'"> 
