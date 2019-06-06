@@ -2,11 +2,12 @@
 session_start();
 ?>
 <body background = "pw.jpg">
-<form method="POST">
-ID:<input type = "text" name = "id" id = "id"><br>
-security question: <input type = "text" name = "security" id = "security"><br>
-<input type = "submit" value ="finish"><input type = "button" value = "return" onclick = "javascript:location.href='index.php'">
-</form>
+    <form method="POST">
+        ID:<input type = "text" name = "id" id = "id"><br>
+        security question: <input type = "text" name = "security" id = "security"><br>
+        <input type = "submit" value ="finish">
+        <input type = "button" value = "return" onclick = "javascript:location.href='index.php'">
+    </form>
 </body>
 <?php
     require_once('login.php');

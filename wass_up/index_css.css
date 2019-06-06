@@ -7,12 +7,12 @@ body{
   list-style: none;
 
   width: 377px;
-  position: absolute;
+  /* position: absolute;
   top: 8%;
-  left: 50%;
-  /* margin: 40px auto 5px auto;  */
+  left: 50%; */
+  margin: 25px auto 5px auto; 
   padding: 0px;
-  transform: translateX(-50%) translateY(-50%);
+  /* transform: translateX(-50%) translateY(-50%); */
 }
 .text-animation li{
   display: inline-block;
@@ -42,11 +42,11 @@ body{
 
 .box{
   width: 350px;
-  position: absolute;
+  /* position: absolute;
   top: 56%;
   left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  /* margin: 40px auto 10px auto; */
+  transform: translateX(-50%) translateY(-50%); */
+  margin: 25px auto 10px auto;
   padding: 30px;
   padding-bottom: 60px;
   border: 2px rgb(255, 255, 255) solid;
@@ -144,7 +144,7 @@ img:nth-child(11){position:absolute; top: 320px; left: 120px;}
 img:nth-child(12){position:absolute; top: 560px; left: 405px;}
 
 /* Small devices (landscape phones, 576px and up) */
-@media (max-width: 576px) {
+@media (max-width: 1350px) {
   .box{
     border: 0px;
   }
