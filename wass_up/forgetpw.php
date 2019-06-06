@@ -3,8 +3,8 @@ session_start();
 ?>
 <body background = "pw.jpg">
     <form method="POST">
-        ID:<input type = "text" name = "id" id = "id"><br>
-        security question: <input type = "text" name = "security" id = "security"><br>
+        ID:<input type = "text" name = "id" id = "id" require = "true"><br>
+        security question: <input type = "text" name = "security" id = "security" require = "true"><br>
         <input type = "submit" value ="finish">
         <input type = "button" value = "return" onclick = "javascript:location.href='index.php'">
     </form>
