@@ -6,7 +6,7 @@ session_start();
         new password:<input type = "password" name = "npw"><br>
         enter new password again: <input type = "password" name = "npw2"><br>
         <input type = "submit" value ="修改密碼">
-        <input type = "button" value = "return"  onclick="history.back()">
+        <input type = "button" value = "return"  onclick="index.php">
     </form>
 </body>
 <?php
