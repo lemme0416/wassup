@@ -50,7 +50,7 @@
 			x.style.backgroundColor = 'gray';
 		}
 		function jump(x){
-			var address = x + ".html";
+			var address = x + ".php";
 			parent.frames[1].location = address;
 		}
     </script>
