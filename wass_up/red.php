@@ -29,7 +29,8 @@
     $sth->execute();
 	while($row=$sth->fetch(PDO::FETCH_ASSOC)){
 		$song_name = $row['name'];
-		echo "<div onmouseover='color_deep(this)' onmouseout='color_shallow(this)' onclick='jump($song_name)'>
+		$song_string = (string)$song_name;
+		echo "<div onmouseover='color_deep(this)' onmouseout='color_shallow(this)' onclick='jump($song_string)'>
 				<p>$song_name</p>
 			</div>";
 	}
