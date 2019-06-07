@@ -30,9 +30,9 @@
 	while($row=$sth->fetch(PDO::FETCH_ASSOC)){
 		$song_name = $row['name'];
 		var_dump($song_name);
-		echo "<div onmouseover='color_deep(this)' onmouseout='color_shallow(this)' onclick='jump('$song_name')'>
+		echo '<div onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="jump(\'$song_name\')">
 				<p>$song_name</p>
-			</div>";
+			</div>';
 	}
 ?>
 <script>
