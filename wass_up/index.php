@@ -61,7 +61,7 @@
                 }, 500);
             });
         </script>
-        <audio id="music"src="Dr. Dre - The Next Episode ft. Snoop Dogg, Kurupt, Nate Dogg.mp3" loop style="visibility: hidden"></audio>
+        <audio id="music"src="music/Dr. Dre - The Next Episode ft. Snoop Dogg, Kurupt, Nate Dogg.mp3" loop style="visibility: hidden"></audio>
     </body>
 </html>
 <?php
