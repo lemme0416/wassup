@@ -18,22 +18,22 @@
 	</style>
 </head>
 <body>
-	<div onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="jump("yellow")">
+	<div onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="jump('yellow')">
 		<p>修改密碼</p>
 	</div>
-	<div onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="jump("blue")">
+	<div onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="jump('blue')">
 		<p>上傳音樂</p>
 	</div>
-	<div onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="jump("red")">
+	<div onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="jump('red')">
 		<p>排行榜</p>
 	</div>
-	<div onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="jump("green")">
+	<div onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="jump('green')">
 		<p>list1</p>
 	</div>
-	<div onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="jump("orange")">
+	<div onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="jump('orange')">
 		<p>list2</p>
 	</div>
-	<div onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="jump("purple")">
+	<div onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="jump('purple')">
 		<p>list3</p>
 	</div>
 
