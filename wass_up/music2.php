@@ -11,7 +11,7 @@
     else $song_src = "music/might_as_well.mp3";
     echo "
         <audio controls autoplay>
-            <source src="$song_src" type="audio/ogg">
+            <source src='$song_src' type='audio/ogg'>
             Your browser does not support the audio element.
         </audio>
     "
