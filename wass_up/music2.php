@@ -6,7 +6,7 @@
 <body>
 <?php
     if(isset($_GET['name'])){
-        $song_src = 'music/' + $_GET['name'] + '.mp3';
+        $song_src = 'music/'.$_GET['name'].'.mp3';
     }
     else $song_src = "music/might_as_well.mp3";
     echo "
