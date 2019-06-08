@@ -1,7 +1,7 @@
 ﻿<?PHP
 	session_start();
 	//check whether the visitor is a member
-	$fileType = $_FILES["uploaded_file"["type"];
+	$fileType = $_FILES["uploaded_file"]["type"];
 	if(isset($_SESSION['login'])==false){
 		header("Location: index.php");
 	}
