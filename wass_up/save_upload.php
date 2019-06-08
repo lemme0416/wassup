@@ -1,15 +1,11 @@
 ﻿<?PHP
 	session_start();
 	//check whether the visitor is a member
-	$fileType = $_FILES["uploaded_file"]["type"];
 	if(isset($_SESSION['login'])==false){
 		header("Location: index.php");
 	}
 	if(!empty($_FILES['uploaded_file'])){
-		if($fileType != "audio/mpeg" && $fileType != "audio/mpeg3" && $fileType != "audio/mp3"
-		&& $fileType != "audio/x-mpeg" && $fileType != "audio/x-mp3" && $fileType != 'audio/x-mpeg3' 
-		&& $fileType != 'audio/x-mpg' && $fileType != "audio/x-mpegaudio" && $fileType != "audio/mpg" 
-		&& $fileType != "audio/x-mpg"){
+		if($_FILES['uploaded_file']['type']!='audio/mp3'){
 			header("Location: upload.php?value=wrong_type"); 
 		}
 		$path = "music/";
