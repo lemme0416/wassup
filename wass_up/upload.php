@@ -5,7 +5,7 @@ session_start();
 if(isset($_SESSION['login'])==false){
     header("Location: index.php");
 }
-if(issed($_GET['value'])){
+if(isset($_GET['value'])){
 	if($_GET['value']=='wrong_type'){
 		echo "<script>alert('wrong type!')</script>";
 	}
