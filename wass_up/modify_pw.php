@@ -1,7 +1,7 @@
 <?php
 session_start();
 ?>
-<body background = "pw.jpg">
+<body>
     <form method="POST">
         new password:<input type = "password" name = "npw"><br>
         enter new password again: <input type = "password" name = "npw2"><br>
