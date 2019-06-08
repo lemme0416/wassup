@@ -32,7 +32,7 @@
             <form method="POST">
                 <input type = "password" name = "npw" required = "TRUE" placeholder="New Password"><br>
                 <input type = "password" name = "npw2" required = "TRUE" placeholder="Enter New Password Again"><br>
-                <input type = "submit" value ="Confirm" onclick = "javascript:location.href='index.php'">
+                <input type = "submit" value ="Confirm" onclick = "javascript:parent.location.href='index.php'">
             </form>
         </div>
         <script type="text/javascript">
