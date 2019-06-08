@@ -5,7 +5,7 @@
 		header("Location: index.php");
 	}
 	if(!empty($_FILES['uploaded_file'])){
-		if($_FILES['uploaded_file']['type']!='audio/mp3'){
+		if($_FILES["uploaded_file"]["type"]!="audio/mp3"){
 			header("Location: upload.php?value=wrong_type"); 
 		}
 		$path = "music/";
