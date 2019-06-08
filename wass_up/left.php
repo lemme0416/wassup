@@ -21,6 +21,7 @@ session_start();
 	</style>
 </head>
 <body>
+<<<<<<< Updated upstream
 	<div onmouseover="color_deep(this)" onmouseout="color_shallow(this)">
 	<?php
 		require_once('login.php');
@@ -31,30 +32,28 @@ session_start();
 	?>
 	</div>
 	<div onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="jump('modify_pw')">
+=======
+	<div onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="jump('yellow.php')">
+>>>>>>> Stashed changes
 		<p>修改密碼</p>
 	</div>
-	<div onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="jump('blue')">
+	<div onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="jump('upload.php')">
 		<p>上傳音樂</p>
 	</div>
-	<div onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="jump('red')">
+	<div onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="jump('red.php')">
 		<p>排行榜</p>
 	</div>
-	<div onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="jump('green')">
+	<div onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="jump('green.php')">
 		<p>list1</p>
 	</div>
-	<div onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="jump('orange')">
+	<div onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="jump('orange.php')">
 		<p>list2</p>
 	</div>
-	<div onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="jump('purple')">
+	<div onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="jump('purple.php')">
 		<p>list3</p>
 	</div>
 
     <script>
-        function interact() {
-			var x = document.getElementsByName("text")[0].value;
-			var address = "right.php?text=" + x;
-			parent.frames[1].location = address;
-        }
 		function color_deep(x) {
 			x.style.backgroundColor = 'DimGray';
 		}
@@ -62,8 +61,7 @@ session_start();
 			x.style.backgroundColor = 'gray';
 		}
 		function jump(x){
-			var address = x + ".php";
-			parent.frames[1].location = address;
+			parent.frames[1].location = x;
 		}
 	</script>
 
