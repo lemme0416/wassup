@@ -21,7 +21,6 @@ session_start();
 	</style>
 </head>
 <body>
-<<<<<<< Updated upstream
 	<div onmouseover="color_deep(this)" onmouseout="color_shallow(this)">
 	<?php
 		require_once('login.php');
@@ -32,9 +31,6 @@ session_start();
 	?>
 	</div>
 	<div onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="jump('modify_pw')">
-=======
-	<div onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="jump('yellow.php')">
->>>>>>> Stashed changes
 		<p>修改密碼</p>
 	</div>
 	<div onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="jump('upload.php')">

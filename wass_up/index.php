@@ -10,7 +10,7 @@
         
         <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
         
-        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="css/index.css">
         
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,7 +18,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>        
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
         
-        <script src="index.js"></script>
+        <script src="js/index.js"></script>
     </head>
     <body>
         <img src="https://imgur.com/OCPuJWd.png" id="weed_img" onclick="weed()" >
