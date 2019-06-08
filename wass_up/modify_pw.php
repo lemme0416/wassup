@@ -4,7 +4,6 @@ session_start();
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Modify! | WassUp!</title>
         <link rel="shortcut icon" href="https://imgur.com/G4KMHP3.png" type="image/x-icon" />
         
         <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
@@ -31,7 +30,7 @@ session_start();
             <form method="POST">
                 <input type = "password" name = "npw" placeholder="New Password"><br>
                 <input type = "password" name = "npw2" placeholder="Enter New Password Again"><br>
-                <input type = "submit" value ="Confirm" require = "true" onclick = "javascript:parent.location.href='index.php'">
+                <input type = "submit" value ="Confirm" require = "true">
             </form>
         </div>
         <script type="text/javascript">
