@@ -33,7 +33,7 @@ session_start();
     $dsn = 'mysql:host=localhost;dbname=wassup';
     $dbh = new PDO($dsn,$CFG['username'],$CFG['pw']);   
     $sth = $dbh->prepare('select count(*) as r from users where id = ? and problem = ? ;');
-    $sth->execute(array($_POST['id'],$_POST['security']));
+    $sth->execute(array(@$_POST['id'],@$_POST['security']));
     $result = $sth->fetch(PDO::FETCH_ASSOC);
     if($result['r'] == 1 ){
         $_SESSION['login'] = $_POST['id'];
