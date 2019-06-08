@@ -1,5 +1,6 @@
 <?php
-session_start();
+    header("Content-Type: text/html; charset=utf-8");
+    session_start();
 ?>
 <!DOCTYPE html>
 <html>
@@ -29,8 +30,8 @@ session_start();
         </ul>
         <div class="box">        
             <form method="POST">
-                <input type = "password" name = "npw" required = "true" placeholder="New Password"><br>
-                <input type = "password" name = "npw2" required = "true" placeholder="Enter New Password Again"><br>
+                <input type = "password" name = "npw" required = "TRUE" placeholder="New Password"><br>
+                <input type = "password" name = "npw2" required = "TRUE" placeholder="Enter New Password Again"><br>
                 <input type = "submit" value ="Confirm" onclick = "javascript:parent.location.href='index.php'">
             </form>
         </div>
@@ -47,11 +48,12 @@ session_start();
     require_once('login.php');
     $dsn = 'mysql:host=localhost;dbname=wassup';
     $dbh = new PDO($dsn,$CFG['username'],$CFG['pw']);
-    if(@$_POST['npw'] == @$_POST['npw2']){
-        $sth = $dbh->prepare('update  users set pw = ? where id = ?');
-        $sth->execute(array(@$_POST['npw'],$_SESSION['login']));
-        echo "<script>alert('Password has been modified!')</script>";
-    }
-    else echo "<script>alert('The passwords you typed do not match. Please retype the new password.')</script>";
-    
+    if(empty(@$_POST['npw']) == false && empty(@$_POST['npw2']) == false){
+        if(@$_POST['npw'] == @$_POST['npw2']){
+            $sth = $dbh->prepare('update  users set pw = ? where id = ?');
+            $sth->execute(array(@$_POST['npw'],$_SESSION['login']));
+            echo "<script>alert('Password has been modified!')</script>";
+        }
+        else echo "<script>alert('The passwords you typed do not match. Please retype the new password.')</script>";
+    }  
 ?> 
