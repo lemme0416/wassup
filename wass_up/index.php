@@ -36,7 +36,7 @@
         <img src="https://imgur.com/OCPuJWd.png">
         <img src="https://imgur.com/OCPuJWd.png">
 
-        <ul class="text-animation hidden" onclick = "javascript:location.href='index.php'">
+        <ul class="text-animation hidden">
             <li>W</li>
             <li>a</li>
             <li>s</li>
