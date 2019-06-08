@@ -27,7 +27,7 @@ session_start();
 		$dsn = 'mysql:host=localhost;dbname=wassup';
 		$dbh = new PDO($dsn,$CFG['username'],$CFG['pw']);
 		$id_name = $_SESSION['login'];
-		echo "<p>$id_name</p>"; 
+		echo "<p>Hello, $id_name</p>"; 
 	?>
 	</div>
 	<div onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="jump('modify_pw')">
