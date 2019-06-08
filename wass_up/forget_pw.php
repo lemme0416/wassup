@@ -9,23 +9,40 @@ session_start();
         
         <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
         
-        <link rel="stylesheet" href="forget_pw.css">
+        <link rel="stylesheet" href="css/forget_pw.css">
         
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>        
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-        
-        <script src="forget_pw.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>    
     </head>
-    <body background = "pw.jpg">
-        <form method="POST">
-            ID:<input type = "text" name = "id" id = "id"><br>
-            security question: <input type = "text" name = "security" id = "security"><br>
-            <input type = "submit" value ="finish">
-            <input type = "button" value = "返回" onclick = "javascript:location.href='index.php'">
-        </form>
+    <body>
+        <ul class="text-animation hidden">
+            <li>F</li>
+            <li>o</li>
+            <li>r</li>
+            <li>g</li>
+            <li>e</li>
+            <li>t</li>
+            <li>?</li>
+        </ul>
+        <div class="box">        
+            <form method="POST">
+                <input type = "text" name = "id" id = "id" placeholder="Your ID"><br>
+                <h2>Favorite animal?</h2>
+                <input type = "text" name = "security" id = "security"placeholder="Your answer"><br>
+                <input type = "submit" value ="Confirm">
+                <input type = "button" value = "HomePage" onclick = "javascript:location.href='index.php'">
+            </form>
+        </div>
+        <script type="text/javascript">
+            $(function(){
+                setTimeout(function(){
+                    $('.text-animation').removeClass('hidden');
+                }, 500);
+            });
+        </script>
     </body>
 </html>
 <?php
