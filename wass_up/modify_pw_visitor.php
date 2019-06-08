@@ -15,6 +15,7 @@ session_start();
     if(@$_POST['npw'] == @$_POST['npw2']){
         $sth = $dbh->prepare('update  users set pw = ? where id = ?');
         $sth->execute(array(@$_POST['npw'],$_SESSION['login']));
+        echo "<script>alert('Change!')</script>";
     }
     else echo "<script>alert('兩次密碼不一樣')</script>";
     
