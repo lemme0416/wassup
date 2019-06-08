@@ -22,7 +22,7 @@ if(isset($_GET['value'])){
     <title></title>
 </head>
 <body style="background-color:LightCyan">
-    <form action="upload.php"  method="post" enctype="multipart/form-data">
+    <form action="save_upload.php"  method="post" enctype="multipart/form-data">
         Select music to upload:
         <input type="file" name="uploaded_file">
         <input type="submit" value="upload">
