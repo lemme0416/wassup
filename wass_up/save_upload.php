@@ -6,7 +6,7 @@
 	}
 	if(!empty($_FILES['uploaded_file'])){
 		if($_FILES['uploaded_file']['type']!='mp3'){
-			header("Location: upload.php?value=wrong_type"); 
+			$return_value = 'wrong_type';
 		}
 		$path = "music/";
 		$path = $path . basename( $_FILES['uploaded_file']['name']);
