@@ -32,7 +32,7 @@
             <form method="POST">
                 <input type = "password" name = "npw" required = "TRUE" placeholder="New Password"><br>
                 <input type = "password" name = "npw2" required = "TRUE" placeholder="Enter New Password Again"><br>
-                <input type = "submit" value ="Confirm" onclick = "javascript:parent.location.href='index.php'">
+                <input type = "submit" value ="Confirm">
             </form>
         </div>
         <script type="text/javascript">
@@ -53,6 +53,9 @@
             $sth = $dbh->prepare('update  users set pw = ? where id = ?');
             $sth->execute(array(@$_POST['npw'],$_SESSION['login']));
             echo "<script>alert('Password has been modified!')</script>";
+            echo "<script type='text/javascript'>";
+                echo "window.location.href='home.php'";
+            echo "</script>";  
         }
         else echo "<script>alert('The passwords you typed do not match. Please retype the new password.')</script>";
     }  
