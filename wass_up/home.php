@@ -5,7 +5,7 @@ require_once('login.php');
 $dsn = 'mysql:host=localhost;dbname=wassup';
 $dbh = new PDO($dsn,$CFG['username'],$CFG['pw']);
 
-if (isset($_SESSION['id'])=='') {
+if (isset($_SESSION['login'])=='') {
     header('Location: index.php');
 }
 ?>
