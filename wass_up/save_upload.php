@@ -5,12 +5,12 @@
 		header("Location: index.php");
 	}
 	if(!empty($_FILES['uploaded_file'])){
-		if($_FILES['uploaded_file']['type']!='mp3'){
+		/*if($_FILES['uploaded_file']['type']!='mp3'){
 			header("Location: upload.php?value=wrong_type"); 
-		}
+		}*/
 		$path = "music/";
-		$path = $path . basename( $_FILES['uploaded_file']['name']);
-		if(move_uploaded_file($_FILES['uploaded_file']['tmp_name'], $path)) {
+		$des = $path . basename( $_FILES['uploaded_file']['name']);
+		if(move_uploaded_file($_FILES['uploaded_file']['tmp_name'], $des)) {
 			$return_value = 'success';
 			$file_name = basename( $_FILES['uploaded_file']['name'], '.mp3');
 			require_once('login.php');
