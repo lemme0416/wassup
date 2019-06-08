@@ -54,7 +54,7 @@ session_start();
     $result = $sth->fetch(PDO::FETCH_ASSOC);
     if($result['r'] == 1 ){
         $_SESSION['login'] = $_POST['id'];
-        $url = "modify_pw.php";
+        $url = "modify_pw_visitor.php";
         echo "<script type='text/javascript'>";
         echo "window.location.href='$url'";
         echo "</script>";
