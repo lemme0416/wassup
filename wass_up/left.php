@@ -26,7 +26,8 @@ session_start();
 		require_once('login.php');
 		$dsn = 'mysql:host=localhost;dbname=wassup';
 		$dbh = new PDO($dsn,$CFG['username'],$CFG['pw']);
-		echo "<p>$_SESSION['login']</p>"; 
+		$id_name = $_SESSION['login'];
+		echo "<p>$id_name</p>"; 
 	?>
 	</div>
 	<div onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="jump('yellow')">
