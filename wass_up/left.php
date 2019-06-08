@@ -30,10 +30,10 @@ session_start();
 		echo "<p>$id_name</p>"; 
 	?>
 	</div>
-	<div onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="jump('yellow')">
+	<div onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="jump('modify_pw')">
 		<p>修改密碼</p>
 	</div>
-	<div onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="jump('modify_pw')">
+	<div onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="jump('blue')">
 		<p>上傳音樂</p>
 	</div>
 	<div onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="jump('red')">
