@@ -7,13 +7,13 @@ if(isset($_SESSION['login'])==false){
 }
 if(issed($_GET['value'])){
 	if($_GET['value']=='wrong_type'){
-		echo "alert('wrong type!')";
+		echo "<script>alert('wrong type!')</script>";
 	}
 	else if($_GET['value']=='error'){
-		echo "Fail to upload!";
+		echo "<script>alert('Fail to upload!')</script>";
 	}
 	else if($_GET['value']=='success'){
-		echo "Uploaded!";
+		echo "<script>alert('Uploaded!')</script>";
 	}
 }
 ?>

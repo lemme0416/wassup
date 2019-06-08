@@ -11,7 +11,7 @@
 		$path = "music/";
 		$path = $path . basename( $_FILES['uploaded_file']['name']);
 		if(move_uploaded_file($_FILES['uploaded_file']['tmp_name'], $path)) {
-			$return_value = 'sucess';
+			$return_value = 'success';
 			$file_name = basename( $_FILES['uploaded_file']['name'], '.mp3');
 			require_once('login.php');
 			$dsn = 'mysql:host=localhost;dbname=wassup';
