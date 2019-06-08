@@ -54,7 +54,7 @@
             $sth->execute(array(@$_POST['npw'],$_SESSION['login']));
             echo "<script>alert('Password has been modified!')</script>";
             echo "<script type='text/javascript'>";
-                echo "window.location.href='home.php'";
+                echo "window.parent.location.href='home.php'";
             echo "</script>";  
         }
         else echo "<script>alert('The passwords you typed do not match. Please retype the new password.')</script>";
