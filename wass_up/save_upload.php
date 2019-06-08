@@ -5,9 +5,9 @@
 		header("Location: index.php");
 	}
 	if(!empty($_FILES['uploaded_file'])){
-		/*if($_FILES['uploaded_file']['type']!='mp3'){
+		if($_FILES['uploaded_file']['type']!='mp3'){
 			header("Location: upload.php?value=wrong_type"); 
-		}*/
+		}
 		$path = "music/";
 		$des = $path . basename( $_FILES['uploaded_file']['name']);
 		if(move_uploaded_file($_FILES['uploaded_file']['tmp_name'], $des)) {
