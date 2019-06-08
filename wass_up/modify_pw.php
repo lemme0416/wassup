@@ -5,8 +5,7 @@ session_start();
     <form method="POST">
         new password:<input type = "password" name = "npw"><br>
         enter new password again: <input type = "password" name = "npw2"><br>
-        <input type = "submit" value ="修改密碼" require = "true">
-        <input type = "button" value = "return"  onclick="javascript:parent.location.href='index.php'" require = "true">
+        <input type = "submit" value ="修改密碼" require = "true" onclick="javascript:parent.location.href='index.php'">
     </form>
 </body>
 <?php
