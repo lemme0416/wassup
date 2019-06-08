@@ -1,4 +1,7 @@
-﻿<html>
+﻿<?php
+session_start();
+?>
+<html>
 <head>
     <meta charset="utf-8" />
     <title>left</title>
@@ -18,6 +21,14 @@
 	</style>
 </head>
 <body>
+	<div onmouseover="color_deep(this)" onmouseout="color_shallow(this)">
+	<?php
+		require_once('login.php');
+		$dsn = 'mysql:host=localhost;dbname=wassup';
+		$dbh = new PDO($dsn,$CFG['username'],$CFG['pw']);
+		echo $_session['id']; 
+	?>
+	</div>
 	<div onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="jump('yellow')">
 		<p>修改密碼</p>
 	</div>
@@ -53,6 +64,7 @@
 			var address = x + ".php";
 			parent.frames[1].location = address;
 		}
-    </script>
+	</script>
+
 </body>
 </html>
