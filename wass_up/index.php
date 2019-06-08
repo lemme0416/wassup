@@ -76,9 +76,9 @@
             if($result['pw'] == $_POST['pw']){ // Passwrord correct or not
                 $_SESSION['login'] = $_POST['id'];
                 if($_POST['id'] == 'admin'){
-                    $url = "home.html";
+                    $url = "home.php";
                 }
-                else $url = "home.html";
+                else $url = "home.php";
                 echo "<script type='text/javascript'>";
                     echo "window.location.href='$url'";
                 echo "</script>";                 
