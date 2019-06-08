@@ -1,10 +1,10 @@
 ﻿<?PHP
 	session_start();
 	//check whether the visitor is a member
+	$fileType = $_FILES["uploaded_file"["type"];
 	if(isset($_SESSION['login'])==false){
 		header("Location: index.php");
 	}
-	$fileType = $_FILES["uploaded_file"["type"];
 	if(!empty($_FILES['uploaded_file'])){
 		if($fileType != "audio/mpeg" && $fileType != "audio/mpeg3" && $fileType != "audio/mp3"
 		&& $fileType != "audio/x-mpeg" && $fileType != "audio/x-mp3" && $fileType != 'audio/x-mpeg3' 
