@@ -49,7 +49,7 @@ session_start();
     if(@$_POST['npw'] == @$_POST['npw2']){
         $url = "index.php";
         echo "<script type='text/javascript'>";
-        echo "window.location.href='$url'";
+        echo "parent.location.href='$url'";
         echo "</script>";
         $sth = $dbh->prepare('update  users set pw = ? where id = ?');
         $sth->execute(array(@$_POST['npw'],$_SESSION['login']));
