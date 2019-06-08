@@ -1,6 +1,3 @@
-<?php
-session_start();
-?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -45,20 +42,3 @@ session_start();
         </script>
     </body>
 </html>
-<?php
-    require_once('login.php');
-    $dsn = 'mysql:host=localhost;dbname=wassup';
-    $dbh = new PDO($dsn,$CFG['username'],$CFG['pw']);   
-    $sth = $dbh->prepare('select count(*) as r from users where id = ? and problem = ? ;');
-    $sth->execute(array(@$_POST['id'],@$_POST['security']));
-    $result = $sth->fetch(PDO::FETCH_ASSOC);
-    if($result['r'] == 1 ){
-        $_SESSION['login'] = $_POST['id'];
-        $url = "modify_pw.php";
-        echo "<script type='text/javascript'>";
-        echo "window.location.href='$url'";
-        echo "</script>";
-        $sth = $dbh->prepare('update  users set pw = ? where id = ?');
-        $sth->execute(array($_POST['pw'],$_POST['id']));
-    }
-?> 

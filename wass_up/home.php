@@ -13,7 +13,7 @@ if (isset($_SESSION['login'])=='') {
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>Home|WassUp!</title>
+    <title>Home | WassUp!</title>
 </head>
 <frameset rows="6*,1*">
     <frameset cols="1*,5*">
