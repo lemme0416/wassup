@@ -29,9 +29,9 @@ session_start();
         </ul>
         <div class="box">        
             <form method="POST">
-                <input type = "text" name = "id" id = "id" placeholder="Your ID"><br>
+                <input type = "text" name = "id" id = "id" required = "true" placeholder="Your ID"><br>
                 <h2>Favorite animal?</h2>
-                <input type = "text" name = "security" id = "security"placeholder="Your answer"><br>
+                <input type = "text" name = "security" id = "security" required = "true" placeholder="Your answer"><br>
                 <input type = "submit" value ="Confirm">
                 <input type = "button" value = "HomePage" onclick = "javascript:location.href='index.php'">
             </form>

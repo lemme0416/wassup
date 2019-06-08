@@ -29,9 +29,9 @@ session_start();
         </ul>
         <div class="box">        
             <form method="POST">
-                <input type = "password" name = "npw" placeholder="New Password"><br>
-                <input type = "password" name = "npw2" placeholder="Enter New Password Again"><br>
-                <input type = "submit" value ="Confirm" require = "true" onclick = "javascript:parent.location.href='index.php'">
+                <input type = "password" name = "npw" required = "true" placeholder="New Password"><br>
+                <input type = "password" name = "npw2" required = "true" placeholder="Enter New Password Again"><br>
+                <input type = "submit" value ="Confirm" onclick = "javascript:parent.location.href='index.php'">
             </form>
         </div>
         <script type="text/javascript">
@@ -50,7 +50,8 @@ session_start();
     if(@$_POST['npw'] == @$_POST['npw2']){
         $sth = $dbh->prepare('update  users set pw = ? where id = ?');
         $sth->execute(array(@$_POST['npw'],$_SESSION['login']));
+        echo "<script>alert('Password has been modified!')</script>";
     }
-    else echo "<script>alert('兩次密碼不一樣')</script>";
+    else echo "<script>alert('The passwords you typed do not match. Please retype the new password.')</script>";
     
 ?> 
