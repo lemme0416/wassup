@@ -4,8 +4,12 @@
 	if(isset($_SESSION['login'])==false){
 		header("Location: index.php");
 	}
+	$fileType = $_FILES["uploaded_file"["type"];
 	if(!empty($_FILES['uploaded_file'])){
-		if($_FILES["uploaded_file"]["type"]!="audio/mp3"){
+		if($fileType != "audio/mpeg" && $fileType != "audio/mpeg3" && $fileType != "audio/mp3"
+		&& $fileType != "audio/x-mpeg" && $fileType != "audio/x-mp3" && $fileType != 'audio/x-mpeg3' 
+		&& $fileType != 'audio/x-mpg' && $fileType != "audio/x-mpegaudio" && $fileType != "audio/mpg" 
+		&& $fileType != "audio/x-mpg"){
 			header("Location: upload.php?value=wrong_type"); 
 		}
 		$path = "music/";
