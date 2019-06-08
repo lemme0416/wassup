@@ -31,7 +31,7 @@ session_start();
             <form method="POST">
                 <input type = "password" name = "npw" placeholder="New Password"><br>
                 <input type = "password" name = "npw2" placeholder="Enter New Password Again"><br>
-                <input type = "submit" value ="Confirm" require = "true" onclick="javascript:parent.location.href='index.php'">
+                <input type = "submit" value ="Confirm" require = "true" onclick = "javascript:location.href='index.php'">
             </form>
         </div>
         <script type="text/javascript">
