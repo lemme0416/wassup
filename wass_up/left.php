@@ -63,12 +63,7 @@ session_start();
 		}
 		function jump(x){
 			var address = x + ".php";
-			if(x='modify_pw'){
-				location.href='index.php'
-			}
-			else{
-				parent.frames[1].location = address;
-			}
+			parent.frames[1].location = address;
 		}
 	</script>
 
