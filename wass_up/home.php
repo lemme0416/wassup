@@ -1,4 +1,15 @@
-﻿<!DOCTYPE html>
+﻿<?php
+session_start();
+
+require_once('login.php');
+$dsn = 'mysql:host=localhost;dbname=wassup';
+$dbh = new PDO($dsn,$CFG['username'],$CFG['pw']);
+
+if (isset($_SESSION["id"])==FALSE) {
+    header('Location: index.php');
+}
+?>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
