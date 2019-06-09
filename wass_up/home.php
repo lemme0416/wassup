@@ -14,13 +14,15 @@ if (isset($_SESSION['login'])=='') {
     <head>
         <meta charset="utf-8" />
         <title>Home | WassUp!</title>
+        <link rel="shortcut icon" href="https://imgur.com/G4KMHP3.png" type="image/x-icon" />
+
     </head>
     <frameset rows="8*,80*,10*">
-        <frame src="search.php" name="top">
+        <frame src="search.php" name="top" frameborder="0">
         <frameset cols="1*,5*">
-            <frame src="left.php" name="left">
-            <frame src="yellow.php" name="right">
+            <frame src="left.php" name="left" frameborder="0">
+            <frame src="yellow.php" name="right" frameborder="0">
         </frameset>
-        <frame src="music.html" name="music" noresize="noresize">
+        <frame src="music.html" name="music" noresize="noresize" frameborder="0">
     </frameset>
 </html>
