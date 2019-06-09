@@ -21,7 +21,7 @@
         $query = mysql_query("SELECT * from music where name like'%$searchq%'") or die("could not search!");
         $count = mysql_num_rows($query);
         if($count == 0){
-            $output = 'There was no search results!'
+            $output = 'There was no search results!';
         }
         else{
             while ($row = mysql_fetch_array($query)) {
