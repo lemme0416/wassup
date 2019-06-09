@@ -75,7 +75,7 @@ body{
     background: red;
     margin: 0px;
   }
-  .text-animation{
+  .text{
     list-style: none;
   
     width: 377px;
@@ -87,7 +87,7 @@ body{
     float: left;
     /* transform: translateX(-50%) translateY(-50%); */
   }
-  .text-animation li{
+  .text li{
     display: inline-block;
     font-family: 'Montserrat';
     font-weight: 900;
@@ -97,7 +97,7 @@ body{
     opacity: 1;
     transition: all 2.5s ease;
   }
-  .text-animation li:last-child{
+  .text li:last-child{
     margin-right: 0;
   }
 
