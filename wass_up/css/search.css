@@ -22,16 +22,17 @@ p{
     height: 30px;
     border-radius: 30px;
     padding: 10px;
-    width: 150px;
 }
 
-.search-box:focus > .search-txt {
-    width: 240px;
+.search-box:hover > .search-txt {
+    width: 150px;
     padding: 0 6px;
 
 }
-
-.search-box:focus > .search-btn {
+.search-txt:focus{
+    width: 200px
+}
+.search-box:hover > .search-btn {
     background: white;
     color: black;
 }
