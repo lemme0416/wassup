@@ -63,14 +63,16 @@ session_start();
 
         $sth = $dbh->prepare('insert into users (id,pw,name,gender,problem) values (?,?,?,?,?) ;');
         $sth->execute(array(@$_POST['id'],@$_POST['pw'],@$_POST['nkn'],@$_POST['sex'],@$_POST['security']));
+        if(isset($_POST['id'])){
+            $inst = 'create table if not exists '.$_POST['id'].'_list (list_name VARCHAR(50));';
+            $sth = $dbh->prepare($inst);
+            $sth->execute();
+        }          
         echo "<script>alert('Registration SUCCESS!')</script>";
         echo "<script type='text/javascript'>";
             echo "window.location.href='index.php'";
         echo "</script>";  
-    }
-    if(isset($_POST['id'])){
-		$inst = 'create table if not exists '.$_POST['id'].'_list (list_name VARCHAR(50));';
-		$sth = $dbh->prepare($inst);
-		$sth->execute();
-	}
+  
+}
+
 ?> 
