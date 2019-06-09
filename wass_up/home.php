@@ -15,13 +15,11 @@ if (isset($_SESSION['login'])=='') {
         <meta charset="utf-8" />
         <title>Home | WassUp!</title>
     </head>
-    <frameset rows="6*,1*">
+    <frameset rows="1*,8*,1*">
+        <frame src="search.php" name="top">
         <frameset cols="1*,5*">
             <frame src="left.php" name="left">
-             <!-- <frameset row="1*,8*">    -->
-                <!-- <frame src="search.php" name="top"> -->
-                <frame src="yellow.php" name="right">
-            <!-- </frameset> -->
+            <frame src="yellow.php" name="right">
         </frameset>
         <frame src="music.html" name="music" noresize="noresize">
     </frameset>
