@@ -5,7 +5,7 @@ session_start();
 <!DOCTYPE html>
 <html> 
     <head>
-        <title>Create | WassUp!</title>
+        <title>Register | WassUp!</title>
         <link rel="shortcut icon" href="https://imgur.com/G4KMHP3.png" type="image/x-icon" />
         
         <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
@@ -22,24 +22,28 @@ session_start();
     </head>
     <body>
         <ul class="text-animation hidden">
-            <li>W</li>
-            <li>a</li>
+            <li>R</li>
+            <li>e</li>
+            <li>g</li>
+            <li>i</li>
             <li>s</li>
-            <li>s</li>
-            <li>U</li>
-            <li>p</li>
+
+            <li>t</li>
+            <li>e</li>
+            <li>r</li>
             <li>!</li>
         </ul>
         <div class="box">
             <form method="POST">
-                <input type = "text" name = "id" require = "true" placeholder="Enter Your ID"><br>
-                <input type = "password" name = "pw" require = "true" placeholder="Enter Your Password"><br>
-                <input type ="text" name = "nkn" require = "true" placeholder="Enter Your Nickname"><br>
-                <input type = "text" name = "sex" require = "true"><br>
-                security word<input type = "text" name = "security"><br>
-                <!-- submit 創帳號 return回首頁 -->
-                <input type = "submit" value ="create">
-                <input type = "button" value = "return" onclick = "javascript:location.href='index.php'"> 
+                <input type = "text" name = "id" required = "true" placeholder="Enter Your ID">
+                <input type = "password" name = "pw" required = "true" placeholder="Enter Your Password">
+                <input type ="text" name = "nkn" required = "true" placeholder="Enter Your Nickname">
+                <input type = "radio" name = "sex" required = "true">male
+                <input type = "radio" name = "sex">female
+                <input type = "radio" name = "sex">other<br>                
+                <h2>Most favorite animal ?</h2>
+                <input type = "text" name = "security" required = "true"><br>
+                <input type = "submit" value ="Register">
             </form>
         </div>
         <script type="text/javascript">
@@ -57,7 +61,11 @@ session_start();
     $dbh = new PDO($dsn,$CFG['username'],$CFG['pw']);
     $sth = $dbh->prepare('insert into users (id,pw,name,gender,problem) values (?,?,?,?,?) ;');
     $sth->execute(array(@$_POST['id'],@$_POST['pw'],@$_POST['nkn'],@$_POST['sex'],@$_POST['security']));
-	if(isset($_POST['id'])){
+    echo "<script>alert('Password has been modified!')</script>";
+    echo "<script type='text/javascript'>";
+        echo "window.location.href='index.php'";
+    echo "</script>";  
+    if(isset($_POST['id'])){
 		$inst = 'create table if not exists '.$_POST['id'].'_list (list_name VARCHAR(50));';
 		$sth = $dbh->prepare($inst);
 		$sth->execute();

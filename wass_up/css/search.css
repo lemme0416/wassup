@@ -30,7 +30,7 @@ p{
 
 }
 .search-txt:focus{
-    width: 150px
+    width: 240px
 }
 .search-box:hover > .search-btn {
     background: white;
