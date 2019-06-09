@@ -23,14 +23,15 @@ p{
     border-radius: 30px;
     padding: 10px;
 }
-
-.search-box:hover > .search-txt {
+.search-txt {
     width: 150px;
     padding: 0 6px;
 
 }
-.search-txt:focus{
-    width: 240px
+.search-box:hover > .search-txt {
+    width: 240px;
+    padding: 0 6px;
+
 }
 .search-box:hover > .search-btn {
     background: white;
