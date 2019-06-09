@@ -25,6 +25,10 @@ p{
     width: 150px;
 
 }
+.search-box:hover{
+    width: 240px;
+
+}
 .search-txt {
     width: 150px;
     padding: 0 6px;
