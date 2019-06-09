@@ -39,11 +39,6 @@
 	}
 ?>
 <script>
-    function interact() {
-		var x = document.getElementsByName("text")[0].value;
-		var address = "right.php?text=" + x;
-		parent.frames[1].location = address;
-    }
 	function color_deep(x) {
 		x.style.backgroundColor = 'black';
 	}

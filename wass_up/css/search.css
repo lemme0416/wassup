@@ -70,3 +70,35 @@ p{
     font-family: 'Montserrat';
     font-size: 20px;
 }
+body{
+    background-size: cover;
+    background: red;
+    margin: 0px;
+  }
+  .text-animation{
+    list-style: none;
+  
+    width: 377px;
+    /* position: absolute;
+    top: 8%;
+    left: 50%; */
+    margin: 25px auto 5px auto; 
+    padding: 0px;
+    float: left;
+    /* transform: translateX(-50%) translateY(-50%); */
+  }
+  .text-animation li{
+    display: inline-block;
+    font-family: 'Montserrat';
+    font-weight: 900;
+    font-style:oblique;
+    font-size: 5em;
+    color: white;
+    opacity: 1;
+    transition: all 2.5s ease;
+  }
+  .text-animation li:last-child{
+    margin-right: 0;
+  }
+
+  

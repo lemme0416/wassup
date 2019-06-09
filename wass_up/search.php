@@ -9,6 +9,15 @@
 
     </head> 
     <body> 
+        <ul class="text">
+            <li>W</li>
+            <li>a</li>
+            <li>s</li>
+            <li>s</li>
+            <li>U</li>
+            <li>p</li>
+            <li>!</li>
+        </ul>
         <div>
             <form method="get" action="search.php" class="search-box"> 
                 <input type="text" id="search" name="search" required="true" placeholder="Search" class="search-txt">
