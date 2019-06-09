@@ -11,15 +11,18 @@ if (isset($_SESSION['login'])=='') {
 ?>
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8" />
-    <title>Home | WassUp!</title>
-</head>
-<frameset rows="6*,1*">
-    <frameset cols="1*,5*">
-        <frame src="left.php" name="left">
-        <frame src="yellow.php" name="right">
+    <head>
+        <meta charset="utf-8" />
+        <title>Home | WassUp!</title>
+    </head>
+    <frameset rows="6*,1*">
+        <frameset cols="1*,5*">
+            <frame src="left.php" name="left">
+             <frameset row="1*,8*">   
+                <frame src="search.php" name="top" noresize="noresize">
+                <frame src="yellow.php" name="right">
+            </frameset>
+        </frameset>
+        <frame src="music.html" name="music" noresize="noresize">
     </frameset>
-    <frame src="music.html" name="music"></frame>
-</frameset>
 </html>
