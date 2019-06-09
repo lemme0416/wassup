@@ -40,9 +40,9 @@ session_start();
                 <a>Gender:</a>
                 <input type = "radio" name = "sex" required = "true"><a>Male</a>
                 <input type = "radio" name = "sex"><a>Female</a>
-                <input type = "radio" name = "sex"><a>Others</a><br>                
+                <input type = "radio" name = "sex"><a>Others</a><br><br>                
                 <h2>Most favorite animal ?</h2>
-                <input type = "text" name = "security" required = "true"><br><br>
+                <input type = "text" name = "security" required = "true"><br>
                 <input type = "submit" value ="Register">
             </form>
         </div>

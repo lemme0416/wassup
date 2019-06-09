@@ -108,7 +108,11 @@ body{
   border: 2px solid rgb(255, 255, 255);
   color: black;
 }
-
+.box a{
+    color: white;
+    font-family: 'Montserrat';
+    font-size: 12px;
+  }
 .box a:link{
   color: white;
   font-family: 'Montserrat';
