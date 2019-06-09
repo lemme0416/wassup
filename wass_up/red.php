@@ -52,7 +52,7 @@
 	}
 	function jump(x){
 		var address = "music2.php?name=" + x;
-		parent.frames[2].location = address;
+		parent.frames[3].location = address;
 	}
 </script>
 </body>

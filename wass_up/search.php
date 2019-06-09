@@ -10,56 +10,45 @@
     </head> 
     <body> 
         <div>
-            <form method="post" action="search.php" class="search-box"> 
+            <form method="post" action="show_search_result.php" class="search-box"> 
                 <input type="text" name="search" required="true" placeholder="Search" class="search-txt">
-                <button type="submit" name="submit" class="search-btn">
+                <button type="submit" name="submit" class="search-btn" onclick="jump()">
                     <i class="fas fa-search"></i>
                 </button>
             </form>
         <div> 
-        <?php
-            require_once('login.php');
-            $dsn = 'mysql:host=localhost;dbname=wassup';
-            $dbh = new PDO($dsn,$CFG['username'],$CFG['pw']);
-            if(empty($_POST['search'])== false){
-                if(isset($_POST['submit'])){
-                    $str = $_POST["search"];
-                    $sth = $dbh->prepare("SELECT * FROM music WHERE name like '%$str%'");
-                    $sth->setFetchMode(PDO:: FETCH_OBJ);
-                    $sth->execute();
+            
+        <!-- <?php
+            // require_once('login.php');
+            // $dsn = 'mysql:host=localhost;dbname=wassup';
+            // $dbh = new PDO($dsn,$CFG['username'],$CFG['pw']);
+            // if(empty($_POST['search'])== false){
+            //     if(isset($_POST['submit'])){
+            //         $str = $_POST["search"];
+            //         $sth = $dbh->prepare("SELECT * FROM music WHERE name like '%$str%'");
+            //         $sth->setFetchMode(PDO:: FETCH_OBJ);
+            //         $sth->execute();
 
-                    while($row = $sth->fetch()){
-                        echo '<div class="song_div" onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="jump('."'$row->name'".')">
-                        ';
-                        echo"	<p>$row->name</p>
-                        ";
-                        echo"</div>
-                        ";            
+            //         while($row = $sth->fetch()){
+            //             echo '<div class="song_div" onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="jump('."'$row->name'".')">
+            //             ';
+            //             echo"	<p>$row->name</p>
+            //             ";
+            //             echo"</div>
+            //             ";            
                     ?>
             <?php     
-                    }
-                    // else echo "name doesnt exist";
-                }        
-            }
+            //         }
+            //         // else echo "name doesnt exist";
+            //     }        
+            // }
 
-        ?>    
+        ?> -->
     </body> 
 </html>
 
 <script>
-    function interact() {
-		var x = document.getElementsByName("text")[0].value;
-		var address = "right.php?text=" + x;
-		parent.frames[1].location = address;
-    }
-	function color_deep(x) {
-		x.style.backgroundColor = 'black';
-	}
-	function color_shallow(x) {
-		x.style.backgroundColor = 'DarkSlateGray ';
-	}
-	function jump(x){
-		var address = "music2.php?name=" + x;
-		parent.frames[3].location = address;
+	function jump(){
+		parent.frames[2].location = "show_search_result.php";
 	}
 </script>
