@@ -20,7 +20,7 @@
         $sth->setFetchMode(PDO:: FETCH_OBJ);
         $sth->execute();
 
-        if($row = $sth->fecth()){
+        if($row = $sth->fetch()){
             ?>
             <br><br><br>
             <table>
