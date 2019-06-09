@@ -17,7 +17,7 @@
     if(isset($_POST['submit'])){
         $str = $_POST["search"];
         $sth = $dbh->prepare("SELECT * FROM music WHERE name like '%$str%'");
-        $sth->setFetchMode(PDO:: FETCH_OBJ);
+        // $sth->setFetchMode(PDO:: FETCH_OBJ);
         $sth->execute();
 
         while($row = $sth->fetch(PDO::FETCH_ASSOC)){
