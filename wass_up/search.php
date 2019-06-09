@@ -35,6 +35,8 @@
 <script>
 	function jump(){
         var x = document.getElementById("search").value;
-		parent.frames[2].location = "show_search_result.php?search="+x;
+        if(x!=""){
+            parent.frames[2].location = "show_search_result.php?search="+x;
+        }
 	}
 </script>
