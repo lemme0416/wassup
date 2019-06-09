@@ -48,6 +48,13 @@ session_start();
 	<div onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="jump('purple.php')">
 		<p>list3</p>
 	</div>
+	<div onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="show_form">
+		<p>新增清單</p>
+	</div>
+	<form method = "POST" hidden = "true" action="add_list.php" id="hidden_form">
+		<input type="text">
+		<input type="submit" value="新增">
+	</form>
 
     <script>
 		function color_deep(x) {
@@ -58,6 +65,10 @@ session_start();
 		}
 		function jump(x){
 			parent.frames[1].location = x;
+		}
+		function show_form(){
+			var hid = document.getElementById("hidden_form");
+			hid.hidden = !(hid.hidden);
 		}
 	</script>
 
