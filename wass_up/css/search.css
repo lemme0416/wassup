@@ -82,7 +82,7 @@ body{
     /* position: absolute;
     top: 8%;
     left: 50%; */
-    margin: auto; 
+    margin: auto auto auto auto; 
     padding: 0px;
     float: left;
     /* transform: translateX(-50%) translateY(-50%); */
@@ -92,10 +92,10 @@ body{
     font-family: 'Montserrat';
     font-weight: 900;
     font-style:oblique;
-    font-size: 25px;
+    font-size: 20px;
     color: white;
     opacity: 1;
-    transition: all 2.5s ease;
+    /* transition: all 2.5s ease; */
   }
   .text li:last-child{
     margin-right: 0;
