@@ -63,7 +63,7 @@ session_start();
 
         $sth = $dbh->prepare('insert into users (id,pw,name,gender,problem) values (?,?,?,?,?) ;');
         $sth->execute(array(@$_POST['id'],@$_POST['pw'],@$_POST['nkn'],@$_POST['sex'],@$_POST['security']));
-        echo "<script>alert('Registration success!')</script>";
+        echo "<script>alert('Registration SUCCESS!')</script>";
         echo "<script type='text/javascript'>";
             echo "window.location.href='index.php'";
         echo "</script>";  
