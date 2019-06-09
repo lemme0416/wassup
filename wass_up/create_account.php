@@ -38,7 +38,8 @@ session_start();
                 <input type = "text" name = "id" required = "true" placeholder="Enter Your ID">
                 <input type = "password" name = "pw" required = "true" placeholder="Enter Your Password">
                 <input type ="text" name = "nkn" required = "true" placeholder="Enter Your Nickname">
-                <input type = "radio" name = "sex" required = "true">male
+
+                Gender:<input type = "radio" name = "sex" required = "true">male
                 <input type = "radio" name = "sex">female
                 <input type = "radio" name = "sex">other<br>                
                 <h2>Most favorite animal ?</h2>

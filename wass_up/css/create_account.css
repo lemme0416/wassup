@@ -5,14 +5,9 @@ body{
 }
 .text-animation{
   list-style: none;
-
   width: 400px;
-  /* position: absolute;
-  top: 8%;
-  left: 50%; */
   margin: 25px auto 5px auto; 
   padding: 0px;
-  /* transform: translateX(-50%) translateY(-50%); */
 }
 .text-animation li{
   display: inline-block;
@@ -44,19 +39,14 @@ body{
 
 .box{
   width: 350px;
-  /* position: absolute;
-  top: 56%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%); */
   margin: 25px auto 10px auto;
   padding: 30px;
   padding-bottom: 60px;
   border: 2px rgb(255, 255, 255) solid;
   border-radius: 30px;
-  background: #ff0000;  /* fallback for old browsers */        
+  background: #ff0000;
   overflow: hidden;
   text-align: center;
-  font-family: 'Montserrat';
 }
 
 .box input[type = "text"],.box input[type = "password"]{
@@ -129,7 +119,16 @@ body{
   font-family: 'Montserrat';
   font-size: 12px;
   }
-
+.box h2{
+    color: white;
+    font-family: 'Montserrat';
+    font-size: 15px;
+}
+.box input[type = "radio"]{
+    color: white;
+    font-family: 'Montserrat';
+    font-size: 12px;
+}
 @media (max-width: 1350px) {
   .box{
     border: 0px;
