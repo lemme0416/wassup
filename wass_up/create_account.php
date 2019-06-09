@@ -59,12 +59,15 @@ session_start();
     require_once('login.php');
     $dsn = 'mysql:host=localhost;dbname=wassup';
     $dbh = new PDO($dsn,$CFG['username'],$CFG['pw']);
-    $sth = $dbh->prepare('insert into users (id,pw,name,gender,problem) values (?,?,?,?,?) ;');
-    $sth->execute(array(@$_POST['id'],@$_POST['pw'],@$_POST['nkn'],@$_POST['sex'],@$_POST['security']));
-    echo "<script>alert('Password has been modified!')</script>";
-    echo "<script type='text/javascript'>";
-        echo "window.location.href='index.php'";
-    echo "</script>";  
+    if(empty(@$_POST['id']) == false && empty(@$_POST['pw']) == false && empty(@$_POST['nkn']) == false && empty(@$_POST['sex']) == false && empty(@$_POST['security']) == false){
+
+        $sth = $dbh->prepare('insert into users (id,pw,name,gender,problem) values (?,?,?,?,?) ;');
+        $sth->execute(array(@$_POST['id'],@$_POST['pw'],@$_POST['nkn'],@$_POST['sex'],@$_POST['security']));
+        echo "<script>alert('Password has been modified!')</script>";
+        echo "<script type='text/javascript'>";
+            echo "window.location.href='index.php'";
+        echo "</script>";  
+    }
     if(isset($_POST['id'])){
 		$inst = 'create table if not exists '.$_POST['id'].'_list (list_name VARCHAR(50));';
 		$sth = $dbh->prepare($inst);
