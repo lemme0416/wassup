@@ -11,7 +11,9 @@
     <body> 
         <form method="post" action="search.php" class="search-box"> 
             <input type="text" name="search" required="true" placeholder="Search" class="search-txt">
-            <input type="submit" name="submit" value=">"class="search-btn">
+            <a type="submit" name="submit" class="search-btn">
+                <i class="fas fa-search"></i>
+            </a>
         </form> 
     </body> 
 </html>
