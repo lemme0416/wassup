@@ -2,6 +2,22 @@
 <html> 
     <head> 
         <meta http-equiv="content-type" content="text/html; charset=utf-8"> 
+        <style>
+            div{
+                overflow: hidden;
+                background-color: DarkSlateGray;
+                border: 2px solid white;
+                margin: 2px 2px;
+            }
+            body{
+                background-color: lightblue;
+                margin: 0px;
+            }
+            p{
+                text-align: center;
+                color: white;
+            }
+        </style>
     </head> 
     <body bgcbor="#ffffff" text="#000000"> 
         <form method="post" action="search.php"> 
@@ -21,7 +37,7 @@
         $sth->execute();
 
         while($row = $sth->fetch()){
-            echo '<div onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="jump('."' $row->name'".')">
+            echo '<div onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="jump('."'$row->name'".')">
             ';
             echo"	<p>$row->name</p>
             ";
