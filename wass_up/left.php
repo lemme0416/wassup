@@ -65,7 +65,7 @@ session_start();
 			x.style.backgroundColor = 'gray';
 		}
 		function jump(x){
-			parent.frames[1].location = x;
+			parent.frames[2].location = x;
 		}
 		function show_form(){
 			var hid = document.getElementById("hidden_form");
