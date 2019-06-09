@@ -1,5 +1,6 @@
 ﻿<?php
     if(isset($_POST['list_name'])){
+        session_start();
         require_once('login.php');
         $dsn = 'mysql:host=localhost;dbname=wassup';
         $dbh = new PDO($dsn,$CFG['username'],$CFG['pw']);
