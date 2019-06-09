@@ -14,6 +14,8 @@ session_start();
         
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>        
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> 
@@ -38,9 +40,9 @@ session_start();
                 <input type ="text" name = "nkn" required = "true" placeholder="Enter Your Nickname">
 
                 <a>Gender:</a>
-                <input type = "radio" name = "sex" required = "true"><a>Male</a>
-                <input type = "radio" name = "sex"><a>Female</a>
-                <input type = "radio" name = "sex"><a>Others</a><br><br>                
+                <input type = "radio" name = "sex" required = "true" class="custom-control-input"><a>Male</a>
+                <input type = "radio" name = "sex" class="custom-control-input"><a>Female</a>
+                <input type = "radio" name = "sex" class="custom-control-input"><a>Others</a><br><br>                
                 <h2>What is your most favorite animal ?</h2>
                 <input type = "text" name = "security" required = "true" placeholder="Most favorite animal"><br>
                 <input type = "submit" value ="Register">
