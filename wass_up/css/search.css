@@ -3,7 +3,7 @@ body {
     padding: 0;
     background: #e84118;
 }
-..song_div{
+.song_div{
     overflow: hidden;
     background-color: DarkSlateGray;
     border: 2px solid white;

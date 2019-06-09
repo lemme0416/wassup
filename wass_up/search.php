@@ -10,41 +10,42 @@
     </head> 
     <body> 
         <div>
-        <form method="post" action="search.php" class="search-box"> 
-            <input type="text" name="search" required="true" placeholder="Search" class="search-txt">
-            <button type="submit" name="submit" class="search-btn">
-                <i class="fas fa-search"></i>
-            </button>
-        </form>
+            <form method="post" action="search.php" class="search-box"> 
+                <input type="text" name="search" required="true" placeholder="Search" class="search-txt">
+                <button type="submit" name="submit" class="search-btn">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
         <div> 
+        <?php
+            require_once('login.php');
+            $dsn = 'mysql:host=localhost;dbname=wassup';
+            $dbh = new PDO($dsn,$CFG['username'],$CFG['pw']);
+            if(empty($_POST['search'])== false){
+                if(isset($_POST['submit'])){
+                    $str = $_POST["search"];
+                    $sth = $dbh->prepare("SELECT * FROM music WHERE name like '%$str%'");
+                    $sth->setFetchMode(PDO:: FETCH_OBJ);
+                    $sth->execute();
+
+                    while($row = $sth->fetch()){
+                        echo '<div class="song_div" onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="jump('."'$row->name'".')">
+                        ';
+                        echo"	<p>$row->name</p>
+                        ";
+                        echo"</div>
+                        ";            
+                    ?>
+            <?php     
+                    }
+                    // else echo "name doesnt exist";
+                }        
+            }
+
+        ?>    
     </body> 
 </html>
-<?php
-    require_once('login.php');
-    $dsn = 'mysql:host=localhost;dbname=wassup';
-    $dbh = new PDO($dsn,$CFG['username'],$CFG['pw']);
-    if(empty($_POST['search'])== false){
-        if(isset($_POST['submit'])){
-            $str = $_POST["search"];
-            $sth = $dbh->prepare("SELECT * FROM music WHERE name like '%$str%'");
-            $sth->setFetchMode(PDO:: FETCH_OBJ);
-            $sth->execute();
 
-            while($row = $sth->fetch()){
-                echo '<div class="song_div" onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="jump('."'$row->name'".')">
-                ';
-                echo"	<p>$row->name</p>
-                ";
-                echo"</div>
-                ";            
-            ?>
-    <?php     
-            }
-            // else echo "name doesnt exist";
-        }        
-    }
-
-?>
 <script>
     function interact() {
 		var x = document.getElementsByName("text")[0].value;
