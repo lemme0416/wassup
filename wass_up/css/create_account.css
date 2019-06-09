@@ -111,7 +111,7 @@ body{
 .box a{
     color: white;
     font-family: 'Montserrat';
-    font-size: 12px;
+    font-size: 15px;
   }
 .box a:link{
   color: white;
@@ -126,7 +126,7 @@ body{
 .box h2{
     color: white;
     font-family: 'Montserrat';
-    font-size: 15px;
+    font-size: 20px;
 }
 .box input[type = "radio"]{
     color: white;
