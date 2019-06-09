@@ -38,9 +38,9 @@ session_start();
                 <input type ="text" name = "nkn" required = "true" placeholder="Enter Your Nickname">
 
                 <a class="gender">Gender  :  </a>
-                <input type = "radio" name = "sex" required = "true"><a class="options">Male</a>
-                <input type = "radio" name = "sex"><a class="options">Female</a>
-                <input type = "radio" name = "sex"><a class="options">Others</a><br><br>                
+                <input type = "radio" name = "sex" required = "true" value="male"><a class="options">Male</a>
+                <input type = "radio" name = "sex" value="female"><a class="options">Female</a>
+                <input type = "radio" name = "sex" value="Others"><a class="options">Others</a><br><br>                
                 <h2>What is your most favorite animal ?</h2>
                 <input type = "text" name = "security" required = "true" placeholder="Most favorite animal"><br>
                 <input type = "submit" value ="Register">
