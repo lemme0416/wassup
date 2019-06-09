@@ -24,7 +24,7 @@
             require_once('login.php');
             $dsn = 'mysql:host=localhost;dbname=wassup';
             $dbh = new PDO($dsn,$CFG['username'],$CFG['pw']);
-            if(empty($_GET['search'])== false){
+            if(isset($_GET["search"])){
                 $str = $_GET["search"];
                 $sth = $dbh->prepare("SELECT * FROM music WHERE name like '%$str%'");
                 $sth->setFetchMode(PDO:: FETCH_OBJ);
