@@ -7,7 +7,7 @@
         $inst = 'create table '.$_SESSION['login'].'_list_'.$_POST['list_name'].' (song VARCHAR(100));';
         $sth = $dbh->prepare($inst);
         $sth->execute();
-        $inst = 'insert into '.$_SESSION['login'].'_list (' .$_POST['list_name'].');';
+        $inst = 'insert into '.$_SESSION['login'].'_list values (' .$_POST['list_name'].');';
         $sth = $dbh->prepare($inst);
         $sth->execute();
     }
