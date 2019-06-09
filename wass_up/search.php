@@ -16,7 +16,7 @@
     $dbh = new PDO($dsn,$CFG['username'],$CFG['pw']);
     if(isset($_POST['submit'])){
         $str = $_POST["search"];
-        $sth = $dbh->prepare("SELECT * FROM music WHERE name = '$str'");
+        $sth = $dbh->prepare("SELECT * FROM music WHERE name = '%$str%'");
         $sth->setFetchMode(PDO:: FETCH_OBJ);
         $sth->execute();
 
