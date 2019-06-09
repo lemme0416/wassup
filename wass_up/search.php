@@ -2,27 +2,16 @@
 <html> 
     <head> 
         <meta http-equiv="content-type" content="text/html; charset=utf-8"> 
-        <style>
-            div{
-                overflow: hidden;
-                background-color: DarkSlateGray;
-                border: 2px solid white;
-                margin: 2px 2px;
-            }
-            body{
-                background-color: lightblue;
-                margin: 0px;
-            }
-            p{
-                text-align: center;
-                color: white;
-            }
-        </style>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+        
+        <link rel="stylesheet" href="css/search.css">
+
     </head> 
-    <body bgcbor="#ffffff" text="#000000"> 
-        <form method="post" action="search.php"> 
-            <input type="text" name="search" placeholder="Search">
-            <input type="submit" name="submit" value=">>">
+    <body> 
+        <form method="post" action="search.php" class="search-box"> 
+            <input type="text" name="search" required="true" placeholder="Search" class="search-txt">
+            <input type="submit" name="submit" value=">"class="search-btn">
         </form> 
     </body> 
 </html>
@@ -30,24 +19,27 @@
     require_once('login.php');
     $dsn = 'mysql:host=localhost;dbname=wassup';
     $dbh = new PDO($dsn,$CFG['username'],$CFG['pw']);
-    if(isset($_POST['submit'])){
-        $str = $_POST["search"];
-        $sth = $dbh->prepare("SELECT * FROM music WHERE name like '%$str%'");
-        $sth->setFetchMode(PDO:: FETCH_OBJ);
-        $sth->execute();
+    if(empty($_POST['search'])== false){
+        if(isset($_POST['submit'])){
+            $str = $_POST["search"];
+            $sth = $dbh->prepare("SELECT * FROM music WHERE name like '%$str%'");
+            $sth->setFetchMode(PDO:: FETCH_OBJ);
+            $sth->execute();
 
-        while($row = $sth->fetch()){
-            echo '<div onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="jump('."'$row->name'".')">
-            ';
-            echo"	<p>$row->name</p>
-            ";
-            echo"</div>
-            ";            
-        ?>
-<?php     
-        }
-        // else echo "name doesnt exist";
+            while($row = $sth->fetch()){
+                echo '<div onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="jump('."'$row->name'".')">
+                ';
+                echo"	<p>$row->name</p>
+                ";
+                echo"</div>
+                ";            
+            ?>
+    <?php     
+            }
+            // else echo "name doesnt exist";
+        }        
     }
+
 ?>
 <script>
     function interact() {

@@ -15,8 +15,8 @@ if (isset($_SESSION['login'])=='') {
         <meta charset="utf-8" />
         <title>Home | WassUp!</title>
     </head>
-    <frameset rows="1*,8*,1*">
-        <frame src="search.php" name="top">
+    <frameset rows="6*,80*,10*">
+        <frame src="search.php" name="top" noresize="noresize">
         <frameset cols="1*,5*">
             <frame src="left.php" name="left">
             <frame src="yellow.php" name="right">
