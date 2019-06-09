@@ -6,7 +6,7 @@
     <body bgcbor="#ffffff" text="#000000"> 
         <form method="post" action="search.php"> 
             <input type="text" name="search" placeholder="Search">
-            <input type="submit" value=">>">
+            <input type="submit" name="submit" value=">>">
         </form> 
     </body> 
 </html>
@@ -14,21 +14,29 @@
     require_once('login.php');
     $dsn = 'mysql:host=localhost;dbname=wassup';
     $dbh = new PDO($dsn,$CFG['username'],$CFG['pw']);
-    $output ='';
-    if(isset($_POST['search'])){
-        $searchq = $_POST['search'];
-        $searchq = preg_replace("#[^0-9a-z]#i","",$searchq);
-        $query = mysql_query("SELECT * from music where name like'%$searchq%'") or die("could not search!");
-        $count = mysql_num_rows($query);
-        if($count == 0){
-            $output = 'There was no search results!';
+    if(isset($_POST['submit'])){
+        $str = $_POST["search"];
+        $sth = $dbh->prepare("SELECT * FROM music WHERE name = '$str'");
+        $sth->setFetchMode(PDO:: FETCH_OBJ);
+        $sth->execute();
+
+        if($row = $sth->fecth()){
+            ?>
+            <br><br><br>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>id</th>
+                </tr>
+                <tr>
+                    <td><?php echo $row->name; ?></td>
+                    <td><?php echo $row->id; ?></td>
+                </tr>
+            </table>
+<?php            
         }
         else{
-            while ($row = mysql_fetch_array($query)) {
-                $fname = $row['name'];
-                $output .= '<div>'.$fname.'</div>';
-            }
+            echo "name doesnt exist!";
         }
     }
-    print("$output");
 ?>

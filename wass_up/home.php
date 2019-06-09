@@ -19,7 +19,7 @@ if (isset($_SESSION['login'])=='') {
         <frameset cols="1*,5*">
             <frame src="left.php" name="left">
              <frameset row="1*,8*">   
-                <frame src="search.php" name="top" noresize="noresize">
+                <frame src="search.php" name="top">
                 <frame src="yellow.php" name="right">
             </frameset>
         </frameset>
