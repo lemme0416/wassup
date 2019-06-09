@@ -37,7 +37,7 @@ session_start();
                 <input type = "password" name = "pw" required = "true" placeholder="Enter Your Password">
                 <input type ="text" name = "nkn" required = "true" placeholder="Enter Your Nickname">
 
-                <a>Gender:</a>
+                <h2>Gender:</h2>
                 <input type = "radio" name = "sex" required = "true"><a>Male</a>
                 <input type = "radio" name = "sex"><a>Female</a>
                 <input type = "radio" name = "sex"><a>Others</a><br><br>                
@@ -63,7 +63,7 @@ session_start();
 
         $sth = $dbh->prepare('insert into users (id,pw,name,gender,problem) values (?,?,?,?,?) ;');
         $sth->execute(array(@$_POST['id'],@$_POST['pw'],@$_POST['nkn'],@$_POST['sex'],@$_POST['security']));
-        echo "<script>alert('Password has been modified!')</script>";
+        echo "<script>alert('Registration success!')</script>";
         echo "<script type='text/javascript'>";
             echo "window.location.href='index.php'";
         echo "</script>";  
