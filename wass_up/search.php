@@ -17,39 +17,12 @@
                 </button>
             </form>
         <div> 
-            
-        <!-- <?php
-            // require_once('login.php');
-            // $dsn = 'mysql:host=localhost;dbname=wassup';
-            // $dbh = new PDO($dsn,$CFG['username'],$CFG['pw']);
-            // if(empty($_POST['search'])== false){
-            //     if(isset($_POST['submit'])){
-            //         $str = $_POST["search"];
-            //         $sth = $dbh->prepare("SELECT * FROM music WHERE name like '%$str%'");
-            //         $sth->setFetchMode(PDO:: FETCH_OBJ);
-            //         $sth->execute();
-
-            //         while($row = $sth->fetch()){
-            //             echo '<div class="song_div" onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="jump('."'$row->name'".')">
-            //             ';
-            //             echo"	<p>$row->name</p>
-            //             ";
-            //             echo"</div>
-            //             ";            
-                    ?>
-            <?php     
-            //         }
-            //         // else echo "name doesnt exist";
-            //     }        
-            // }
-
-        ?> -->
     </body> 
 </html>
 
 <script>
 	function jump(){
-        var x=document.getElementbyId("search").value;
+        var x = document.getElementById("search").value;
 		parent.frames[2].location = "show_search_result.php?search="+x;
 	}
 </script>
