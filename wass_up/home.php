@@ -18,10 +18,10 @@ if (isset($_SESSION['login'])=='') {
     <frameset rows="6*,1*">
         <frameset cols="1*,5*">
             <frame src="left.php" name="left">
-             <frameset row="1*,8*">   
-                <frame src="search.php" name="top">
+             <!-- <frameset row="1*,8*">    -->
+                <!-- <frame src="search.php" name="top"> -->
                 <frame src="yellow.php" name="right">
-            </frameset>
+            <!-- </frameset> -->
         </frameset>
         <frame src="music.html" name="music" noresize="noresize">
     </frameset>
