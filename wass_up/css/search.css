@@ -30,6 +30,7 @@ p{
     padding: 0 6px;
 
 }
+
 .search-box:hover > .search-btn {
     background: white;
     color: black;
@@ -73,12 +74,13 @@ p{
 list-style: none;
 
 width: 377px;
-position: absolute;
-top: 25%;
-left: 15%;
+/* position: absolute;
+top: 8%;
+left: 50%; */
+margin: auto auto auto auto; 
 padding: 0px;
 float: left;
-transform: translateX(-50%) translateY(-50%);
+/* transform: translateX(-50%) translateY(-50%); */
 }
 .text li{
 display: inline-block;
