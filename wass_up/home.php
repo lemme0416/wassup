@@ -16,7 +16,7 @@ if (isset($_SESSION['login'])=='') {
         <title>Home | WassUp!</title>
     </head>
     <frameset rows="8*,80*,10*">
-        <frame src="search.php" name="top" noresize="noresize">
+        <frame src="search.php" name="top">
         <frameset cols="1*,5*">
             <frame src="left.php" name="left">
             <frame src="yellow.php" name="right">
