@@ -37,7 +37,7 @@ session_start();
                 <input type = "password" name = "pw" required = "true" placeholder="Enter Your Password">
                 <input type ="text" name = "nkn" required = "true" placeholder="Enter Your Nickname">
 
-                <a class="gender">Gender : </a>
+                <a class="gender">Gender  :  </a>
                 <input type = "radio" name = "sex" required = "true"><a class="options">Male</a>
                 <input type = "radio" name = "sex"><a class="options">Female</a>
                 <input type = "radio" name = "sex"><a class="options">Others</a><br><br>                
