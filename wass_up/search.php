@@ -25,6 +25,6 @@
             <p><?php echo $row->name;?><p> 
 <?php     
         }
-        else echo "name doesnt exist";
+        // else echo "name doesnt exist";
     }
 ?>
