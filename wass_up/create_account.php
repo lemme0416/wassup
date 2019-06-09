@@ -19,4 +19,9 @@ security word<input type = "text" name = "security"><br>
     $dbh = new PDO($dsn,$CFG['username'],$CFG['pw']);
     $sth = $dbh->prepare('insert into users (id,pw,name,gender,problem) values (?,?,?,?,?) ;');
     $sth->execute(array(@$_POST['id'],@$_POST['pw'],@$_POST['nkn'],@$_POST['sex'],@$_POST['security']));
+	if(isset($_POST['id'])){
+		$inst = 'create table if not exists '.$_POST['id'].'_list (list_name VARCHAR(50));';
+		$sth = $dbh->prepare($inst);
+		$sth->execute();
+	}
 ?> 

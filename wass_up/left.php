@@ -51,7 +51,7 @@ session_start();
 	<div onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="show_form()">
 		<p>新增清單</p>
 	</div>
-	<form method = "POST" hidden = "true" action="add_list.php" id="hidden_form">
+	<form method = "POST" hidden = "true" action="add_list.php" id="hidden_form" style="margin:0px 0px 0px 5px">
 		<input type="text">
 		<input type="submit" value="新增">
 	</form>
