@@ -37,11 +37,12 @@ session_start();
                 <input type = "password" name = "pw" required = "true" placeholder="Enter Your Password">
                 <input type ="text" name = "nkn" required = "true" placeholder="Enter Your Nickname">
 
-                Gender:<input type = "radio" name = "sex" required = "true">male
-                <input type = "radio" name = "sex">female
-                <input type = "radio" name = "sex">other<br>                
+                <a>Gender:</a>
+                <input type = "radio" name = "sex" required = "true"><a>Male</a>
+                <input type = "radio" name = "sex"><a>Female</a>
+                <input type = "radio" name = "sex"><a>Others</a><br>                
                 <h2>Most favorite animal ?</h2>
-                <input type = "text" name = "security" required = "true"><br>
+                <input type = "text" name = "security" required = "true"><br><br>
                 <input type = "submit" value ="Register">
             </form>
         </div>
