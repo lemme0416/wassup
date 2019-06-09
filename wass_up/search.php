@@ -21,10 +21,32 @@
         $sth->execute();
 
         while($row = $sth->fetch()){
-            ?>
-            <p><?php echo $row->name;?><p> 
+            echo '<div onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="jump('."' $row->name'".')">
+            ';
+            echo"	<p>$row->name</p>
+            ";
+            echo"</div>
+            ";            
+        ?>
 <?php     
         }
         // else echo "name doesnt exist";
     }
 ?>
+<script>
+    function interact() {
+		var x = document.getElementsByName("text")[0].value;
+		var address = "right.php?text=" + x;
+		parent.frames[1].location = address;
+    }
+	function color_deep(x) {
+		x.style.backgroundColor = 'black';
+	}
+	function color_shallow(x) {
+		x.style.backgroundColor = 'DarkSlateGray ';
+	}
+	function jump(x){
+		var address = "music2.php?name=" + x;
+		parent.frames[2].location = address;
+	}
+</script>
