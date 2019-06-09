@@ -19,8 +19,8 @@ p{
     left: 50%;
     transform: translate(-50%, -50%);
     background: #2f3640;
-    height: 30px;
-    border-radius: 30px;
+    height: 35px;
+    border-radius: 35px;
     padding: 10px;
 
 }
@@ -39,8 +39,8 @@ p{
 .search-btn {
     color: #e84118;
     float: right;
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     border-radius: 50%;
     background: #2f3640;
     display: flex;
@@ -48,6 +48,7 @@ p{
     align-items: center;
     transition: 0.4s;
     color: white;
+    cursor: pointer;    
 }
 
 .search-btn > i {
@@ -63,9 +64,9 @@ p{
     color: white;
     font-size: 16px;
     transition: 0.4s;
-    line-height: 30px;
+    line-height: 35px;
     width: 0px;
     font-weight: bold;
     font-family: 'Montserrat';
-    font-size: 20px;
+    font-size: 25px;
 }
