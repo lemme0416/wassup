@@ -39,20 +39,21 @@ session_start();
 	<div onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="jump('red.php')">
 		<p>排行榜</p>
 	</div>
-	<div onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="jump('green.php')">
-		<p>list1</p>
-	</div>
-	<div onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="jump('orange.php')">
-		<p>list2</p>
-	</div>
-	<div onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="jump('purple.php')">
-		<p>list3</p>
-	</div>
+	<?php
+		$inst = 'select * from '.$_SESSION['login'].'_list;';
+		$sth = $dbh->prepare($inst);
+		$sth->execute();
+		while($row=$sth->fetch(PDO::FETCH_ASSOC)){
+			echo '<div onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="jump('."'list.php?name=123'".')">';
+			echo '<p>'.$row['list_name'].'</p>';
+			echo '</div>';	
+		}
+	?>
 	<div onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="show_form()">
 		<p>新增清單</p>
 	</div>
-	<form method = "POST" hidden = "true" action="add_list.php" id="hidden_form" style="margin:0px 0px 0px 5px">
-		<input type="text">
+	<form method = "POST" hidden = "true" action="add_list.php" id="hidden_form" style="margin:0px 0px 0px 10px">
+		<input type="text" required="true" name="list_name">
 		<input type="submit" value="新增">
 	</form>
 
