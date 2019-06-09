@@ -9,12 +9,14 @@
 
     </head> 
     <body> 
+        <div>
         <form method="post" action="search.php" class="search-box"> 
             <input type="text" name="search" required="true" placeholder="Search" class="search-txt">
             <button type="submit" name="submit" class="search-btn">
                 <i class="fas fa-search"></i>
             </button>
-        </form> 
+        </form>
+        <div> 
     </body> 
 </html>
 <?php
@@ -29,7 +31,7 @@
             $sth->execute();
 
             while($row = $sth->fetch()){
-                echo '<div onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="jump('."'$row->name'".')">
+                echo '<div class="song_div" onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="jump('."'$row->name'".')">
                 ';
                 echo"	<p>$row->name</p>
                 ";

@@ -3,7 +3,7 @@ body {
     padding: 0;
     background: #e84118;
 }
-div{
+..song_div{
     overflow: hidden;
     background-color: DarkSlateGray;
     border: 2px solid white;
@@ -52,7 +52,7 @@ p{
 }
 
 .search-btn > i {
-    font-size: 25px;    
+    font-size: 20px;    
 }
 
 .search-txt {
