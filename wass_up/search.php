@@ -10,8 +10,8 @@
     </head> 
     <body> 
         <div>
-            <form method="post" action="show_search_result.php" class="search-box"> 
-                <input type="text" name="search" required="true" placeholder="Search" class="search-txt">
+            <form method="get" action="search.php" class="search-box"> 
+                <input type="text" id="search" name="search" required="true" placeholder="Search" class="search-txt">
                 <button type="submit" name="submit" class="search-btn" onclick="jump()">
                     <i class="fas fa-search"></i>
                 </button>
@@ -49,6 +49,7 @@
 
 <script>
 	function jump(){
-		parent.frames[2].location = "show_search_result.php";
+        var x=document.getElementbyId("search").value;
+		parent.frames[2].location = "show_search_result.php?search="+x;
 	}
 </script>

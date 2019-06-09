@@ -24,25 +24,23 @@
             require_once('login.php');
             $dsn = 'mysql:host=localhost;dbname=wassup';
             $dbh = new PDO($dsn,$CFG['username'],$CFG['pw']);
-            if(empty($_POST['search'])== false){
-                if(isset($_POST['submit'])){
-                    $str = $_POST["search"];
-                    $sth = $dbh->prepare("SELECT * FROM music WHERE name like '%$str%'");
-                    $sth->setFetchMode(PDO:: FETCH_OBJ);
-                    $sth->execute();
+            if(empty($_GET['search'])== false){
+                $str = $_GET["search"];
+                $sth = $dbh->prepare("SELECT * FROM music WHERE name like '%$str%'");
+                $sth->setFetchMode(PDO:: FETCH_OBJ);
+                $sth->execute();
 
-                    while($row = $sth->fetch()){
-                        echo '<div class="song_div" onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="jump('."'$row->name'".')">
-                        ';
-                        echo"	<p>$row->name</p>
-                        ";
-                        echo"</div>
-                        ";            
-                    ?>
+                while($row = $sth->fetch()){
+                    echo '<div class="song_div" onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="jump('."'$row->name'".')">
+                    ';
+                    echo"	<p>$row->name</p>
+                    ";
+                    echo"</div>
+                    ";            
+                ?>
             <?php     
-                    }
+                }
                     // else echo "name doesnt exist";
-                }        
             }
 
         ?> 
