@@ -20,23 +20,32 @@
         $sth->setFetchMode(PDO:: FETCH_OBJ);
         $sth->execute();
 
-        if($row = $sth->fetch()){
-            ?>
-            <br><br><br>
-            <table>
-                <tr>
-                    <th>Name</th>
-                    <th>id</th>
-                </tr>
-                <tr>
-                    <td><?php echo $row->name; ?></td>
-                    <td><?php echo $row->id; ?></td>
-                </tr>
-            </table>
-<?php            
-        }
-        else{
-            echo "name doesnt exist!";
+        while($row = $sth->fetch()){
+            $song_name = $row['name'];
+            $song_string = (string)$song_name;
+            echo '<div onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="jump('."'$song_string'".')">
+            ';
+            echo"	<p>$song_name</p>
+            ";
+            echo"</div>
+            ";        
         }
     }
 ?>
+<script>
+    function interact() {
+		var x = document.getElementsByName("text")[0].value;
+		var address = "right.php?text=" + x;
+		parent.frames[1].location = address;
+    }
+	function color_deep(x) {
+		x.style.backgroundColor = 'black';
+	}
+	function color_shallow(x) {
+		x.style.backgroundColor = 'DarkSlateGray ';
+	}
+	function jump(x){
+		var address = "music2.php?name=" + x;
+		parent.frames[2].location = address;
+	}
+</script>
