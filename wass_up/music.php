@@ -7,16 +7,17 @@ $dbh = new PDO($dsn,$CFG['username'],$CFG['pw']);
 $sth = $dbh->prepare('select (*) from ? order by id;');
 //$sth->bindparam("ss");
 $sth->execute(array($obj['table']));
-
+/*
 while ($result = $sth->fetch()){
     echo $result;
-}
+}*/
 
 $result = $sth->fetchAll();
+/*
 //$outp = $result->fetch_all(MYSQLI_ASSOC);
 echo $obj['table'];
 echo $_GET["x"];
-echo $obj->table;
+echo $obj->table;*/
 //echo $result;
 echo json_encode($result);
 
