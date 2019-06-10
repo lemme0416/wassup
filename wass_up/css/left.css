@@ -9,6 +9,7 @@ div:hover > p{
 }
 div:focus{
     border-color: red;
+    border-left: 10px solid;
 }
 body{
     background-color: rgb(0, 0, 0);
