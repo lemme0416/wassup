@@ -47,14 +47,12 @@
 		echo '<div onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="jump('."'$song_name'".')">
 		';
 		echo '<p>'.$song_name.'</p>';
-		echo '<form><select name='."'$song_name'".'>';
+		echo '<form method="POST" action="add_to_list?song_name='."'$song_name'".'><select name="list_name">';
 		foreach($arr as $value){
 			echo '<option value='."'$value'".'>'.$value.'</option>';
 		}
-		echo" </select></form>
-		";
-		echo"</div>
-		";
+		echo '</select><input type="submit" value="add to list"></form>';
+		echo '</div>';
 	}
 ?>
 <script>
