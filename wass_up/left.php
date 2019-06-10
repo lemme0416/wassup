@@ -29,7 +29,7 @@ session_start();
 		$name = $dbh->prepare('select * from users where id = ? ;');
 		$name->execute(array($_SESSION['login']));
 		while($row=$name->fetch(PDO::FETCH_ASSOC)){
-			echo "<p>Hello, $row['name']</p>"; 
+			echo '<p>Hello, '.$row['name'].'</p>';
 		}
 	?>
 	</div>
