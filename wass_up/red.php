@@ -25,6 +25,10 @@
 			display: inline-block;
 			float: right;
 		}
+		select{
+			display: inline-block;
+			float: right;
+		}
 	</style>
 </head>
 <body>
@@ -47,11 +51,12 @@
 		echo '<div onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="jump('."'$song_name'".')">
 		';
 		echo '<p>'.$song_name.'</p>';
-		echo '<form method="POST" action="add_to_list?song_name='."'$song_name'".'><select name="list_name">';
+		echo '<select name="list_name">';
 		foreach($arr as $value){
 			echo '<option value='."'$value'".'>'.$value.'</option>';
 		}
-		echo '</select><input type="submit" value="add to list"></form>';
+		echo '</select>';
+		echo '<form method="POST" action="add_to_list.php?song_name='."'$song_name'".'><input type="submit" value="add to list"></form>';
 		echo '</div>';
 	}
 ?>
