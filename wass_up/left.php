@@ -26,8 +26,11 @@ session_start();
 		require_once('login.php');
 		$dsn = 'mysql:host=localhost;dbname=wassup';
 		$dbh = new PDO($dsn,$CFG['username'],$CFG['pw']);
-		$id_name = $_SESSION['login'];
-		echo "<p>Hello, $id_name</p>"; 
+		$name = $dbh->prepare('select * from users where id = ? ;');
+		$name->execute(array($_SESSION['login']));
+		while($row=$name->fetch(PDO::FETCH_ASSOC)){
+			echo "<p>Hello, $row['name']</p>"; 
+		}
 	?>
 	</div>
 	<div onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="jump('modify_pw.php')">
