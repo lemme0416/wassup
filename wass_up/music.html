@@ -1,20 +1,4 @@
 <html>
-<body onload="play_music()">
-<!-- 播放 -->
-<audio id ="music" preload="true" controls = "true" loop = false>
-Your browser does not support the audio element.
-</audio>
-<select name="how_to_play" id = "playmode" onchange="showCustomer(this.value)">
-  <option value="loop">循環播放</option>
-  <option value="single">單曲循環</option>
-  <option value="random">random</option>
-</select>
-<input type = "button" onclick = "playendedhandler()">下一首</input>
-<p id = "test">error</p>
-<p id = "l"></p>
-
-
-</body>
 <script>
 var loop_or_single = false;
 var i = 0;
@@ -67,6 +51,21 @@ function nextmusic(){
   document.getElementById("music").src = "music/"+myObj[i].name+".mp3";
 }
 </script>
-    
+<body onload="play_music()">
+  <!-- 播放 -->
+  <audio id ="music" preload="true" controls = "true" loop = false>
+  Your browser does not support the audio element.
+  </audio>
+  <select name="how_to_play" id = "playmode" onchange="showCustomer(this.value)">
+    <option value="loop">循環播放</option>
+    <option value="single">單曲循環</option>
+    <option value="random">random</option>
+  </select>
+  <input type = "button" onclick = "playendedhandler()">下一首</input>
+  <p id = "test">error</p>
+  <p id = "l"></p>
+  
+  
+  </body>
 
 </html>
