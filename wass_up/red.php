@@ -38,9 +38,8 @@
     $sth1->execute();
 	$arr = array();
 	while($col=$sth1->fetch(PDO::FETCH_ASSOC)){
-		array_push($arr, $col);
+		array_push($arr, $col['list_name']);
 	}
-	print_r($arr); 
     $sth2 = $dbh->prepare('select * from music;');
     $sth2->execute();
 	while($row=$sth2->fetch(PDO::FETCH_ASSOC)){
