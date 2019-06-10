@@ -17,8 +17,8 @@ if (isset($_SESSION['login'])=='') {
         <link rel="shortcut icon" href="https://imgur.com/G4KMHP3.png" type="image/x-icon" />
 
     </head>
-    <frameset rows="8*,80*,10*" border="2" bordercolor=black noresize="noresize">
-        <frame src="search.php" name="top">
+    <frameset rows="8*,80*,10*" border="2" bordercolor=black>
+        <frame src="search.php" name="top" noresize="noresize">
         <frameset cols="1*,5*">
             <frame src="left.php" name="left">
             <frame src="yellow.php" name="right">

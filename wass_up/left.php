@@ -30,9 +30,9 @@ session_start();
 		}
 	?>
 	</div>
-	<!-- <div onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="jump('modify_pw.php')"> -->
-		<h2 onclick="jump('modify_pw.php')">Modify Password</h2>
-	<!-- </div> -->
+	<div onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="jump('modify_pw.php')">
+		<p onclick="jump('modify_pw.php')">Modify Password</p>
+	</div>
 	<div onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="jump('upload.php')">
 		<p>上傳音樂</p>
 	</div>
@@ -70,6 +70,9 @@ session_start();
 		function show_form(){
 			var hid = document.getElementById("hidden_form");
 			hid.hidden = !(hid.hidden);
+		}
+		function toggleSidebar(){
+			document.getElementById("sidebar").classList.toggle('active');
 		}
 	</script>
 
