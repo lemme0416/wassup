@@ -15,6 +15,7 @@ while ($result = $sth->fetch()){
 $result = $sth->fetchAll();
 //$outp = $result->fetch_all(MYSQLI_ASSOC);
 echo $obj['table'];
+echo $obj->table;
 //echo $result;
 echo json_encode($result);
 
