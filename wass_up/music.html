@@ -10,6 +10,7 @@ Your browser does not support the audio element.
   <option value="random">random</option>
 </select>
 <input type ="button" value="下一首" onclick="playendedhandler()">
+<input type ="button" value="上一首" onclick="backsong()">
 <p id = "test">error</p>
 <p id = "l"></p>
 
@@ -44,6 +45,17 @@ xmlhttp.send();
 function getRandom(x){
     return Math.floor(Math.random()*x)+1;
 };
+function backsong(){
+  if (document.getElementById("playmode").value == "random") i = getRandom(length);
+      else if (i == 0)i =length-1;
+      else i--;
+      document.getElementById("music").loop = false;
+      document.getElementById("music").src = "music/"+myObj[i].name+".mp3";
+      document.getElementById("test").innerHTML = myObj[i].name;
+      document.getElementById("l").innerHTML =i;
+      document.getElementById("music").play();
+      
+}
 function playendedhandler(){
       if (document.getElementById("playmode").value == "random") i = getRandom(length);
       else if (i == length-1)i =0;
