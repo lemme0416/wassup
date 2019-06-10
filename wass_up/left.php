@@ -45,8 +45,8 @@ session_start();
 		$sth->execute();
 		while($row=$sth->fetch(PDO::FETCH_ASSOC)){
 			$list_name = $row['list_name'];
-			echo '<div onclick="jump('.'"list.php?list_name='.$list_name.'")'.'">';
 			$list_url = 'list.php?list_name='.$list_name;
+			echo '<div onclick="jump('."'$list_url'".')">';
 			echo '<p class="options">'.$list_name.'</p>';
 			echo '</div>';	
 		}
