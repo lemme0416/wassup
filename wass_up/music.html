@@ -32,7 +32,7 @@ function play_music(obj){
   if (this.readyState == 4 && this.status == 200) {
     myObj = JSON.parse(this.responseText);
     length = myObj.length;
-    document.getElementById("l").innerHTML = dbParam;
+    document.getElementById("l").innerHTML = this.responseText;
     document.getElementById("music").src = "music/"+myObj[i].name+".mp3";
     document.getElementById("music").loop = false;
     document.getElementById("test").innerHTML = myObj[i].name;
