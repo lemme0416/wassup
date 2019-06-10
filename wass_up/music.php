@@ -6,7 +6,7 @@ $dsn = 'mysql:host=localhost;dbname=wassup';
 $dbh = new PDO($dsn,$CFG['username'],$CFG['pw']);
 $sth = $dbh->prepare('select (*) from ? order by id;');
 //$sth->bindparam("ss");
-$sth->execute(array($obj->table));
+$sth->execute(arraxy($obj->table));
 
 while ($result = $sth->fetch()){
     echo $result;
