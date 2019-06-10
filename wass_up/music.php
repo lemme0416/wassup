@@ -4,7 +4,7 @@ $obj = json_decode($_GET["x"], false);
 require_once('login.php');
 $dsn = 'mysql:host=localhost;dbname=wassup';
 $dbh = new PDO($dsn,$CFG['username'],$CFG['pw']);
-$sth = $dbh->prepare('select (*) from music order by id;');
+$sth = $dbh->prepare('select name from music order by id;');
 //$sth->bindparam("ss");
 $sth->execute();
 /*
