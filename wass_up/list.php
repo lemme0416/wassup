@@ -44,8 +44,8 @@
 	while($col=$sth1->fetch(PDO::FETCH_ASSOC)){
 		array_push($arr, $col['list_name']);
 	}
-	$inst = 'select * from '.$_GET['list_name'];
-    $sth2 = $dbh->prepare('select * from music;');
+	$inst = 'select * from '.$_SESSION['login'].'_list_'.$_GET['list_name'];
+    $sth2 = $dbh->prepare($inst);
     $sth2->execute();
 	while($row=$sth2->fetch(PDO::FETCH_ASSOC)){
 		$song_name = $row['name'];
