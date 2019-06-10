@@ -44,7 +44,7 @@ session_start();
 		$sth = $dbh->prepare($inst);
 		$sth->execute();
 		while($row=$sth->fetch(PDO::FETCH_ASSOC)){
-			echo '<div onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="jump('."'list.php?name=123'".')">';
+			echo '<div onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="jump("'.'list.php?list_name='.$list_name.'")">';
 			echo '<p>'.$row['list_name'].'</p>';
 			echo '</div>';	
 		}

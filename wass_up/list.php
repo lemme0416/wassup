@@ -1,4 +1,3 @@
 <?php
-	echo '123';
-
+	echo $_GET['list_name'];
 ?>
