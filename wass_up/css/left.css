@@ -6,7 +6,7 @@ body{
 }
 div{
     width: 189.6px;
-    overflow-x: hidden;
+    overflow: hidden;
     border-left: 10px solid rgba(0, 0, 0, 0);
 }
 div:hover > .options{
