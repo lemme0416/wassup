@@ -24,6 +24,6 @@ if (isset($_SESSION['login'])=='') {
             <frame src="left.php" name="left">
             <frame src="yellow.php" name="right">
         </frameset>
-        <frame src="music.html" name="music" >
+        <frame src="music.php" name="music" >
     </frameset>
 </html>
