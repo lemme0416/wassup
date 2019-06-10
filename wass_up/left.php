@@ -34,7 +34,7 @@ session_start();
 	?>
 	</div>
 	<div onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="jump('modify_pw.php')">
-		<p>修改密碼</p>
+		<h2 onclick="jump('modify_pw.php')">Modify Password</h2>
 	</div>
 	<div onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="jump('upload.php')">
 		<p>上傳音樂</p>
