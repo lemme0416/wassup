@@ -18,7 +18,6 @@
 		}
 		p{
 			display: inline-block;
-			margin: 0px 0px 0px 5px;
 			text-align: center;
 			color: white;
 		}
@@ -41,6 +40,7 @@
 	while($col=$sth1->fetch(PDO::FETCH_ASSOC)){
 		array_push($arr, $col);
 	}
+	echo $arr;
     $sth2 = $dbh->prepare('select * from music;');
     $sth2->execute();
 	while($row=$sth2->fetch(PDO::FETCH_ASSOC)){
