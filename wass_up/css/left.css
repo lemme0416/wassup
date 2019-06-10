@@ -10,3 +10,15 @@ h2:hover{
     font-family: 'Montserrat';
     font-size: 18px;
 }
+div{
+    overflow: hidden;
+    background-color: gray;
+}
+body{
+    background-color: gray;
+    margin: 0px;
+}
+p{
+    text-align: center;
+    color: white;
+}
