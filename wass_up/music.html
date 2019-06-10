@@ -4,14 +4,11 @@
 <audio id ="music" preload="true" controls = "true" loop = false>
 Your browser does not support the audio element.
 </audio>
-<form action="" onchange="showCustomer(this.value)">
-  <select name="how_to_play" id = "playmode">
-    <option value="loop">循環播放</option>
-    <option value="single">單曲循環</option>
-    <option value="random">random</option>
-  </select>
-  <input type="submit" value="Submit">
-  </form>
+<select name="how_to_play" id = "playmode" onchange="showCustomer(this.value)">
+  <option value="loop">循環播放</option>
+  <option value="single">單曲循環</option>
+  <option value="random">random</option>
+</select>
   
 <p id = "test">error</p>
 <p id = "l"></p>
