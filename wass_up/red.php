@@ -56,7 +56,7 @@
 			echo '<option value='."'$value'".'>'.$value.'</option>';
 		}
 		echo '</select>';
-		echo '<form method="POST" id="'.$song_name.'"action="add_to_list.php?song_name='."'$song_name'".'"><input type="submit" value="add to list"></form>';
+		echo '<form method="POST" id="'.$song_name.'"action="add_to_list.php?song_name='.'$song_name'.'"><input type="submit" value="add to list"></form>';
 		echo '</div>';
 	}
 ?>
