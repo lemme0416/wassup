@@ -64,7 +64,7 @@ session_start();
         $sth = $dbh->prepare('insert into users (id,pw,name,gender,problem) values (?,?,?,?,?) ;');
         $sth->execute(array(@$_POST['id'],@$_POST['pw'],@$_POST['nkn'],@$_POST['sex'],@$_POST['security']));
         if(isset($_POST['id'])){
-            $inst = 'create table if not exists '.$_POST['id'].'_list (list_name VARCHAR(50));';
+            $inst = 'create table if not exists '.$_POST['id'].'_list (list_name VARCHAR(50), CONSTRAINT list_unique UNIQUE (list_name));';
             $sth = $dbh->prepare($inst);
             $sth->execute();
         }          
