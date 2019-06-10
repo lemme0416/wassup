@@ -59,21 +59,12 @@ session_start();
 	</form>
 
     <script>
-		// function color_deep(x) {
-		// 	x.style.backgroundColor = 'DimGray';
-		// }
-		// function color_shallow(x) {
-		// 	x.style.backgroundColor = 'gray';
-		// }
 		function jump(x){
 			parent.frames[2].location = x;
 		}
 		function show_form(){
 			var hid = document.getElementById("hidden_form");
 			hid.hidden = !(hid.hidden);
-		}
-		function toggleSidebar(){
-			document.getElementById("sidebar").classList.toggle('active');
 		}
 	</script>
 
