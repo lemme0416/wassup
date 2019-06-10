@@ -1,14 +1,25 @@
 <html>
 <body>
+<!-- 播放 -->
 <audio id ="music" preload="true" controls = "true" loop = false>
 Your browser does not support the audio element.
 </audio>
+<form action="" onchange="showCustomer(this.value)">
+  <select name="how_to_play">
+    <option value="loop">循環播放</option>
+    <option value="single">單曲循環</option>
+    <option value="random">random</option>
+  </select>
+  <input type="submit" value="Submit">
+  </form>
+  
 <p id = "test">error</p>
 <p id = "l"></p>
 
 
 </body>
 <script>
+var loop_or_single = false;
 var i = 0;
 var obj, dbParam, xmlhttp;
 obj = { "table":"name", "limit":10 };
@@ -25,10 +36,10 @@ xmlhttp.onreadystatechange = function() {
     document.getElementById("music").addEventListener('ended',playendedhandler, false);
     document.getElementById("music").play();
     function playendedhandler(){
-      
-      if (i == myObj.length)i =0;
+      if (form.how_to_play.value == "random") i = getRandom(myObj.length);
+      else if (i == myObj.length)i =0;
       else i++;
-      document.getElementById("music").loop = false
+      document.getElementById("music").loop = loop_or_single;
       document.getElementById("music").src = "music/"+myObj[i].name+".mp3";
       document.getElementById("test").innerHTML = myObj[i].name;
       document.getElementById("l").innerHTML =i;
@@ -39,6 +50,15 @@ xmlhttp.onreadystatechange = function() {
 };
 xmlhttp.open("GET", "music.php?x="+dbParam, true);
 xmlhttp.send();
+
+function getRandom(x){
+    return Math.floor(Math.random()*x)+1;
+};
+
+function showCustomer(str){
+  if (str == single)loop_or_single = true;
+  else loop_or_single = false;
+}
 </script>
     
 
