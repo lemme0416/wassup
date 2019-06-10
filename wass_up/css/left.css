@@ -1,6 +1,6 @@
 div{
     overflow: hidden;
-    border-left: 10p solid ;
+    border-left: 10px solid ;
 }
 div:hover > .options{
     color: white;
