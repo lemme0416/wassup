@@ -8,6 +8,7 @@
         $sth = $dbh->prepare($inst);
         $sth->execute();
         $inst = 'insert into '.$_SESSION['login'].'_list(list_name) values (' .$_POST['list_name'].');';
+		echo $inst;
         $sth = $dbh->prepare($inst);
         $sth->execute();
     }
