@@ -18,15 +18,17 @@ Your browser does not support the audio element.
 <script>
 var loop_or_single = false;
 var i = 0;
+var length;
 var obj, dbParam, xmlhttp;
 obj = { "table":"name", "limit":10 };
+var myObj
 function play_music(){
   dbParam = JSON.stringify(obj);
   var xmlhttp = new XMLHttpRequest();
   xmlhttp.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) {
-    var myObj = JSON.parse(this.responseText);
-    
+    myObj = JSON.parse(this.responseText);
+    length = myObj.length;
     document.getElementById("music").src = "music/"+myObj[i].name+".mp3";
     document.getElementById("music").loop = false;
     document.getElementById("test").innerHTML = myObj[i].name;
@@ -43,8 +45,8 @@ function getRandom(x){
     return Math.floor(Math.random()*x)+1;
 };
 function playendedhandler(){
-      if (document.getElementById("playmode").value == "random") i = getRandom(myObj.length);
-      else if (i == myObj.length-1)i =0;
+      if (document.getElementById("playmode").value == "random") i = getRandom(length);
+      else if (i == length-1)i =0;
       else i++;
       document.getElementById("music").loop = false;
       document.getElementById("music").src = "music/"+myObj[i].name+".mp3";
@@ -55,7 +57,7 @@ function playendedhandler(){
     }
 function showCustomer(str){
   if (str == "single")document.getElementById("music").loop = true;
-  else if (str == "loop")document.getElementById("music").loop = false;
+  else document.getElementById("music").loop = false;
 }
 </script>
     
