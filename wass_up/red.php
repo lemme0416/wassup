@@ -14,8 +14,13 @@
 			margin: 0px;
 		}
 		p{
+			display: inline-block;
 			text-align: center;
 			color: white;
+		}
+		form{
+			display: inline-block;
+			float: right;
 		}
 	</style>
 </head>
@@ -25,14 +30,28 @@
     require_once('login.php');
     $dsn = 'mysql:host=localhost;dbname=wassup';
     $dbh = new PDO($dsn,$CFG['username'],$CFG['pw']);
-    $sth = $dbh->prepare('select * from music;');
-    $sth->execute();
-	while($row=$sth->fetch(PDO::FETCH_ASSOC)){
+	$inst = 'select * from '.$_SESSION['login'].'_list;';
+	$sth1 = $dbh->prepare($inst);
+    $sth1->execute();
+	$arr = array();
+	$i = 0;
+	while($col=$sth1->fetch(PDO::FETCH_ASSOC)){
+		$arr[$i] = $col;
+		$i++;
+	}
+    $sth2 = $dbh->prepare('select * from music;');
+    $sth2->execute();
+	while($row=$sth2->fetch(PDO::FETCH_ASSOC)){
 		$song_name = $row['name'];
-		$song_string = (string)$song_name;
-		echo '<div onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="jump('."'$song_string'".')">
+		echo '<div onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="jump('."'$song_name'".')">
 		';
 		echo"	<p>$song_name</p>
+		";
+		echo '<form><select name='."'$song_name'".'>';
+		foreach($arr as $value){
+			echo '<option value='."'$value'".'>'.$value.'</option>';
+		}
+		echo" </select></form>
 		";
 		echo"</div>
 		";
