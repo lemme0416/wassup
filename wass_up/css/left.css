@@ -3,7 +3,7 @@ div{
     background-color: rgb(0, 0, 0);
     border-left: 10px solid;
 }
-div:hover > p{
+div:hover > .options{
     color: white;
     cursor: default;
 }
@@ -12,8 +12,14 @@ body{
     background-color: rgb(0, 0, 0);
     margin: 0px;
 }
-p{
+.options{
     color: rgb(146, 146, 146);
+    font-family: 'Montserrat';
+    font-size: 15px;
+    float: left;
+}
+.intro{
+    color: white;
     font-family: 'Montserrat';
     font-size: 15px;
     float: left;

@@ -26,18 +26,18 @@ session_start();
 		$name = $dbh->prepare('select * from users where id = ? ;');
 		$name->execute(array($_SESSION['login']));
 		while($row=$name->fetch(PDO::FETCH_ASSOC)){
-			echo '<p>Hello, '.$row['name'].'</p>';
+			echo '<p class="intro">Hello, '.$row['name'].'</p>';
 		}
 	?>
 	</div>
 	<div onclick="jump('modify_pw.php')">
-		<p onclick="jump('modify_pw.php')">Modify Password</p>
+		<p class="options" onclick="jump('modify_pw.php')">Modify Password</p>
 	</div>
 	<div onclick="jump('upload.php')">
-		<p>上傳音樂</p>
+		<p class="options">上傳音樂</p>
 	</div>
 	<div onclick="jump('red.php')">
-		<p>排行榜</p>
+		<p class="options">排行榜</p>
 	</div>
 	<?php
 		$inst = 'select * from '.$_SESSION['login'].'_list;';
@@ -46,12 +46,12 @@ session_start();
 		while($row=$sth->fetch(PDO::FETCH_ASSOC)){
 			$list_name = $row['list_name'];
 			echo '<div onclick="jump('.'"list.php?list_name='.$list_name.'")'.'">';
-			echo '<p>'.$list_name.'</p>';
+			echo '<p class="options">'.$list_name.'</p>';
 			echo '</div>';	
 		}
 	?>
 	<div onclick="show_form()">
-		<p>新增清單</p>
+		<p class="options">新增清單</p>
 	</div>
 	<form method = "POST" hidden = "true" action="add_list.php" id="hidden_form" style="margin:0px 0px 0px 10px">
 		<input type="text" required="true" name="list_name">
