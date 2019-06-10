@@ -40,7 +40,7 @@
 	while($col=$sth1->fetch(PDO::FETCH_ASSOC)){
 		array_push($arr, $col);
 	}
-	echo $arr;
+	print_r($arr); 
     $sth2 = $dbh->prepare('select * from music;');
     $sth2->execute();
 	while($row=$sth2->fetch(PDO::FETCH_ASSOC)){
