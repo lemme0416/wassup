@@ -30,13 +30,13 @@ session_start();
 		}
 	?>
 	</div>
-	<div onclick="jump('modify_pw.php')">
-		<p onclick="jump('modify_pw.php')">Modify Password</p>
+	<div onclick="color_deep(this)" onclick="jump('modify_pw.php')">
+		<p onclick="color_deep(this)" onclick="jump('modify_pw.php')">Modify Password</p>
 	</div>
-	<div onclick="jump('upload.php')">
+	<div onclick="color_deep(this)" onclick="jump('upload.php')">
 		<p>上傳音樂</p>
 	</div>
-	<div onclick="jump('red.php')">
+	<div onclick="color_deep(this)" onclick="jump('red.php')">
 		<p>排行榜</p>
 	</div>
 	<?php
@@ -45,12 +45,12 @@ session_start();
 		$sth->execute();
 		while($row=$sth->fetch(PDO::FETCH_ASSOC)){
 			$list_name = $row['list_name'];
-			echo '<div onclick="jump('.'"list.php?list_name='.$list_name.'")'.'">';
+			echo '<div onclick="color_deep(this)" onclick="jump('.'"list.php?list_name='.$list_name.'")'.'">';
 			echo '<p>'.$list_name.'</p>';
 			echo '</div>';	
 		}
 	?>
-	<div onclick="show_form()">
+	<div onclick="color_deep(this)" onclick="show_form()">
 		<p>新增清單</p>
 	</div>
 	<form method = "POST" hidden = "true" action="add_list.php" id="hidden_form" style="margin:0px 0px 0px 10px">
@@ -59,6 +59,9 @@ session_start();
 	</form>
 
     <script>
+		function color_deep(x) {
+			x.style.borderColor = 'red';
+		}
 		function jump(x){
 			parent.frames[2].location = x;
 		}
