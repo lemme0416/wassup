@@ -3,22 +3,19 @@ session_start();
 ?>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <title>left</title>
-	<style>
-		div{
-			overflow: hidden;
-			background-color: gray;
-		}
-		body{
-			background-color: gray;
-			margin: 0px;
-		}
-		p{
-			text-align: center;
-			color: white;
-		}
-	</style>
+	<link rel="shortcut icon" href="https://imgur.com/G4KMHP3.png" type="image/x-icon" />
+	
+	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+	
+	<link rel="stylesheet" href="css/left.css">
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>        
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	
+	<script src="js/left.js"></script>
 </head>
 <body>
 	<div onmouseover="color_deep(this)" onmouseout="color_shallow(this)">
@@ -33,9 +30,9 @@ session_start();
 		}
 	?>
 	</div>
-	<div onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="jump('modify_pw.php')">
-		<p>修改密碼</p>
-	</div>
+	<!-- <div onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="jump('modify_pw.php')"> -->
+		<h2 onclick="jump('modify_pw.php')">Modify Password</h2>
+	<!-- </div> -->
 	<div onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="jump('upload.php')">
 		<p>上傳音樂</p>
 	</div>

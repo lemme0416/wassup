@@ -1,0 +1,24 @@
+h2{
+    color: rgb(160, 160, 160);
+    font-family: 'Montserrat';
+    font-size: 30px;
+    overflow: hidden;
+    background-color: rgb(0, 0, 0);
+    margin-top: 10px
+}
+h2:hover{
+    color: rgb(255, 255, 255);
+
+}
+div{
+    overflow: hidden;
+    background-color: gray;
+}
+body{
+    background-color: gray;
+    margin: 0px;
+}
+p{
+    text-align: center;
+    color: white;
+}
