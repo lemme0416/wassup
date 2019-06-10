@@ -37,7 +37,7 @@ function play_music(){
     document.getElementById("music").addEventListener('ended',playendedhandler, false);
     document.getElementById("music").play();
     function playendedhandler(){
-      if (form.how_to_play.value == "random") i = getRandom(myObj.length);
+      if (form.value == "random") i = getRandom(myObj.length);
       else if (i == myObj.length-1)i =0;
       else i++;
       document.getElementById("music").loop = loop_or_single;
