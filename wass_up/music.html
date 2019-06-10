@@ -37,7 +37,7 @@ xmlhttp.onreadystatechange = function() {
     document.getElementById("music").play();
     function playendedhandler(){
       if (form.how_to_play.value == "random") i = getRandom(myObj.length);
-      else if (i == myObj.length)i =0;
+      else if (i == myObj.length-1)i =0;
       else i++;
       document.getElementById("music").loop = loop_or_single;
       document.getElementById("music").src = "music/"+myObj[i].name+".mp3";
