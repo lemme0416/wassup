@@ -57,19 +57,5 @@ session_start();
 		<input type="text" required="true" name="list_name">
 		<input type="submit" value="新增">
 	</form>
-
-    <script>
-		function color_deep(x) {
-			x.style.borderColor = 'red';
-		}
-		function jump(x){
-			parent.frames[2].location = x;
-		}
-		function show_form(){
-			var hid = document.getElementById("hidden_form");
-			hid.hidden = !(hid.hidden);
-		}
-	</script>
-
 </body>
 </html>
