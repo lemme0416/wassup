@@ -29,7 +29,7 @@ session_start();
         </ul>
         <div class="box">        
             <form method="POST">
-                <input type = "text" name = "id" id = "id" required = "true" placeholder="Your ID"><br>
+                <input type = "text" name = "id" id = "id" required = "true" placeholder="Your ID">
                 <h2>Favorite animal?</h2>
                 <input type = "text" name = "security" id = "security" required = "true" placeholder="Your answer"><br>
                 <input type = "submit" value ="Confirm">

@@ -47,7 +47,7 @@
         </ul>
         <div class="box">
             <form method = "POST" >
-                <input type = "text" name = "id" required="TRUE" placeholder="Your ID"><br>
+                <input type = "text" name = "id" required="TRUE" placeholder="Your ID">
                 <input type = "password" name = "pw" required="TRUE" placeholder="Password"><br>
                 <input type = "submit" value = "SIGN IN">
                 <input type = "button" value = "SIGN UP" onclick = "javascript:location.href='create_account.php'">
