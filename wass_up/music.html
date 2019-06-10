@@ -35,7 +35,7 @@ function play_music(obj){
     document.getElementById("music").src = "music/"+myObj[i].name+".mp3";
     document.getElementById("music").loop = false;
     document.getElementById("test").innerHTML = myObj[i].name;
-    document.getElementById("l").innerHTML =i;
+    document.getElementById("l").innerHTML = this.responseText;
     document.getElementById("music").addEventListener('ended',playendedhandler, false);
     document.getElementById("music").play();
     
