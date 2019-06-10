@@ -1,5 +1,5 @@
 <html>
-<body onload="play_music()">
+<body >
 <!-- 播放 -->
 <audio id ="music" preload="true" controls = "true" loop = false>
 Your browser does not support the audio element.
@@ -21,9 +21,10 @@ var loop_or_single = false;
 var i = 0;
 var length;
 var obj, dbParam, xmlhttp;
-obj = { "table":"name", "limit":10 };
+obj = { "table":"music", "limit":10 };
 var myObj
-function play_music(){
+window.onload = play_music(obj)
+function play_music(obj){
   dbParam = JSON.stringify(obj);
   var xmlhttp = new XMLHttpRequest();
   xmlhttp.onreadystatechange = function() {
