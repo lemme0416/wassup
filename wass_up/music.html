@@ -5,7 +5,7 @@
 Your browser does not support the audio element.
 </audio>
 <form action="" onchange="showCustomer(this.value)">
-  <select name="how_to_play">
+  <select name="how_to_play" id = "playmode">
     <option value="loop">循環播放</option>
     <option value="single">單曲循環</option>
     <option value="random">random</option>
@@ -37,7 +37,7 @@ function play_music(){
     document.getElementById("music").addEventListener('ended',playendedhandler, false);
     document.getElementById("music").play();
     function playendedhandler(){
-      if (form.value == "random") i = getRandom(myObj.length);
+      if (document.getElementById("playmode").value == "random") i = getRandom(myObj.length);
       else if (i == myObj.length-1)i =0;
       else i++;
       document.getElementById("music").loop = loop_or_single;
