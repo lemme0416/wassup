@@ -20,5 +20,5 @@ echo $_GET["x"];
 echo $obj->table;*/
 //echo $result;
 echo json_encode($result);
-
+echo $_GET[x];
 ?>
