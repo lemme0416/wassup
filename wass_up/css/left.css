@@ -1,7 +1,7 @@
 div{
     overflow: hidden;
     background-color: #434343;
-    border-left: 10px solid;
+    border-left: 10px #434343 solid ;
 }
 div:hover > .options{
     color: white;
