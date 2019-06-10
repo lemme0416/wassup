@@ -17,9 +17,8 @@
 				require_once('login.php');
 				$dsn = 'mysql:host=localhost;dbname=wassup';
 				$dbh = new PDO($dsn,$CFG['username'],$CFG['pw']);
-				$sth=$dbh->prepare('insert into music(name,music) values(:name,:music)');
+				$sth=$dbh->prepare('insert into music(name) values(:name)');
 				$sth->bindParam(':name', $file_name);
-				$sth->bindParam(':music',$file_name);
 				$sth->execute();
 			} else{
 				$return_value = 'error';
