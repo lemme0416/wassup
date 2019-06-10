@@ -48,7 +48,8 @@
     $sth2->execute();
 	while($row=$sth2->fetch(PDO::FETCH_ASSOC)){
 		$song_name = $row['name'];
-		echo '<div onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="jump('."'$song_name'".')">
+		$song_id = $row['id'];
+		echo '<div onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="jump('."'$song_id'".')">
 		';
 		echo '<p>'.$song_name.'</p>';
 		echo '<select name="list_name" onclick="bubble(event)" form="'.$song_name.'">';
@@ -68,7 +69,7 @@
 		x.style.backgroundColor = 'DarkSlateGray ';
 	}
 	function jump(x){
-		var address = "music2.php?name=" + x;
+		var address = "music2.php?id=" + x;
 		var obj = {"table":"music"}
 		parent.frames[3].play_music(obj);
 	}
