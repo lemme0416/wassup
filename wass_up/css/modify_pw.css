@@ -1,6 +1,7 @@
 body{
-  background-size: cover;
-  background: red;
+  background: #c31432;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #240b36, #c31432);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #240b36, #c31432); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   margin: 0px;
 }
 .text-animation{
@@ -42,7 +43,7 @@ body{
   padding-bottom: 60px;
   border: 2px rgb(255, 255, 255) solid;
   border-radius: 30px;
-  background: #ff0000;        
+  background: #ff000000 ;        
   overflow: hidden;
   text-align: center;
 }
