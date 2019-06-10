@@ -48,7 +48,7 @@
 		$song_name = $row['name'];
 		echo '<div onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="jump('."'$song_name'".')">
 		';
-		echo '<p>$song_name</p>';
+		echo '<p>'.$song_name.'</p>';
 		echo '<form><select name='."'$song_name'".'>';
 		foreach($arr as $value){
 			echo '<option value='."'$value'".'>'.$value.'</option>';
