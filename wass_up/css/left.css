@@ -1,6 +1,6 @@
 div{
     overflow: hidden;
-    border-left: 10px solid ;
+    border-left: 10px solid rgba(0, 0, 0, 0);
 }
 div:hover > .options{
     color: white;
@@ -14,7 +14,7 @@ body{
     margin: 0px;
 }
 .options{
-    color: rgb(177, 177, 177);
+    color: rgb(206, 206, 206);
     font-family: 'Montserrat';
     font-size: 15px;
     float: left;
