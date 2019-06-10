@@ -9,7 +9,6 @@ Your browser does not support the audio element.
   <option value="single">單曲循環</option>
   <option value="random">random</option>
 </select>
-<input type = "button" onclick = "playendedhandler()">下一首</input>
 <p id = "test">error</p>
 <p id = "l"></p>
 
@@ -58,13 +57,6 @@ function playendedhandler(){
 function showCustomer(str){
   if (str == "single")document.getElementById("music").loop = true;
   else document.getElementById("music").loop = false;
-}
-function nextmusic(){
-  if (document.getElementById("playmode").value == "random") i = getRandom(length);
-      else if (i == length-1)i =0;
-      else i++;
-  }
-  document.getElementById("music").src = "music/"+myObj[i].name+".mp3";
 }
 </script>
     
