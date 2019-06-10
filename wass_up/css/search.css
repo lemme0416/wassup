@@ -82,44 +82,44 @@ body {
 }
 @media (max-width: 575.98px) {
     .search-box {
-        width: 140px;
+        width: 120px;
     
     }
     .search-box:hover > .search-txt {
-        width: 80px;
+        width: 60px;
         padding: 0 6px;
     
     }
 }
 @media (min-width: 576px) and (max-width: 767.98px) {
     .search-box {
-        width: 180px;
+        width: 160px;
     
     }
     .search-box:hover > .search-txt {
-        width: 120px;
+        width: 100px;
         padding: 0 6px;
     
     }
 }
 @media (min-width: 768px) and (max-width: 991.98px) {
     .search-box {
-        width: 220px;
+        width: 200px;
     
     }
     .search-box:hover > .search-txt {
-        width: 160px;
+        width: 140px;
         padding: 0 6px;
     
     }
 }
 @media (min-width: 992px) and (max-width: 1199.98px) {
     .search-box {
-        width: 260px;
+        width: 240px;
     
     }
     .search-box:hover > .search-txt {
-        width: 200px;
+        width: 180px;
         padding: 0 6px;
     
     }
