@@ -69,7 +69,8 @@
 	}
 	function jump(x){
 		var address = "music2.php?name=" + x;
-		parent.frames[3].location = address;
+		var obj = {"table":"music"}
+		parent.frames[3].play_music(obj);
 	}
 	function bubble(event){
 		event.cancelBubble = true;
