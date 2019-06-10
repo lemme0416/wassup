@@ -9,7 +9,7 @@ session_start();
         
         <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
         
-        <link rel="stylesheet" href="css/modify_pw.css">
+        <link rel="stylesheet" href="css/modify_pw_visitor.css">
         
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
