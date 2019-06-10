@@ -8,8 +8,9 @@ body{
 }
 p{
     text-align: center;
-    color: white;
+    color: rgb(105, 105, 105);
 }
 p:hover{
+    color: white;
     cursor: pointer;
 }
