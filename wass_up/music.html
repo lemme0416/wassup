@@ -27,7 +27,7 @@ window.onload = play_music(obj)
 function play_music(obj){
   dbParam = JSON.stringify(obj);
   var xmlhttp = new XMLHttpRequest();
-  i = obj.id;
+  i = obj.id-1;
   xmlhttp.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) {
     myObj = JSON.parse(this.responseText);
