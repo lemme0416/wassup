@@ -1,6 +1,6 @@
 <?php
 header("Content-Type: application/json; charset=UTF-8");
-$obj = json_decode($_GET["x"], false);
+$obj = json_decode($_GET['x'], false);
 require_once('login.php');
 $dsn = 'mysql:host=localhost;dbname=wassup';
 $dbh = new PDO($dsn,$CFG['username'],$CFG['pw']);
@@ -20,5 +20,5 @@ echo $_GET["x"];
 echo $obj->table;*/
 //echo $result;
 echo json_encode($result);
-echo $_GET['x'];
+//echo $_GET['x'];
 ?>
