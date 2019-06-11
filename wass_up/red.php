@@ -36,7 +36,7 @@
 		$song_id = $row['id'];
 		echo '<div>
 		';
-		echo '<img src="https://i.imgur.com/CY4HN75.png" onmouseover="play_black(this)" onmouseout="play_white(this)" onclick="jump('."'$song_id'".')">';
+		echo '<img src="https://i.imgur.com/P3DW52n.png" onmouseover="play_black(this)" onmouseout="play_white(this)" onclick="jump('."'$song_id'".')">';
 		echo '<p>'.$song_name.'</p>';
 		echo '<form method="POST" onclick="bubble(event)" id="'.$song_id.'" action="add_to_list.php?song_name='.$song_name.'&song_id='.$song_id.'"><input type="submit" value="add to list"></form>';
 		echo '<select name="list_name" onclick="bubble(event)" form="'.$song_id.'">';
@@ -49,10 +49,10 @@
 ?>
 <script>
 	function play_black(x){
-		x.src="https://i.imgur.com/POXP1rs.png";
+		x.src="https://i.imgur.com/T1iuPh7.png";
 	}
 	function play_white(x){
-		x.src="https://i.imgur.com/CY4HN75.png";
+		x.src="https://i.imgur.com/P3DW52n.png";
 	}
 	function jump(x){
 		var address = "music2.php?id=" + x;
