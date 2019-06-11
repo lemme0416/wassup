@@ -17,6 +17,6 @@
 			$sth->execute();
 			echo "<script> parent.frames[1].location.reload(true) </script>";
 		}
-		//header("Location: red.php");
+		echo "<script> window.location='red.php' </script>";
 	}
 ?>
