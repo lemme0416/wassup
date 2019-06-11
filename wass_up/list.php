@@ -47,7 +47,8 @@
 	while($col=$sth1->fetch(PDO::FETCH_ASSOC)){
 		array_push($arr, $col['list_name']);
 	}
-	$inst = 'select * from '.$_SESSION['login'].'_list_'.$_GET['list_name'];
+	$list_name = $_GET['list_name'];
+	$inst = 'select * from '.$_SESSION['login'].'_list_'.$list_name;
     $sth2 = $dbh->prepare($inst);
     $sth2->execute();
 	while($row=$sth2->fetch(PDO::FETCH_ASSOC)){
@@ -56,7 +57,7 @@
 		echo '<div onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="jump('."'$song_id'".')">
 		';
 		echo '<p>'.$song_name.'</p>';
-		echo '<form method="POST" onclick="bubble(event)" action="remove_from_list.php?song_name='.$song_name.'&song_id='.$song_id.'"><input type="submit" value="remove from list"></form>';
+		echo '<form method="POST" onclick="bubble(event)" action="remove_from_list.php?list_name='.$list_name.'&song_id='.$song_id.'"><input type="submit" value="remove from list"></form>';
 		echo '<form method="POST" onclick="bubble(event)" id="'.$song_id.'"action="add_to_list.php?song_name='.$song_name.'&song_id='.$song_id.'"><input type="submit" value="add to list"></form>';
 		echo '<select name="list_name" onclick="bubble(event)" form="'.$song_id.'">';
 		foreach($arr as $value){
