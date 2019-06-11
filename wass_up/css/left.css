@@ -29,7 +29,6 @@ div:hover > .options{
     font-weight: bolder;
     float: left;
 }
-*{margin:0px; padding:0px; font-family:Helvetica, Arial, sans-serif;}
 
 /* Full-width input fields */
 input[type=text], input[type=password] {
