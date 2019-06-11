@@ -32,6 +32,7 @@ div:hover > .options{
 
 /* Full-width input fields */
 input[type=text], input[type=password] {
+    margin-top: 20px;
     width: 130px;
     padding: 2px 2px;
     display: inline-block;
