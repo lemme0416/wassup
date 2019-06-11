@@ -23,10 +23,12 @@
 		}
 		form{
 			display: inline-block;
+			margin: 14.6px 2.5px 14.6px 2.5px;
 			float: right;
 		}
 		select{
 			display: inline-block;
+			margin: 17.6px 2.5px 17.6px 2.5px;
 			float: right;
 		}
 	</style>
@@ -53,12 +55,13 @@
 		echo '<div onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="jump('."'$song_id'".')">
 		';
 		echo '<p>'.$song_name.'</p>';
+		echo '<form method="POST" onclick="bubble(event)" action="remove_from_list.php?song_name='.$song_name.'&song_id='.$song_id.'"><input type="submit" value="remove from list"></form>';
+		echo '<form method="POST" onclick="bubble(event)" id="'.$song_id.'"action="add_to_list.php?song_name='.$song_name.'&song_id='.$song_id.'"><input type="submit" value="add to list"></form>';
 		echo '<select name="list_name" onclick="bubble(event)" form="'.$song_id.'">';
 		foreach($arr as $value){
 			echo '<option value='."'$value'".'>'.$value.'</option>';
 		}
 		echo '</select>';
-		echo '<form method="POST" onclick="bubble(event)" id="'.$song_id.'"action="add_to_list.php?song_name='.$song_name.'&song_id='.$song_id.'"><input type="submit" value="add to list"></form>';
 		echo '</div>';
 	}
 ?>
