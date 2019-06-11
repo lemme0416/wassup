@@ -5,7 +5,6 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Modify! | WassUp!</title>
         <link rel="shortcut icon" href="https://imgur.com/G4KMHP3.png" type="image/x-icon" />
         
         <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
