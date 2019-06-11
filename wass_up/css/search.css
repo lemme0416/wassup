@@ -82,11 +82,11 @@ body {
 }
 @media (max-width: 575.98px) {
     .search-box {
-        width: 120px;
+        width: 100px;
     
     }
     .search-box:hover > .search-txt {
-        width: 60px;
+        width: 40px;
         padding: 0 6px;
     
     }
