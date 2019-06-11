@@ -45,7 +45,7 @@ session_start();
 
 	<div id="modal-wrapper" class="modal">
 		<form class="modal-content animate" method = "POST" action="add_list.php" >
-			<!-- <div onclick="document.getElementById('modal-wrapper').style.display='none'" class="close" title="Close PopUp">&times;</div> -->
+			<div onclick="document.getElementById('modal-wrapper').style.display='none'" class="close" title="Close PopUp">&times;</div>
 			<input type="text" required="true" name="list_name" placeholder="Playlist Name"><br>
 			<input type="submit" value="新增">
 		</form>

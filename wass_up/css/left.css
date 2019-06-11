@@ -76,7 +76,7 @@ input[type = "submit"]:hover{
 
 /* Modal Content Box */
 .modal-content {
-    background-color: #000000;
+    background-color: #240b36;
     position: absolute;
     top: 55%;
     left: 10%;
@@ -90,7 +90,7 @@ input[type = "submit"]:hover{
 .close {
     margin: 10px 40px 10px 0px;
     height: 30px;
-    color: #000;
+    color: rgb(255, 255, 255);
     font-size: 35px;
     font-weight: bold;
 }
