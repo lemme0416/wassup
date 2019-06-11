@@ -15,13 +15,13 @@
 			$inst = 'delete from '.$_SESSION['login'].'_list where list_name='."'$list_name'".';';
 			$sth = $dbh->prepare($inst);
 			$sth->execute();
-			echo '<script> refresh(); </script>';
+			echo "<script> refresh(); </script>";
 		}
 		header("Location: red.php");
 	}
 ?>
 <script>
 	function refresh(){
-		parent.frames[2].location = "left.php";
+		window.parent.frames[1].location .reload(true);
 	}
 </script>
