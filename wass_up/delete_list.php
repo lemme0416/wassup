@@ -1,3 +1,8 @@
+<script>
+	function refresh(){
+		window.parent.frames["left"].location .reload(true);
+	}
+</script>
 <?php
 	session_start();
 	if(!isset($_SESSION['login'])){
@@ -15,13 +20,8 @@
 			$inst = 'delete from '.$_SESSION['login'].'_list where list_name='."'$list_name'".';';
 			$sth = $dbh->prepare($inst);
 			$sth->execute();
-			echo "<script> refresh(); </script>";
+			echo '<script type="text/javascript">refresh();</script>';
 		}
 		header("Location: red.php");
 	}
 ?>
-<script>
-	function refresh(){
-		window.parent.frames["left"].location .reload(true);
-	}
-</script>
