@@ -44,7 +44,7 @@ session_start();
 	</div>
 
 	<div id="modal-wrapper" class="modal">
-		<form class="modal-content animate" method = "POST" hidden = "true" action="add_list.php" id="hidden_form" style="margin:0px 0px 0px 10px">
+		<form class="modal-content animate" method = "POST" action="add_list.php" >
 			<div class="container">
 				<input type="text" required="true" name="list_name">
 				<input type="submit" value="新增">

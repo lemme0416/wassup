@@ -41,21 +41,6 @@ input[type=text], input[type=password] {
 	font-size:16px;
 }
 
-/* Set a style for all buttons */
-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 26px;
-    border: none;
-    cursor: pointer;
-    width: 90%;
-	font-size:20px;
-}
-button:hover {
-    opacity: 0.8;
-}
-
 /* The Modal (background) */
 .modal {
 	display:none;
