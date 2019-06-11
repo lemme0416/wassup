@@ -13,8 +13,6 @@ body{
     color: white;
     cursor: default;
 }
-
-
 .options{
     color: rgb(206, 206, 206);
     font-family: 'Montserrat';
@@ -85,6 +83,7 @@ input[type = "submit"]:hover{
     border: 2px solid rgb(255, 255, 255);
     border-radius: 10px;
     width: 150px; 
+    height: 200px;
 	padding-bottom: 0px;
 }
 /* The Close Button (x) */
