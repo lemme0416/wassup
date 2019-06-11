@@ -1,0 +1,30 @@
+body{
+    background-color: lightblue;
+    margin: 0px;
+}
+div{
+    overflow: hidden;
+    background-color: DarkSlateGray;
+    border: 2px solid white;
+    margin: 3px 5px;
+}
+
+p{
+    display: inline-block;
+    text-align: center;
+    color: white;
+    margin-left: 5px;
+}
+form{
+    display: inline-block;
+    margin: 14.6px 2.5px 14.6px 2.5px;
+    float: right;
+}
+select{
+    display: inline-block;
+    margin: 17.6px 2.5px 17.6px 2.5px;
+    float: right;
+}
+img :hover{
+    src="https://i.imgur.com/6EMbicT.png";
+}

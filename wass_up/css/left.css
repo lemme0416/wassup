@@ -4,6 +4,7 @@ body{
     background: linear-gradient(to bottom, #240b36, #97172d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     margin: 0px;
 }
+/* for every div in left */
 .options_div{
     width: 179.6px;
     overflow-x: hidden;
@@ -13,6 +14,7 @@ body{
     color: white;
     cursor: default;
 }
+/* for every p in div in left */
 .options{
     color: rgb(206, 206, 206);
     font-family: 'Montserrat';
@@ -20,6 +22,7 @@ body{
     font-weight: bold;
     float: left;
 }
+/* for "hello, name" */
 .intro{
     color: white;
     font-family: 'Montserrat';
@@ -28,7 +31,7 @@ body{
     float: left;
 }
 
-/* Full-width input fields */
+/* for add list input text */
 input[type = "text"] {
     text-align: center;
     margin: 40px auto 0px;
@@ -40,7 +43,8 @@ input[type = "text"] {
     font-size:16px;
     font-family: 'Montserrat';
     font-size: 16px;
-}
+} 
+ /* for add list input submit */
 input[type = "submit"]{
     background: none;
     display: block;
@@ -103,6 +107,7 @@ input[type = "submit"]:hover{
 .animate {
     animation: zoom 0.6s
 }
+/* for add list title*/
 h2{
     text-align: center;
     font-family: 'Montserrat';
@@ -111,14 +116,13 @@ h2{
     color: rgb(255, 255, 255);
     margin: 0px;
 }
+
+/* for scrollbar */
 ::-webkit-scrollbar{
     background: #97172d;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to bottom, #240b36, #97172d);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to bottom, #240b36, #97172d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     width: 12px;
-}
-::-webkit-srcollbar{
-
 }
 ::-webkit-scrollbar-thumb{
     background:gray;

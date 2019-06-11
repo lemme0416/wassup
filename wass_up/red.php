@@ -3,37 +3,19 @@
 ?>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <title>music</title>
-	<style>
-		div{
-			overflow: hidden;
-			background-color: DarkSlateGray;
-			border: 2px solid white;
-			margin: 3px 5px;
-		}
-		body{
-			background-color: lightblue;
-			margin: 0px;
-		}
-		p{
-			display: inline-block;
-			text-align: center;
-			color: white;
-			margin-left: 5px;
-		}
-		form{
-			display: inline-block;
-			margin: 14.6px 2.5px 14.6px 2.5px;
-			float: right;
-		}
-		select{
-			display: inline-block;
-			margin: 17.6px 2.5px 17.6px 2.5px;
-			float: right;
-		}
-	</style>
-</head>
+	<link rel="shortcut icon" href="https://imgur.com/G4KMHP3.png" type="image/x-icon" />
+	
+	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+	
+	<link rel="stylesheet" href="css/red.css">
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>        
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	
+	<script src="js/left.js"></script></head>
 <body>
 
 <?php
@@ -52,8 +34,9 @@
 	while($row=$sth2->fetch(PDO::FETCH_ASSOC)){
 		$song_name = $row['name'];
 		$song_id = $row['id'];
-		echo '<div onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="jump('."'$song_id'".')">
+		echo '<div onmouseover="color_deep(this)" onmouseout="color_shallow(this)" >
 		';
+		echo '<img src="https://i.imgur.com/6EMbicT.png" onmouseover="play_black(this)" onmouseout="play_white(this)" onclick="jump('."'$song_id'".')">';
 		echo '<p>'.$song_name.'</p>';
 		echo '<form method="POST" onclick="bubble(event)" id="'.$song_id.'" action="add_to_list.php?song_name='.$song_name.'&song_id='.$song_id.'"><input type="submit" value="add to list"></form>';
 		echo '<select name="list_name" onclick="bubble(event)" form="'.$song_id.'">';
@@ -70,6 +53,12 @@
 	}
 	function color_shallow(x) {
 		x.style.backgroundColor = 'DarkSlateGray ';
+	}
+	function play_black(x){
+		x.src="https://i.imgur.com/6EMbicT.png";
+	}
+	function play_white(x){
+		x.src="https://i.imgur.com/HiPrjmk.png";
 	}
 	function jump(x){
 		var address = "music2.php?id=" + x;
