@@ -10,7 +10,8 @@
 			overflow: hidden;
 			background-color: DarkSlateGray;
 			border: 2px solid white;
-			margin: 2px 2px;
+			margin: 3px 5px;
+			height: 60px;
 		}
 		body{
 			background-color: lightblue;
