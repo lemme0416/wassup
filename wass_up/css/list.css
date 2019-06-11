@@ -1,0 +1,48 @@
+html {
+    height: 100%;
+    overflow: hidden;
+    background: radial-gradient(ellipse at bottom, #1b2735 0%,#240b36 100%);
+  }
+input[type = "submit"]{
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid rgb(255, 255, 255);
+    padding: 14px 40px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+    font-family: 'Montserrat';
+}
+div{
+    overflow: hidden;
+    background-color: DarkSlateGray;
+    border: 2px solid white;
+    margin: 2px 2px;
+}
+body{
+    background-color: lightblue;
+    margin: 0px;
+}
+p{
+    display: inline-block;
+    text-align: center;
+    margin-left: 5px;
+    color: white;
+}
+form.a{
+    display: inline-block;
+    margin: 14.6px 2.5px 14.6px 2.5px;
+    float: right;
+}
+form.b{
+    margin: 7px 45vw;
+}
+select{
+    display: inline-block;
+    margin: 17.6px 2.5px 17.6px 2.5px;
+    float: right;
+}
