@@ -25,6 +25,7 @@ select{
     margin: 17.6px 2.5px 17.6px 2.5px;
     float: right;
 }
-img :hover{
-    src="https://i.imgur.com/6EMbicT.png";
+img{
+    height: 54px;
+    width: 54px;
 }

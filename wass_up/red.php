@@ -55,10 +55,10 @@
 		x.style.backgroundColor = 'DarkSlateGray ';
 	}
 	function play_black(x){
-		x.src="https://i.imgur.com/6EMbicT.png";
+		x.src="https://i.imgur.com/HiPrjmk.png";
 	}
 	function play_white(x){
-		x.src="https://i.imgur.com/HiPrjmk.png";
+		x.src="https://i.imgur.com/6EMbicT.png;"
 	}
 	function jump(x){
 		var address = "music2.php?id=" + x;
