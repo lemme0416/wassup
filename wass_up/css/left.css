@@ -31,7 +31,7 @@ body{
 /* Full-width input fields */
 input[type = "text"] {
     text-align: center;
-    margin: 40px auto 0px;
+    margin: 10px auto 0px;
     width: 130px;
     padding: 5px 5px;
     display: block;
@@ -89,7 +89,7 @@ input[type = "submit"]:hover{
 /* The Close Button (x) */
 .close {
     width: 30px;
-    margin: 0px 0px 10px 10px;
+    margin: 0px 0px 0px 190px;
     height: 30px;
     color: rgb(255, 255, 255);
     font-size: 35px;
@@ -102,6 +102,12 @@ input[type = "submit"]:hover{
 /* Add Zoom Animation */
 .animate {
     animation: zoom 0.6s
+}
+h2{
+    font-family: 'Montserrat';
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    margin: 0px;
 }
 @keyframes zoom {
     from {transform: scale(0)} 
