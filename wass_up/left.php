@@ -18,7 +18,7 @@ session_start();
 	<script src="js/left.js"></script>
 </head>
 <body>
-	<div>
+	<div class="options_div">
 	<?php
 		require_once('login.php');
 		$dsn = 'mysql:host=localhost;dbname=wassup';
@@ -30,16 +30,16 @@ session_start();
 		}
 	?>
 	</div>
-	<div onclick="jump('modify_pw.php')">
+	<div class="options_div" onclick="jump('modify_pw.php')">
 		<p class="options" onclick="jump('modify_pw.php')">Modify Password</p>
 	</div>
-	<div onclick="jump('upload.php')">
+	<div class="options_div" onclick="jump('upload.php')">
 		<p class="options">上傳音樂</p>
 	</div>
-	<div onclick="jump('red.php')">
+	<div class="options_div" onclick="jump('red.php')">
 		<p class="options">排行榜</p>
 	</div>
-	<div onclick="document.getElementById('modal-wrapper').style.display='block'">
+	<div class="options_div" onclick="document.getElementById('modal-wrapper').style.display='block'">
 		<p class="options">新增清單</p>
 	</div>
 
@@ -58,7 +58,7 @@ session_start();
 		while($row=$sth->fetch(PDO::FETCH_ASSOC)){
 			$list_name = $row['list_name'];
 			$list_url = 'list.php?list_name='.$list_name;
-			echo '<div onclick="jump('."'$list_url'".')">';
+			echo '<div class="options_div" onclick="jump('."'$list_url'".')">';
 			echo '<p class="options">'.$list_name.'</p>';
 			echo '</div>';	
 		}

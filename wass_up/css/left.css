@@ -4,12 +4,12 @@ body{
     background: linear-gradient(to bottom, #240b36, #97172d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     margin: 0px;
 }
-div{
+.options_div{
     width: 179.6px;
     overflow-x: hidden;
     border-left: 10px solid rgba(0, 0, 0, 0);
 }
-div:hover > .options{
+.options_div:hover > .options{
     color: white;
     cursor: default;
 }
@@ -35,9 +35,8 @@ input[type=text] {
     margin-top: 20px;
     width: 130px;
     padding: 2px 2px;
-    display: inline-block;
+    display: block;
     border: 1px solid #ccc;
-    box-sizing: border-box;
 	font-size:16px;
 }
 
