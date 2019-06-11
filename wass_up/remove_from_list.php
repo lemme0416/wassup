@@ -9,7 +9,7 @@
 		$inst = 'delete from '.$_SESSION['login'].'_list_'.$_POST['list_name'].' where id='.$song_id ;
 		$sth = $dbh->prepare($inst);
 		$sth->execute();
-		$destination = 'Location: list.php?'.$_POST['list_name'];
+		$destination = 'Location: list.php?list_name='.$_POST['list_name'];
 		header($destination);
 	}
 ?>
