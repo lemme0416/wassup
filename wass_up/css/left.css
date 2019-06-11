@@ -31,7 +31,7 @@ body{
 /* Full-width input fields */
 input[type = "text"] {
     text-align: center;
-    margin: 20px auto;
+    margin: 20px auto 0px;
     width: 130px;
     padding: 5px 5px;
     display: block;
