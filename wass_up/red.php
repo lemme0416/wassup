@@ -24,12 +24,13 @@
 		}
 		form{
 			display: inline-block;
-			margin-left: 5px;
+			margin: 17.2px 2.5px 17.2px 2.5px;
 			float: right;
 			vertical-align: middle;
 		}
 		select{
 			display: inline-block;
+			margin: 17.6px 2.5px 17.6px 2.5px;
 			float: right;
 			vertical-align: middle;
 		}
