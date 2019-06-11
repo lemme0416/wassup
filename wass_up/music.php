@@ -4,21 +4,20 @@ $obj = json_decode($_GET['x'], false);
 require_once('login.php');
 $dsn = 'mysql:host=localhost;dbname=wassup';
 $dbh = new PDO($dsn,$CFG['username'],$CFG['pw']);
-$sth = $dbh->prepare('select name from music order by id;');
-//$sth->bindparam("ss");
+//table name 不能用?去頂 改用字串接起來
+$str = 'select name from '.$obj->table.' order by id;';
+$sth = $dbh->prepare($str);
 $sth->execute();
-/*
-while ($result = $sth->fetch()){
-    echo $result;
-}*/
 
 $result = $sth->fetchAll();
-/*
-//$outp = $result->fetch_all(MYSQLI_ASSOC);
-echo $obj['table'];
-echo $_GET["x"];
-echo $obj->table;*/
+
 //echo $result;
 echo json_encode($result);
-//echo $_GET['x'];
+/*
+var_dump($result);
+echo '<br>';
+//echo $str;
+echo $_GET['x'];
+echo $obj->table;
+*/
 ?>
