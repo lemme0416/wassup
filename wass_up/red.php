@@ -11,6 +11,7 @@
 			background-color: DarkSlateGray;
 			border: 2px solid white;
 			margin: 3px 5px;
+			line-height: this.height;
 		}
 		body{
 			background-color: lightblue;
@@ -20,6 +21,7 @@
 			display: inline-block;
 			text-align: center;
 			color: white;
+			margin-left: 5px;
 		}
 		form{
 			display: inline-block;
