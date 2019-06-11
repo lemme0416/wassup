@@ -39,13 +39,19 @@ session_start();
 	<div onclick="jump('red.php')">
 		<p class="options">排行榜</p>
 	</div>
-	<div onclick="show_form()">
+	<div onclick="document.getElementById('modal-wrapper').style.display='block'" style="width:200px; margin-top:200px; margin-left:160px;">
 		<p class="options">新增清單</p>
 	</div>
-	<form method = "POST" hidden = "true" action="add_list.php" id="hidden_form" style="margin:0px 0px 0px 10px">
-		<input type="text" required="true" name="list_name">
-		<input type="submit" value="新增">
-	</form>
+
+	<div id="modal-wrapper" class="modal">
+		<form class="modal-content animate" method = "POST" hidden = "true" action="add_list.php" id="hidden_form" style="margin:0px 0px 0px 10px">
+			<div class="container">
+				<input type="text" required="true" name="list_name">
+				<input type="submit" value="新增">
+			</div>
+		</form>
+	</div>
+
 	<?php
 		$inst = 'select * from '.$_SESSION['login'].'_list;';
 		$sth = $dbh->prepare($inst);
