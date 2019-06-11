@@ -33,7 +33,9 @@ body{
 /* Full-width input fields */
 input[type = "text"] {
     text-align: center;
-    margin-top: 20px auto;
+    position: absolute;
+    top: 40%;
+    left: 50%;
     width: 130px;
     padding: 5px 5px;
     display: block;
