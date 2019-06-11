@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	if(isset($_GET['song_name'])){
+	if(isset($_GET['song_id'])){
 		require_once('login.php');
 		$dsn = 'mysql:host=localhost;dbname=wassup';
 		$dbh = new PDO($dsn,$CFG['username'],$CFG['pw']);
