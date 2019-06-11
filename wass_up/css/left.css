@@ -32,18 +32,13 @@ body{
 
 /* Full-width input fields */
 input[type = "text"] {
-    background: none;
+    margin-top: 20px auto;
+    width: 130px;
+    padding: 2px 2px;
     display: block;
-    margin: 20px auto;
-    text-align: center;
-    border: 2px solid rgb(0, 0, 0);
-    padding: 14px 40px;
-    outline: none;
-    color: rgb(255, 255, 255);
-    border-radius: 24px;
-    transition: 0.25s;
-    cursor: pointer;
-    font-family: 'Montserrat';
+    border: 1px solid #ccc;
+    border-radius: 50px;
+	font-size:16px;
 }
 input[type = "submit"]{
     background: none;
