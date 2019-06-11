@@ -51,6 +51,8 @@
 					<form action="save_upload.php"  method="post" enctype="multipart/form-data">
 						<h2>Select music to upload:</h2>
 						<input type="file" name="uploaded_file" accept=".mp3">
+						<button type="button" id="custom-button">CHOOSE A FILE</button>
+						<span id="custom-text">No file chosen, yet.</span>
 						<input type="submit" value="Upload">
 					</form>
 				</div>
@@ -60,7 +62,26 @@
                             $('.text-animation').removeClass('hidden');
                         }, 500);
                     });
-                </script>
+				</script>
+				<script>
+					const realFileBtn = document.getElementById("real-file");
+					const customBtn = document.getElementById("custom-button");
+					const customTxt = document.getElementById("custom-text");
+
+					customBtn.addEventListener("click", function() {
+					realFileBtn.click();
+					});
+
+					realFileBtn.addEventListener("change", function() {
+					if (realFileBtn.value) {
+						customTxt.innerHTML = realFileBtn.value.match(
+						/[\/\\]([\w\d\s\.\-\(\)]+)$/
+						)[1];
+					} else {
+						customTxt.innerHTML = "No file chosen, yet.";
+					}
+					});
+				</script>
 			</div>
 		</section>
 	</body>
