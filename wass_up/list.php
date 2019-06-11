@@ -19,6 +19,7 @@
 		p{
 			display: inline-block;
 			text-align: center;
+			margin-left: 5px;
 			color: white;
 		}
 		form{
