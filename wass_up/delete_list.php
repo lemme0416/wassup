@@ -15,7 +15,7 @@
 			$inst = 'delete from '.$_SESSION['login'].'_list where list_name='."'$list_name'".';';
 			$sth = $dbh->prepare($inst);
 			$sth->execute();
-			echo '<script> window.parent.frames["left"].location.reload();</script>';
+			echo '<script> alert("deleted!");</script>';
 		}
 		header("Location: red.php");
 	}
