@@ -129,19 +129,27 @@ html {
       border: 0px;
     }
   }
-  
+
   #custom-button {
-    padding: 10px;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid rgb(255, 255, 255);
+    padding: 14px 40px;
+    outline: none;
     color: white;
-    background-color: #009578;
-    border: 1px solid #000;
-    border-radius: 5px;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+    font-family: 'Montserrat';
     cursor: pointer;
   }
   
   #custom-button:hover {
-    background-color: #00b28f;
-  }
+    background: rgb(255, 255, 255);
+    border: 2px solid rgb(255, 255, 255);
+    color: black;  }
   
   #custom-text {
     margin-left: 10px;
