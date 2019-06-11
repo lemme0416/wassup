@@ -17,7 +17,7 @@ body{
   font-size: 5em;
   color: white;
   opacity: 1;
-  transition: all 2.5s ease;
+  transition: all 1.5s ease;
 }
 .text-animation li:last-child{
   margin-right: 0;
