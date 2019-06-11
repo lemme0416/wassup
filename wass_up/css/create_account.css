@@ -67,7 +67,7 @@ body{
   border: 2px solid rgb(255, 255, 255);
   color: black;
 }
-.box input[type = "file"]{
+.box input[type = "button"]{
   background: none;
   display: block;
   margin: 20px auto;
@@ -81,7 +81,7 @@ body{
   cursor: pointer;
   font-family: 'Montserrat';
 }
-.box input[type = "file"]:hover{
+.box input[type = "button"]:hover{
   background: rgb(255, 255, 255);
   border: 2px solid rgb(255, 255, 255);
   color: black;
