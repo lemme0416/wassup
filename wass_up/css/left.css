@@ -32,7 +32,7 @@ body{
 
 /* Full-width input fields */
 input[type = "text"] {
-    margin-top: 20px;
+    margin-top: 20px auto;
     width: 130px;
     padding: 2px 2px;
     display: block;
