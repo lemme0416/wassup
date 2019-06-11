@@ -88,12 +88,11 @@ input[type = "submit"]:hover{
 }
 /* The Close Button (x) */
 .close {
-    margin: 0px;
+    margin: 10px 40px 10px 0px;
     height: 30px;
     color: #000;
     font-size: 35px;
     font-weight: bold;
-    float: right;
 }
 .close:hover,.close:focus {
     color: red;
