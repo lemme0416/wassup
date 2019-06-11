@@ -65,14 +65,15 @@
 					const realFileBtn = document.getElementById("real-file");
 					const customBtn = document.getElementById("custom-button");
 					const customTxt = document.getElementById("custom-text");
+					const fileName = document.getElementById("real-file");
 
 					customBtn.addEventListener("click", function() {
 						realFileBtn.click();
 					});
 
 					realFileBtn.addEventListener("change", function() {
-						if (realFileBtn.value) {
-							customTxt.innerHTML = realFileBtn.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
+						if (fileName.value) {
+							customTxt.innerHTML = fileName.files[0].name;
 						} else {
 							customTxt.innerHTML = "No file chosen, yet.";
 						}
