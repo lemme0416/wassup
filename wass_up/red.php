@@ -20,6 +20,7 @@
 
 <?php
     require_once('login.php');
+	$_SESSION['last'] = 'red.php';
     $dsn = 'mysql:host=localhost;dbname=wassup';
     $dbh = new PDO($dsn,$CFG['username'],$CFG['pw']);
 	$inst = 'select * from '.$_SESSION['login'].'_list;';
