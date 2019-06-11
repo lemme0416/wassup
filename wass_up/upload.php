@@ -54,6 +54,13 @@
 						<input type="submit" value="Upload">
 					</form>
 				</div>
+				<script type="text/javascript">
+                    $(function(){
+                        setTimeout(function(){
+                            $('.text-animation').removeClass('hidden');
+                        }, 500);
+                    });
+                </script>
 			</div>
 		</section>
 	</body>
