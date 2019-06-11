@@ -1,5 +1,8 @@
 <?php
 	session_start();
+	if(!isset($_SESSION['login'])){
+		header(Location: index.php);
+	}
 ?>
 <html>
 <head>
@@ -22,10 +25,13 @@
 			margin-left: 5px;
 			color: white;
 		}
-		form{
+		form.a{
 			display: inline-block;
 			margin: 14.6px 2.5px 14.6px 2.5px;
 			float: right;
+		}
+		form.b{
+			margin: 7px auto;
 		}
 		select{
 			display: inline-block;
@@ -51,14 +57,18 @@
 	$inst = 'select * from '.$_SESSION['login'].'_list_'.$list_name;
     $sth2 = $dbh->prepare($inst);
     $sth2->execute();
+	
+	$delete_url = 'delete_list.php?list_name='.$list_name;
+	echo '<form method="GET" class="b" action="delete_list.php?list_name='.$list_name.'">';
+	echo '<input type="submit" value="§R°£¦Cªí"></form>';
 	while($row=$sth2->fetch(PDO::FETCH_ASSOC)){
 		$song_name = $row['name'];
 		$song_id = $row['id'];
 		echo '<div onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="jump('."'$song_id'".')">
 		';
 		echo '<p>'.$song_name.'</p>';
-		echo '<form method="POST" onclick="bubble(event)" action="remove_from_list.php?list_name='.$list_name.'&song_id='.$song_id.'"><input type="submit" value="remove from list"></form>';
-		echo '<form method="POST" onclick="bubble(event)" id="'.$song_id.'"action="add_to_list.php?song_name='.$song_name.'&song_id='.$song_id.'"><input type="submit" value="add to list"></form>';
+		echo '<form method="POST" class="a" onclick="bubble(event)" action="remove_from_list.php?list_name='.$list_name.'&song_id='.$song_id.'"><input type="submit" value="remove from list"></form>';
+		echo '<form method="POST" class="a" onclick="bubble(event)" id="'.$song_id.'"action="add_to_list.php?song_name='.$song_name.'&song_id='.$song_id.'"><input type="submit" value="add to list"></form>';
 		echo '<select name="list_name" onclick="bubble(event)" form="'.$song_id.'">';
 		foreach($arr as $value){
 			echo '<option value='."'$value'".'>'.$value.'</option>';
