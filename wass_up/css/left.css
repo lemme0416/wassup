@@ -1,7 +1,7 @@
 body{
-    background: #690a1a;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom, #240b36, #690a1a);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #240b36, #690a1a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #97172d;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #240b36, #97172d);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #240b36, #97172d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     margin: 0px;
 }
 div{
