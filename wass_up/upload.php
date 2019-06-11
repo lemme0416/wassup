@@ -72,7 +72,7 @@
 
 					realFileBtn.addEventListener("change", function() {
 						if (realFileBtn.value) {
-							customTxt.innerHTML = realFileBtn.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
+							customTxt.innerHTML = realFileBtn.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[0];
 						} else {
 							customTxt.innerHTML = "No file chosen, yet.";
 						}
