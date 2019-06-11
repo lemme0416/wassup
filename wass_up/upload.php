@@ -49,7 +49,7 @@
 				</ul>
 				<div class="box">
 					<form action="save_upload.php"  method="post" enctype="multipart/form-data">
-						Select music to upload:
+						<h2>Select music to upload:</h2>
 						<input type="file" name="uploaded_file" accept=".mp3">
 						<input type="submit" value="Upload">
 					</form>

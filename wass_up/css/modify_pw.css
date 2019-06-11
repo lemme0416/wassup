@@ -119,17 +119,6 @@ html {
   color: black;
 }
 
-.box a:link{
-  color: white;
-  font-family: 'Montserrat';
-  font-size: 12px;
-}
-.box a:visited {
-  color: white;
-  font-family: 'Montserrat';
-  font-size: 12px;
-  }
-
 @media (max-width: 1350px) {
   .box{
     border: 0px;

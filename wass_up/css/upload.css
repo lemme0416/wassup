@@ -118,17 +118,11 @@ html {
     border: 2px solid rgb(255, 255, 255);
     color: black;
   }
-  
-  .box a:link{
+  .box h2{
     color: white;
     font-family: 'Montserrat';
-    font-size: 12px;
-  }
-  .box a:visited {
-    color: white;
-    font-family: 'Montserrat';
-    font-size: 12px;
-    }
+    font-size: 18px;
+}
   
   @media (max-width: 1350px) {
     .box{
