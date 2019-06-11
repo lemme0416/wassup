@@ -89,7 +89,7 @@ input[type = "submit"]:hover{
 /* The Close Button (x) */
 .close {
     width: 30px;
-    margin: 0px 0px 5px 190px;
+    margin: 0px 0px 12px 190px;
     height: 30px;
     color: rgb(255, 255, 255);
     font-size: 35px;
@@ -110,6 +110,19 @@ h2{
     font-weight: bold;
     color: rgb(255, 255, 255);
     margin: 0px;
+}
+::-webkit-scrollbar{
+    background: #97172d;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #240b36, #97172d);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #240b36, #97172d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    width: 12px;
+}
+::-webkit-srcollbar{
+
+}
+::-webkit-scrollbar-thumb{
+    background:gray;
+    border-radius: 10px;
 }
 @keyframes zoom {
     from {transform: scale(0)} 
