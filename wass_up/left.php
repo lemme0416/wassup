@@ -39,7 +39,7 @@ session_start();
 	<div onclick="jump('red.php')">
 		<p class="options">排行榜</p>
 	</div>
-	<div onclick="document.getElementById('modal-wrapper').style.display='block'" style="width:200px; margin-top:200px; margin-left:160px;">
+	<div onclick="document.getElementById('modal-wrapper').style.display='block'" style="width:200px; margin-top:200px;">
 		<p class="options">新增清單</p>
 	</div>
 
