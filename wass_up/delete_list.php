@@ -22,6 +22,6 @@
 ?>
 <script>
 	function refresh(){
-		parent.frames[2].location = "left.php";
+		parent.frames[1].location .reload(true);
 	}
 </script>
