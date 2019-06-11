@@ -22,6 +22,6 @@
 ?>
 <script>
 	function refresh(){
-		window.parent.frames[1].location .reload(true);
+		window.parent.frames["left"].location .reload(true);
 	}
 </script>
