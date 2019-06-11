@@ -39,7 +39,7 @@ input[type = "text"] {
     border-radius: 50px;
     font-size:16px;
     font-family: 'Montserrat';
-    font-size: 18px;
+    font-size: 16px;
 }
 input[type = "submit"]{
     background: none;
@@ -89,7 +89,7 @@ input[type = "submit"]:hover{
 /* The Close Button (x) */
 .close {
     width: 30px;
-    margin: 10px 10px 10px 100px;
+    margin: 0px 0px 10px 120px;
     height: 30px;
     color: rgb(255, 255, 255);
     font-size: 35px;
