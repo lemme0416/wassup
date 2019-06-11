@@ -39,6 +39,13 @@ session_start();
 	<div onclick="jump('red.php')">
 		<p class="options">排行榜</p>
 	</div>
+	<div onclick="show_form()">
+		<p class="options">新增清單</p>
+	</div>
+	<form method = "POST" hidden = "true" action="add_list.php" id="hidden_form" style="margin:0px 0px 0px 10px">
+		<input type="text" required="true" name="list_name">
+		<input type="submit" value="新增">
+	</form>
 	<?php
 		$inst = 'select * from '.$_SESSION['login'].'_list;';
 		$sth = $dbh->prepare($inst);
@@ -51,12 +58,5 @@ session_start();
 			echo '</div>';	
 		}
 	?>
-	<div onclick="show_form()">
-		<p class="options">新增清單</p>
-	</div>
-	<form method = "POST" hidden = "true" action="add_list.php" id="hidden_form" style="margin:0px 0px 0px 10px">
-		<input type="text" required="true" name="list_name">
-		<input type="submit" value="新增">
-	</form>
 </body>
 </html>
