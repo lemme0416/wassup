@@ -11,7 +11,6 @@
 			background-color: DarkSlateGray;
 			border: 2px solid white;
 			margin: 3px 5px;
-			line-height: this.height;
 		}
 		body{
 			background-color: lightblue;
@@ -26,10 +25,12 @@
 		form{
 			display: inline-block;
 			float: right;
+			margin: auto 5px;
 		}
 		select{
 			display: inline-block;
 			float: right;
+			margin: auto 5px;
 		}
 	</style>
 </head>
