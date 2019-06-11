@@ -44,7 +44,7 @@ input[type = "text"] {
 input[type = "submit"]{
     background: none;
     display: block;
-    margin: 20px auto;
+    margin: 5px auto;
     text-align: center;
     border: 2px solid rgb(255, 255, 255);
     padding: 14px 20px;
@@ -88,7 +88,8 @@ input[type = "submit"]:hover{
 }
 /* The Close Button (x) */
 .close {
-    margin: 10px 10px 10px 40px;
+    width: 30px;
+    margin: 10px 10px 10px 50px;
     height: 30px;
     color: rgb(255, 255, 255);
     font-size: 35px;
