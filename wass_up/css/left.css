@@ -5,8 +5,9 @@ body{
     margin: 0px;
 }
 div{
-    width: 189.6px;
+    width: 179.6px;
     overflow: hidden;
+    border-left: 10px solid rgba(0, 0, 0, 0);
 }
 div:hover > .options{
     color: white;
