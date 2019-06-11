@@ -62,8 +62,6 @@
                             $('.text-animation').removeClass('hidden');
                         }, 500);
                     });
-				</script>
-				<script>
 					const realFileBtn = document.getElementById("real-file");
 					const customBtn = document.getElementById("custom-button");
 					const customTxt = document.getElementById("custom-text");
@@ -74,13 +72,12 @@
 
 					realFileBtn.addEventListener("change", function() {
 						if (realFileBtn.value) {
-							customTxt.innerHTML = realFileBtn.value.match(
-							/[\/\\]([\w\d\s\.\-\(\)]+)$/
-							)[1];
-						} else {
+							customTxt.innerHTML = realFileBtn.value;
+						} 
+						else {
 							customTxt.innerHTML = "No file chosen, yet.";
 						}
-					});
+					});				
 				</script>
 			</div>
 		</section>
