@@ -17,6 +17,6 @@
 			$sth->execute();
 			echo "<script>alert('comment deleted!')</script>";
 		}
-		header("Location: red.php");
+		//header("Location: red.php");
 	}
 ?>
