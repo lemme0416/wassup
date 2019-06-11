@@ -83,7 +83,7 @@ input[type = "submit"]:hover{
     border: 2px solid rgb(255, 255, 255);
     border-radius: 10px;
     width: 220px; 
-    height: 180px;
+    height: 240px;
 	padding-bottom: 0px;
 }
 /* The Close Button (x) */
@@ -104,8 +104,9 @@ input[type = "submit"]:hover{
     animation: zoom 0.6s
 }
 h2{
+    text-align: center;
     font-family: 'Montserrat';
-    font-size: 12px;
+    font-size: 15px;
     color: rgb(255, 255, 255);
     margin: 0px;
 }
