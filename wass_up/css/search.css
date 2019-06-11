@@ -82,11 +82,11 @@ body {
 }
 @media (max-width: 575.98px) {
     .search-box {
-        width: 100px;
-    
+        width: 120px;
+        left: 80%; 
     }
     .search-box:hover > .search-txt {
-        width: 40px;
+        width: 60px;
         padding: 0 6px;
     
     }
@@ -94,7 +94,7 @@ body {
 @media (min-width: 576px) and (max-width: 767.98px) {
     .search-box {
         width: 160px;
-    
+        left: 70%; 
     }
     .search-box:hover > .search-txt {
         width: 100px;
@@ -105,7 +105,7 @@ body {
 @media (min-width: 768px) and (max-width: 991.98px) {
     .search-box {
         width: 200px;
-    
+        left: 60%; 
     }
     .search-box:hover > .search-txt {
         width: 140px;
@@ -116,7 +116,6 @@ body {
 @media (min-width: 992px) and (max-width: 1199.98px) {
     .search-box {
         width: 240px;
-    
     }
     .search-box:hover > .search-txt {
         width: 180px;
