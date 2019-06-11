@@ -15,7 +15,7 @@
 			$inst = 'delete from '.$_SESSION['login'].'_list where list_name='."'$list_name'".';';
 			$sth = $dbh->prepare($inst);
 			$sth->execute();
-			echo '<script> alert("deleted!");</script>';
+			echo "<script>alert('comment deleted!')</script>";
 		}
 		header("Location: red.php");
 	}
