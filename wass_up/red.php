@@ -11,7 +11,6 @@
 			background-color: DarkSlateGray;
 			border: 2px solid white;
 			margin: 3px 5px;
-			height: 60px;
 		}
 		body{
 			background-color: lightblue;
