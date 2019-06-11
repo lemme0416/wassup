@@ -58,25 +58,12 @@ input[type=text] {
 .modal-content {
     background-color: #fefefe;
     position: absolute;
-    top: 50%;
+    top: 55%;
     border: 1px solid #888;
     width: 150px; 
 	padding-bottom: 30px;
 }
 
-/* The Close Button (x) */
-.close {
-    position: absolute;
-    right: 25px;
-    top: 0;
-    color: #000;
-    font-size: 35px;
-    font-weight: bold;
-}
-.close:hover,.close:focus {
-    color: red;
-    cursor: pointer;
-}
 
 /* Add Zoom Animation */
 .animate {
