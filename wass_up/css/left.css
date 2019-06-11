@@ -58,12 +58,24 @@ input[type=text] {
     background-color: #fefefe;
     position: absolute;
     top: 55%;
+    left: 50%;
     border: 1px solid #888;
     width: 150px; 
 	padding-bottom: 30px;
 }
-
-
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+.close:hover,.close:focus {
+    color: red;
+    cursor: pointer;
+}
 /* Add Zoom Animation */
 .animate {
     animation: zoom 0.6s
