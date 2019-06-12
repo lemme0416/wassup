@@ -1,5 +1,9 @@
 ﻿<?php
 	session_start();
+	//確認是否登入
+	if(!isset($_SESSION['login'])){
+		header("Location: index.php");
+	}
 ?>
 <html>
 <head>
@@ -21,23 +25,28 @@
 
 <?php
     require_once('login.php');
-	$_SESSION['last'] = 'red.php';
+	//記住當前位置，用於將音樂加入清單後回到原頁面
+	$_SESSION['last'] = 'red.php?language='.$_GET['language'];
     $dsn = 'mysql:host=localhost;dbname=wassup';
     $dbh = new PDO($dsn,$CFG['username'],$CFG['pw']);
+	//將用戶所有清單取出
 	$inst = 'select * from '.$_SESSION['login'].'_list;';
 	$sth1 = $dbh->prepare($inst);
     $sth1->execute();
 	$arr = array();
+	//將所有清單放入陣列中
 	while($col=$sth1->fetch(PDO::FETCH_ASSOC)){
 		array_push($arr, $col['list_name']);
 	}
-    $sth2 = $dbh->prepare('select * from music;');
-    $sth2->execute();
+	//根據$_GET['language']取出亞洲或歐美種類的音樂
+    $sth2 = $dbh->prepare('select * from music where language = ?;');
+    $sth2->execute(array($_GET['language']));
 	while($row=$sth2->fetch(PDO::FETCH_ASSOC)){
 		$song_name = $row['name'];
 		$song_id = $row['id'];
 		echo '<div>
 		';
+		//為每首音樂創建icon、加入清單的button
 		echo '<img src="https://i.imgur.com/T1iuPh7.png" onmouseover="play_black(this)" onmouseout="play_white(this)" onclick="jump('.$song_id.','."'music'".')">';
 		echo '<p>'.htmlentities($song_name).'</p>';
 		echo '<form method="POST" onclick="bubble(event)" id="'.$song_id.'" action="add_to_list.php?song_name='.htmlentities($song_name).'&song_id='.$song_id.'"><input type="submit" value="+" title="Add to the list"></form>';

@@ -38,8 +38,11 @@ session_start();
 	<div class="options_div" onclick="jump('upload.php')">
 		<p class="options">上傳音樂</p>
 	</div>
-	<div class="options_div" onclick="jump('red.php')">
-		<p class="options">排行榜</p>
+	<div class="options_div" onclick="jump('red.php?language=1')">
+		<p class="options">亞洲排行榜</p>
+	</div>
+	<div class="options_div" onclick="jump('red.php?language=0')">
+		<p class="options">歐美排行榜</p>
 	</div>
 	<div class="options_div" onclick="input_box()">
 		<p class="options">新增清單</p>
