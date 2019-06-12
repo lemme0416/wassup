@@ -52,6 +52,9 @@
 					<input type="file" name="uploaded_file" id="real-file" hidden="hidden" accept=".mp3">
 					<button type="button" id="custom-button">CHOOSE A FILE</button>
 					<span id="custom-text">No file chosen, yet.</span>
+					<a class="styles">Style  :  </a>
+                	<input type = "radio" name = "language" required = "true" value="asia"><a class="options">Asia</a>
+                	<input type = "radio" name = "language" value="america"><a class="options">Western Music</a>
 					<input type="submit" value="Upload">
 				</form>
 			</div>
