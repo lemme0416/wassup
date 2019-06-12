@@ -46,6 +46,7 @@ body{
     overflow: hidden;
     background: none;
     margin: 3px 5px;
+    padding: 0px auto;
 }
 .delete_class input[type = "submit"]{
     background: none;
