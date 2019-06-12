@@ -5,6 +5,8 @@ html{
 body{
     background-size: cover;
     margin: 0px;
+    height: 88px;
+
 }
 .song_name{
     overflow-y: hidden;
