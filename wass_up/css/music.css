@@ -71,6 +71,10 @@ audio{
     transform: translateX(-50%) translateY(-50%);
     font-family: 'Montserrat','微軟正黑體';
 }
+img{
+    width: 20px;
+    height: 20px;
+}
 @media (max-width: 575.98px) {
     audio{
         width: 300px;
