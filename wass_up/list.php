@@ -37,8 +37,7 @@
 		$inst = 'select * from '.$_SESSION['login'].'_list_'.$list_name;
 		$sth2 = $dbh->prepare($inst);
 		$sth2->execute();
-		echo '<div class="delete_class"><form method="POST" action="delete_list.php?list_name='.$list_name.'">';
-		echo '<input type="submit" value="Delete This List"></form></div>';
+
 		while($row=$sth2->fetch(PDO::FETCH_ASSOC)){
 			$song_name = $row['name'];
 			$song_id = $row['id'];
@@ -46,8 +45,8 @@
 			';
 			echo '<img src="https://i.imgur.com/T1iuPh7.png" onmouseover="play_black(this)" onmouseout="play_white(this)" onclick="jump('."'$song_id'".')">';
 			echo '<p>'.$song_name.'</p>';
-			echo '<form method="POST" onclick="bubble(event)" action="remove_from_list.php?list_name='.$list_name.'&song_id='.$song_id.'"><input type="submit" value="-"></form>';
-			echo '<form method="POST" onclick="bubble(event)" id="'.$song_id.'"action="add_to_list.php?song_name='.$song_name.'&song_id='.$song_id.'"><input type="submit" value="+"></form>';
+			echo '<form class="delete_song" method="POST" onclick="bubble(event)" action="remove_from_list.php?list_name='.$list_name.'&song_id='.$song_id.'"><input type="submit" value="-"></form>';
+			echo '<form class="add_to_list" method="POST" onclick="bubble(event)" id="'.$song_id.'"action="add_to_list.php?song_name='.$song_name.'&song_id='.$song_id.'"><input type="submit" value="+"></form>';
 			echo '<select name="list_name" onclick="bubble(event)" form="'.$song_id.'">';
 			foreach($arr as $value){
 				echo '<option value='."'$value'".'>'.$value.'</option>';
@@ -55,6 +54,8 @@
 			echo '</select>';
 			echo '</div>';
 		}
+		echo '<div class="delete_class"><form method="POST" action="delete_list.php?list_name='.$list_name.'">';
+		echo '<input type="submit" value="Delete This List"></form></div>';
 	?>
 	</body>
 </html>
