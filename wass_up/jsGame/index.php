@@ -13,6 +13,9 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>   
 </head>
 <body onload="startGame()">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
 <script>
 var myGameArea;
 var myGamePiece;
