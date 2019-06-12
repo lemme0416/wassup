@@ -1,6 +1,7 @@
 html{
     margin: 0px;
     height: 67.2px;
+    overflow: hidden;
 }
 body{
     background-size: cover;
