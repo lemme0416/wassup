@@ -27,4 +27,8 @@ input[type = "image"]{
 audio{
     width: 500px;
     background-color: #F2F3F5;
+    outline: none;
+}
+#playmode{
+    display: inline-block;
 }
