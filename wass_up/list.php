@@ -38,15 +38,16 @@
 		$sth2 = $dbh->prepare($inst);
 		$sth2->execute();
 		echo '<form method="POST" class="b" action="delete_list.php?list_name='.$list_name.'">';
-		echo '<input type="submit" value="delete list" onclick="alert_success()"></form>';
+		echo '<input type="submit" value="delete list" onclick="delete_list_success()"></form>';
 		while($row=$sth2->fetch(PDO::FETCH_ASSOC)){
 			$song_name = $row['name'];
 			$song_id = $row['id'];
 			echo '<div onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="jump('."'$song_id'".')">
 			';
+			echo '<img src="https://i.imgur.com/T1iuPh7.png" onmouseover="play_black(this)" onmouseout="play_white(this)" onclick="jump('."'$song_id'".')">';
 			echo '<p>'.$song_name.'</p>';
-			echo '<form method="POST" class="a" onclick="bubble(event)" action="remove_from_list.php?list_name='.$list_name.'&song_id='.$song_id.'"><input type="submit" value="-"></form>';
-			echo '<form method="POST" class="a" onclick="bubble(event)" id="'.$song_id.'"action="add_to_list.php?song_name='.$song_name.'&song_id='.$song_id.'"><input type="submit" value="+"></form>';
+			echo '<form method="POST" onclick="bubble(event)" action="remove_from_list.php?list_name='.$list_name.'&song_id='.$song_id.'"><input type="submit" value="-"></form>';
+			echo '<form method="POST" onclick="bubble(event)" id="'.$song_id.'"action="add_to_list.php?song_name='.$song_name.'&song_id='.$song_id.'"><input type="submit" value="+"></form>';
 			echo '<select name="list_name" onclick="bubble(event)" form="'.$song_id.'">';
 			foreach($arr as $value){
 				echo '<option value='."'$value'".'>'.$value.'</option>';
@@ -55,24 +56,5 @@
 			echo '</div>';
 		}
 	?>
-	<script>
-		function color_deep(x) {
-			x.style.backgroundColor = 'black';
-		}
-		function color_shallow(x) {
-			x.style.backgroundColor = 'DarkSlateGray ';
-		}
-		function jump(x){
-			var address = "music2.php?id=" + x;
-			var obj = {"table":"music", "id":x-1};
-			parent.frames[3].play_music(obj);
-		}
-		function bubble(event){
-			event.cancelBubble = true;
-		}
-		function alert_success() {
-			alert('Delete SUCCESS!');
-		}
-	</script>
 	</body>
 </html>
