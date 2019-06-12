@@ -28,6 +28,10 @@ input[type = "image"]{
     width: 40px;
 }
 audio{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
     width: 500px;
     background-color: #F2F3F5;
     outline: none;
