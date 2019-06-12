@@ -58,3 +58,8 @@ input[type = "submit"]{
 input[type = "submit"]:hover{
     color: #40E0D0;
 }
+h2{
+    color: white;
+    font-family: 'Montserrat';
+    font-weight: bold;
+    font-size: 25px;}
