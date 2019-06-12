@@ -19,7 +19,7 @@
     <body>
     <?php
         require_once('login.php');
-        $_SESSION['last'] = 'show_search_result.php';
+        $_SESSION['last'] = 'show_search_result.php?search='.$_GET["search"];
         $dsn = 'mysql:host=localhost;dbname=wassup';
         $dbh = new PDO($dsn,$CFG['username'],$CFG['pw']);
         $inst = 'select * from '.$_SESSION['login'].'_list;';
@@ -34,29 +34,33 @@
             $sth = $dbh->prepare("SELECT * FROM music WHERE name like '%$str%';");
             $sth->setFetchMode(PDO:: FETCH_OBJ);
             $sth->execute();
-            
+            $count = 0;
             while($row = $sth->fetch()){
+                $count = 1;
                 $song_name = $row->name;
                 $song_id = $row->id;
-                echo '<div>
-                ';
-                echo '<img src="https://i.imgur.com/T1iuPh7.png" onmouseover="play_black(this)" onmouseout="play_white(this)" onclick="jump('.$song_id.','."'music'".')">';
-                echo '<p>'.htmlentities($song_name).'</p>';
-                echo '<form method="POST" onclick="bubble(event)" id="'.$song_id.'" action="add_to_list.php?song_name='.htmlentities($song_name).'&song_id='.$song_id.'"><input type="submit" value="+" title="Add to the list"></form>';
-                echo '<select name="list_name" onclick="bubble(event)" form="'.$song_id.'">';
-                echo '<option value="0">Choose a list</option>';
-                foreach($arr as $value){
-                    $html_value = htmlentities($value);
-                    echo '<option value='."'$html_value'".'>'.$html_value.'</option>';
-                }
-                echo '</select>';
-                echo '</div>';         
+                if(empty($row) == false){
+                    echo '<div>
+                    ';
+                    echo '<img src="https://i.imgur.com/T1iuPh7.png" onmouseover="play_black(this)" onmouseout="play_white(this)" onclick="jump('.$song_id.','."'music'".')">';
+                    echo '<p>'.htmlentities($song_name).'</p>';
+                    echo '<form method="POST" onclick="bubble(event)" id="'.$song_id.'" action="add_to_list.php?song_name='.htmlentities($song_name).'&song_id='.$song_id.'"><input type="submit" value="+" title="Add to the list"></form>';
+                    echo '<select name="list_name" onclick="bubble(event)" form="'.$song_id.'">';
+                    echo '<option value="0">Choose a list</option>';
+                    foreach($arr as $value){
+                        $html_value = htmlentities($value);
+                        echo '<option value='."'$html_value'".'>'.$html_value.'</option>';
+                    }
+                    echo '</select>';
+                    echo '</div>';   
+                }      
             ?>
         <?php     
             }
+            if($count == 0){
+                echo '<div class="no_result"><h2>No Result!</h2></div>';
+            }
         }
-        else echo "<h2>name doesnt exist</h2>";
-
     ?> 
     </body>
 </html>

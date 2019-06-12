@@ -12,7 +12,7 @@
 
     </head> 
     <body> 
-        <ul class="text" onclick = "javascript:parent.location.href='home.php'">
+        <ul class="text" onclick = "javascript:parent.frames[2].location='jsGame/index.php'">
             <li>W</li>
             <li>a</li>
             <li>s</li>
