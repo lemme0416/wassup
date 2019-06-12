@@ -113,7 +113,7 @@ body{
   border: 2px solid rgb(255, 255, 255);
   color: black;
 }
-/* for input h2 in box */
+/* for h2 in box */
 .box h2{
   color: white;
   font-family: 'Montserrat';
@@ -138,7 +138,7 @@ body{
     font-weight: bold;
     font-size: 18px;
 }
-/* if window width < 1350px ;border = 0 */
+/* if window width < 1350px ;box's border = 0 */
 @media (max-width: 1350px) {
   .box{
     border: 0px;

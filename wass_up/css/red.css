@@ -2,17 +2,16 @@ body{
     background: radial-gradient(ellipse at bottom, #3d4f64 0%,#240b36 100%);
     margin: 0px;
 }
+/* div for songs css */
 div{
     overflow: hidden;
     background: #C04848;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #480048, #C04848);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #480048, #C04848); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    
-    /* border: 1px solid white; */
     border-radius: 54px;
     margin: 3px 5px;
 }
-
+/* p for song name css */
 p{
     display: inline-block;
     text-align: center;
@@ -20,11 +19,13 @@ p{
     font-family: 'Microsoft JhengHei';
     cursor: default;
 }
+/* form for add to list css */
 form{
     display: inline-block;
     margin: 10.6px 10px 10.6px 4px;
     float: right;
 }
+/* choose which list css */
 select{
     display: inline-block;
     margin: 17.6px 2.5px 17.6px 2.5px;
@@ -35,12 +36,14 @@ select{
     outline: none;
 
 }
+/* play button css */
 img{
     margin: 12px 10px ;
     height: 30px;
     width: 30px;
     float: left;
 }
+/* css for + */
 input[type = "submit"]{
     background: none;
     display: block;

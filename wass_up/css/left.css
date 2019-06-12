@@ -137,6 +137,7 @@ h2{
     background:gray;
     border-radius: 10px;
 }
+/* animation for pop out add list */
 @keyframes zoom {
     from {transform: scale(0)} 
     to {transform: scale(1)}
