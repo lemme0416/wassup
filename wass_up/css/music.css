@@ -84,6 +84,16 @@ img{
         width: 20px;
         height: 20px;
     }
+    .loop{
+        left: 85%;
+    }
+    .single{
+        left: 90%;
+
+    }
+    .random{
+        left: 95%;
+    }  
 }
 @media (min-width: 576px) and (max-width: 767.98px) {
 
