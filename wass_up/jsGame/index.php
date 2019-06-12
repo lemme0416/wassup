@@ -50,8 +50,8 @@ var myGameArea = {
         this.title.appendChild(node);
         document.body.insertBefore(this.title, document.body.childNodes[0]);*/
 
-        this.canvas.width = 600;
-        this.canvas.height = 600;
+        this.canvas.width = 500;
+        this.canvas.height = 500;
         this.context = this.canvas.getContext("2d");
         document.body.insertBefore(this.canvas, document.body.childNodes[0]);
         this.frameNo = 0;
@@ -313,7 +313,7 @@ function updateGameArea() {
     if ((myGameArea.frameNo == 1 || everyinterval(50))) {
         //implement random moving obstacles
         if (myGameArea.frameNo == 1) {
-            myObstacles.push(new component(10, 300, "green", 500, 0));
+            myObstacles.push(new component(10, 300, "green", 400, 0));
             pause = true;
         }
         else if (myGameArea.frameNo > 1000 && Math.random() > 0.5) {
@@ -333,8 +333,8 @@ function updateGameArea() {
         else {
             var gap = Math.random() * 50 + 90;
             var gap_y = Math.random() * (500 - gap + 20) - 25;
-            myObstacles.push(new component(10, gap_y, "green", 610, 0));
-            myObstacles.push(new component(10, 500 - (gap_y + gap), "green", 610, gap_y + gap));
+            myObstacles.push(new component(10, gap_y, "green", 510, 0));
+            myObstacles.push(new component(10, 500 - (gap_y + gap), "green", 510, gap_y + gap));
         }
     }
     for (i = 0; i < myObstacles.length; i += 1) {
