@@ -235,7 +235,7 @@ function kbcontrol(){
     }
     else if (right == true && left == false) {
         myGamePiece.speedX = 5;
-        myGamePiece.image.src = "https://i.imgur.com/gTrpKnr.png";
+        myGamePiece.image.src = "startup_forward.png";
         fly = 0;
     }
     else {
@@ -243,17 +243,17 @@ function kbcontrol(){
     }
     if (up == true && down == false) {
         myGamePiece.speedY = -5;
-        myGamePiece.image.src = "https://i.imgur.com/Dx9cvEb.png";
+        myGamePiece.image.src = "startup_up.png";
         fly = 1;
     }
     else if (down == true && up == false) {
         myGamePiece.speedY = 5;
-        myGamePiece.image.src = "https://i.imgur.com/3sZHfeI.png";
+        myGamePiece.image.src = "startup_down.png";
         fly = 2;
     }
     else if ((left == true && right == true) || (left == false && right == false)) {
         myGamePiece.speedY = 0;
-        myGamePiece.image.src = "https://i.imgur.com/pTzRpWv.png";
+        myGamePiece.image.src = "startup.png";
         fly = 0;
     }
     else {

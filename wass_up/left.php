@@ -17,6 +17,7 @@ session_start();
 	<script src="js/left.js"></script>
 </head>
 <body>
+	<!-- div for 'hello, name' -->
 	<div class="options_div">
 	<?php
 		require_once('login.php');
@@ -29,25 +30,31 @@ session_start();
 		}
 	?>
 	</div>
+	<!-- div for log out -->
 	<div class="options_div" onclick = "javascript:parent.location.href='index.php'">
 		<p class="options" >登出</p>
 	</div>
+	<!-- div for modify password -->
 	<div class="options_div" onclick="jump('modify_pw.php')">
 		<p class="options" onclick="jump('modify_pw.php')">修改密碼</p>
 	</div>
+	<!-- div for upload -->
 	<div class="options_div" onclick="jump('upload.php')">
 		<p class="options">上傳音樂</p>
 	</div>
+	<!-- div for 亞洲排行榜 -->
 	<div class="options_div" onclick="jump('red.php?language=1')">
 		<p class="options">亞洲排行榜</p>
 	</div>
+	<!-- div for 歐美排行榜 -->
 	<div class="options_div" onclick="jump('red.php?language=0')">
 		<p class="options">歐美排行榜</p>
 	</div>
+	<!-- div for add list -->
 	<div class="options_div" onclick="input_box()">
 		<p class="options">新增清單</p>
 	</div>
-
+	<!-- div for pop out add list input -->
 	<div id="modal-wrapper" class="modal">
 		<form class="modal-content animate" method = "POST" action="add_list.php" >
 			<div onclick="document.getElementById('modal-wrapper').style.display='none'" class="close">&times;</div>

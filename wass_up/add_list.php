@@ -10,14 +10,15 @@
 			$dsn = 'mysql:host=localhost;dbname=wassup';
 			$dbh = new PDO($dsn,$CFG['username'],$CFG['pw']);
 			//建立播放清單
-			$table_name = $_SESSION['login'].'_list_'.$_POST['list_name'];
+			$replaced_list_name = str_replace(" ","_",$_POST['list_name']);
+			$table_name = $_SESSION['login'].'_list_'.$replaced_list_name;
 			$inst = 'create table if not exists ? (id INT(11), name VARCHAR(100), CONSTRAINT song_unique UNIQUE (id, name));';
 			$sth = $dbh->prepare($inst);
 			$sth->execute(array($table_name));
 			//在清單總Table中加入新Table的資料
 			$inst = 'insert into '.$_SESSION['login'].'_list(list_name) values (?);';
 			$sth = $dbh->prepare($inst);
-			$sth->execute(array($_POST['list_name']));
+			$sth->execute(array($replaced_list_name));
 			//重新整理右方頁面，使更新資料能夠及時顯示
 			echo "<script> parent.frames[2].location.reload(true) </script>";
 		}
