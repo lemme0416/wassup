@@ -36,13 +36,10 @@ audio{
     background-color: #F2F3F5;
     outline: none;
 }
-#playmode{
+#loop{
     position: absolute;
     left: 70%;
     top: 50%;
     transform: translateX(-50%) translateY(-50%);
     font-family: 'Montserrat','微軟正黑體';
-}
-#loop{
-
 }
