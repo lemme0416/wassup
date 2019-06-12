@@ -34,8 +34,9 @@
             $sth = $dbh->prepare("SELECT * FROM music WHERE name like '%$str%';");
             $sth->setFetchMode(PDO:: FETCH_OBJ);
             $sth->execute();
-            
+            $count = 0;
             while($row = $sth->fetch()){
+                $count = 1;
                 $song_name = $row->name;
                 $song_id = $row->id;
                 if(empty($row) == false){
@@ -56,7 +57,9 @@
             ?>
         <?php     
             }
-            echo '<h2>No Result!</h2>';
+            if($count == 1){
+                echo '<h2>No Result!</h2>';
+            }
         }
     ?> 
     </body>
