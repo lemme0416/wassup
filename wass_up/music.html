@@ -36,7 +36,7 @@ function play_music(obj){
     for (x in myObj){
       if(myObj[x].id == i) music_name = myObj[x].name;
     }
-    document.getElementById("l").innerHTML = this.responseText;
+    document.getElementById("l").innerHTML = myObj[i].name;
     document.getElementById("music").src = "music/"+music_name+".mp3";
     document.getElementById("music").loop = false;
     document.getElementById("test").innerHTML = music_name;
