@@ -26,21 +26,13 @@
                 $sth->execute();
                 
                 while($row = $sth->fetch()){
-                    $song_name = $row['name'];
-                    $song_id = $row['id'];
-                    echo '<div>
+                    $row_name = htmlentities($row->name);
+                    echo '<div class="song_div" onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="jump('."'$row_name'".')">
                     ';
-                    echo '<img src="https://i.imgur.com/T1iuPh7.png" onmouseover="play_black(this)" onmouseout="play_white(this)" onclick="jump('.$song_id.','."'music'".')">';
-                    echo '<p>'.htmlentities($song_name).'</p>';
-                    echo '<form method="POST" onclick="bubble(event)" id="'.$song_id.'" action="add_to_list.php?song_name='.htmlentities($song_name).'&song_id='.$song_id.'"><input type="submit" value="+" title="Add to the list"></form>';
-                    echo '<select name="list_name" onclick="bubble(event)" form="'.$song_id.'">';
-                    echo '<option value="0">Choose a list</option>';
-                    foreach($arr as $value){
-                        $html_value = htmlentities($value);
-                        echo '<option value='."'$html_value'".'>'.$html_value.'</option>';
-                    }
-                    echo '</select>';
-                    echo '</div>';          
+                    echo"	<p>".$row_name."</p>
+                    ";
+                    echo"</div>
+                    ";            
                 ?>
             <?php     
                 }
