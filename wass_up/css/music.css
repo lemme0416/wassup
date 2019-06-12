@@ -12,7 +12,7 @@ body{
 }
 .song_name{
     position: absolute;
-    left: 10%;
+    left: 20%;
     top: 50%;
     transform: translateX(-50%) translateY(-50%);
     overflow: hidden;
@@ -20,7 +20,7 @@ body{
     border-left: 10px solid rgba(0, 0, 0, 0);
 }
 .song_name p{
-    font-size: 25px;
+    font-size: 15px;
     font-family: 'Montserrat','微軟正黑體';
 }
 input[type = "image"]{
