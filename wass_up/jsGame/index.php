@@ -50,8 +50,8 @@ var myGameArea = {
         this.title.appendChild(node);
         document.body.insertBefore(this.title, document.body.childNodes[0]);*/
 
-        this.canvas.width = 100%;
-        this.canvas.height = 100%;
+        this.canvas.width = "100%";
+        this.canvas.height = "100%";
         this.context = this.canvas.getContext("2d");
         document.body.insertBefore(this.canvas, document.body.childNodes[0]);
         this.frameNo = 0;
@@ -107,7 +107,7 @@ var myGameArea = {
     clear : function() {
         //clear the current canvas status
         ctx = myGameArea.context;
-        ctx.fillStyle = 'rgba(255,255,255,0)';
+        ctx.fillStyle = 'radial-gradient(ellipse at bottom, #1b2735 0%,#240b36 100%);';
         ctx.fillRect(0, 0, 500, 500);
     },
     stop : function() {
