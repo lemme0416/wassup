@@ -1,7 +1,7 @@
 #test{
     display: inline;
 }
-.how_to_play{
+input[type = "image"]{
     height: 100px;
     width: 100px;
 }
