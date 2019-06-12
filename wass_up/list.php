@@ -38,11 +38,11 @@
 		$sth2 = $dbh->prepare($inst);
 		$sth2->execute();
 		echo '<form method="POST" class="b" action="delete_list.php?list_name='.$list_name.'">';
-		echo '<input type="submit" value="delete list" onclick="delete_list_success()"></form>';
+		echo '<input class="delete_class"type="submit" value="Delete This List" onclick="delete_list_success()"></form><br>';
 		while($row=$sth2->fetch(PDO::FETCH_ASSOC)){
 			$song_name = $row['name'];
 			$song_id = $row['id'];
-			echo '<div onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="jump('."'$song_id'".')">
+			echo '<div>
 			';
 			echo '<img src="https://i.imgur.com/T1iuPh7.png" onmouseover="play_black(this)" onmouseout="play_white(this)" onclick="jump('."'$song_id'".')">';
 			echo '<p>'.$song_name.'</p>';
