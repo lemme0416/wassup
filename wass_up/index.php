@@ -1,5 +1,6 @@
 <?php
     header("Content-Type: text/html; charset=utf-8");
+    session.Clear();
     session_start();
 ?>
 <!DOCTYPE html>
