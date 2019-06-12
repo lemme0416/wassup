@@ -2,6 +2,6 @@
     display: inline;
 }
 input[type = "image"]{
-    height: 100px;
-    width: 100px;
+    height: 10px;
+    width: 10px;
 }
