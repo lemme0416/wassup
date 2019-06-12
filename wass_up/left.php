@@ -6,7 +6,6 @@ session_start();
 	<link rel="shortcut icon" href="https://imgur.com/G4KMHP3.png" type="image/x-icon" />
 	
 	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
-	
 	<link rel="stylesheet" href="css/left.css">
 	
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -64,6 +63,7 @@ session_start();
 			$list_url = 'list.php?list_name='.$list_name;
 			echo '<div class="options_div" onclick="jump('."'$list_url'".')">';
 			echo '<p class="options">'.htmlentities($list_name).'</p>';
+			echo '<img class="options_img" src="list.png">';
 			echo '</div>';	
 		}
 	?>

@@ -16,10 +16,16 @@ body{
 }
 /* for every p in div in left */
 .options{
+    display: inline-block;
     color: rgb(206, 206, 206);
     font-family: 'Montserrat','Microsoft JhengHei';
     font-size: 16px;
     font-weight: bold;
+    float: left;
+}
+.options_img {
+    display: inline-block;
+    height: 50px;
     float: left;
 }
 /* for "hello, name" */
