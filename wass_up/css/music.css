@@ -2,13 +2,16 @@ body{
     overflow: hidden;
 }
 .song_name{
+    overflow: hidden;
+    width: 300px;
     display: inline-block;
     font-size: 25px;
     padding: auto 2px;
     text-align: center;
     font-family: 'Montserrat','微軟正黑體';
-    margin: 0px
-
+}
+.song_name p{
+    margin: 0px;
 }
 input[type = "image"]{
     height: 40px;
