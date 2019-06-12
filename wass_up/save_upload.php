@@ -23,8 +23,8 @@
 				$dbh = new PDO($dsn,$CFG['username'],$CFG['pw']);
 				//將音樂檔名存到music table中
 				$sth=$dbh->prepare('insert into music(name, language) values(? , ?)');
-				if($_POST['langauge']=='asia') $num = 1;
-				else if($_POST['langauge']=='america') $num = 0;
+				if($_POST['language']=='asia') $num = 1;
+				else if($_POST['language']=='america') $num = 0;
 				$sth->execute(array($file_name, $num));
 			} else{
 				//錯誤訊息
