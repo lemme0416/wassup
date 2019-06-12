@@ -1,6 +1,6 @@
 <?php
     header("Content-Type: text/html; charset=utf-8");
-    unset($_SESSION['login']);
+    unset(@$_SESSION['login']);
     session_start();
 ?>
 <!DOCTYPE html>
