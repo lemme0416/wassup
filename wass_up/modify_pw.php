@@ -18,36 +18,34 @@
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>    
     </head>
     <body>
-        <section class="wrapper">
-            <div id="stars"></div>
-            <div id="stars2"></div>
-            <div id="stars3"></div>
-            <div id="title">
-                <ul class="text-animation hidden">
-                    <li>M</li>
-                    <li>o</li>
-                    <li>d</li>
-                    <li>i</li>
-                    <li>f</li>
-                    <li>y</li>
-                    <li>!</li>
-                </ul>
-                <div class="box">        
-                    <form method="POST">
-                        <input type = "password" name = "npw" required = "TRUE" placeholder="New Password"><br>
-                        <input type = "password" name = "npw2" required = "TRUE" placeholder="Enter New Password Again"><br>
-                        <input type = "submit" value ="Confirm">
-                    </form>
-                </div>
-                <script type="text/javascript">
-                    $(function(){
-                        setTimeout(function(){
-                            $('.text-animation').removeClass('hidden');
-                        }, 500);
-                    });
-                </script>
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
+        <div id="title">
+            <ul class="text-animation hidden">
+                <li>M</li>
+                <li>o</li>
+                <li>d</li>
+                <li>i</li>
+                <li>f</li>
+                <li>y</li>
+                <li>!</li>
+            </ul>
+            <div class="box">        
+                <form method="POST">
+                    <input type = "password" name = "npw" required = "TRUE" placeholder="New Password"><br>
+                    <input type = "password" name = "npw2" required = "TRUE" placeholder="Enter New Password Again"><br>
+                    <input type = "submit" value ="Confirm">
+                </form>
             </div>
-        </section>
+            <script type="text/javascript">
+                $(function(){
+                    setTimeout(function(){
+                        $('.text-animation').removeClass('hidden');
+                    }, 500);
+                });
+            </script>
+        </div>
     </body>
 </html>
 <?php
