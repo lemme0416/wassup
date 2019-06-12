@@ -31,3 +31,6 @@ audio{
     background-color: #F2F3F5;
     outline: none;
 }
+#playmode{
+    display: inline-block;
+}
