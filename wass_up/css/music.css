@@ -78,8 +78,7 @@ img{
 }
 @media (max-width: 575.98px) {
     .song_name{
-        left: 25%;
-        width: 150px;
+        left: 30%;
     }
     audio{
         left: 60%;
@@ -89,26 +88,29 @@ img{
         width: 20px;
         height: 20px;
     }
-    .loop{
-        left: 85%;
-    }
-    .single{
-        left: 90%;
-
-    }
-    .random{
-        left: 95%;
-    }  
-    .last{
-        left: 30%;
-
-    }
-    .next{
-        left: 35%;;
-    }
+    .loop{left: 85%;}
+    .single{left: 90%;}
+    .random{left: 95%;}  
+    .last{left: 30%;}
+    .next{left: 35%;}
 }
 @media (min-width: 576px) and (max-width: 767.98px) {
-
+    .song_name{
+        left: 30%;
+    }
+    audio{
+        left: 60%;
+        width: 250px;
+    }
+    img{
+        width: 25px;
+        height: 25px;
+    }
+    .loop{left: 85%;}
+    .single{left: 90%;}
+    .random{left: 95%;}  
+    .last{left: 30%;}
+    .next{left: 35%;}
 }
 @media (min-width: 768px) and (max-width: 991.98px) {
 
