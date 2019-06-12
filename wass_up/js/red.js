@@ -7,6 +7,8 @@ function play_white(x){
 function jump(id, table){
     var obj = {"table":table, "id":id};
     parent.frames[3].play_music(obj);
+    alert(table);
+    alert(id);
 }
 function bubble(event){
     event.cancelBubble = true;
