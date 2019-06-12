@@ -75,6 +75,10 @@ audio{
     audio{
         width: 300px;
     }
+    input [type ="image"]{
+        width: 20px;
+        height: 20px;
+    }
 }
 @media (min-width: 576px) and (max-width: 767.98px) {
 
