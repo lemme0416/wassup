@@ -19,7 +19,7 @@
     <body>
     <?php
         require_once('login.php');
-        $_SESSION['last'] = 'show_search_result.php';
+        $_SESSION['last'] = 'show_search_result.php?search='.$_GET["search"];
         $dsn = 'mysql:host=localhost;dbname=wassup';
         $dbh = new PDO($dsn,$CFG['username'],$CFG['pw']);
         $inst = 'select * from '.$_SESSION['login'].'_list;';
@@ -52,14 +52,11 @@
                     }
                     echo '</select>';
                     echo '</div>';   
-                }
-                else{
-                    echo '<h2>No Result!</h2>';
-                }
-      
+                }      
             ?>
         <?php     
             }
+            echo '<h2>No Result!</h2>';
         }
     ?> 
     </body>
