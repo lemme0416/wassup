@@ -96,11 +96,11 @@ img{
 }
 @media (min-width: 576px) and (max-width: 767.98px) {
     .song_name{
-        left: 30%;
+        left: 20%;
     }
     audio{
         left: 60%;
-        width: 250px;
+        width: 280px;
     }
     img{
         width: 25px;
