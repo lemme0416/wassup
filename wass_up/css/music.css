@@ -6,6 +6,8 @@ body{
     background-size: cover;
     margin: 0px;
     background-color: #F2F3F5;
+    font-family: 'Montserrat','微軟正黑體';
+
 }
 .song_name{
     overflow: hidden;
@@ -28,13 +30,4 @@ audio{
     width: 500px;
     background-color: #F2F3F5;
     outline: none;
-}
-#playmode{
-    display: inline-block;
-}
-#options_div{
-    display: inline-block;
-    width: 300px;
-    font-family: 'Montserrat','微軟正黑體';
-    float: right;
 }
