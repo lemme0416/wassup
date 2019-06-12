@@ -49,7 +49,7 @@
 			echo '<div class="song_div">
 			';
 			$full_list_name = $_SESSION['login'].'_list_'.$list_name;
-			echo '<img src="https://i.imgur.com/T1iuPh7.png" onmouseover="play_black(this)" onmouseout="play_white(this)" onclick="jump('.$song_id.','."'$full_list_name'".')">';
+			echo '<img src="https://i.imgur.com/T1iuPh7.png" onmouseover="play_black(this)" onmouseout="play_white(this)" onclick="jump('.$song_id.','."'$full_list_name'".',2)">';
 			echo '<p>'.$song_name.'</p>';
 			echo '<form class="delete_song" method="POST" onclick="bubble(event)" action="remove_from_list.php?list_name='.$list_name.'&song_id='.$song_id.'"><input type="submit" value="-" title="Delete this song from this list"></form>';
 			echo '<form class="add_to_list" method="POST" onclick="bubble(event)" id="'.$song_id.'"action="add_to_list.php?song_name='.$song_name.'&song_id='.$song_id.'"><input type="submit" value="+" title="Add this song to list"></form>';
