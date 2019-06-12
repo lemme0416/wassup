@@ -1,7 +1,11 @@
+html{
+    margin: 0px;
+    height: 88px;
+}
 body{
     background-size: cover;
     margin: 0px;
-  }
+}
 .song_name{
     overflow-y: hidden;
     margin: auto 2px;
