@@ -100,7 +100,7 @@ img{
     }
     audio{
         left: 60%;
-        width: 280px;
+        width: 330px;
     }
     img{
         width: 25px;
@@ -113,7 +113,22 @@ img{
     .next{left: 40%;}
 }
 @media (min-width: 768px) and (max-width: 991.98px) {
-
+    .song_name{
+        left: 25%;
+    }
+    audio{
+        left: 60%;
+        width: 310px;
+    }
+    img{
+        width: 25px;
+        height: 25px;
+    }
+    .loop{left: 85%;}
+    .single{left: 90%;}
+    .random{left: 95%;}  
+    .last{left: 35%;}
+    .next{left: 40%;}
 }
 @media (min-width: 992px) and (max-width: 1199.98px) {
 
