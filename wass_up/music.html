@@ -3,18 +3,25 @@
       <script src="js/music.js"></script>
   </head>
 <body >
+<!-- song name -->
+<p id = "test">error</p>
 <!-- 播放 -->
 <audio id ="music" preload="true" controls = "true" loop = false>
 Your browser does not support the audio element.
 </audio>
+<!-- select version
 <select name="how_to_play" id = "playmode" onchange="showCustomer(this.value)">
   <option value="loop">循環播放</option>
   <option value="single">單曲循環</option>
   <option value="random">random</option>
-</select>
+</select> -->
+
+<input type ="button" value="loop" onclick="showCustomer(this.value)">
+<input type ="button" value="single" onclick="showCustomer(this.value)">
+<input type ="button" value="random" onclick="showCustomer(this.value)">
 <input type ="button" value="下一首" onclick="playendedhandler()">
 <input type ="button" value="上一首" onclick="backsong()">
-<p id = "test">error</p>
+<!-- used to debug -->
 <p id = "l"></p>
 
 
