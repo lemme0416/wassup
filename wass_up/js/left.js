@@ -1,6 +1,4 @@
-function color_deep(x) {
-    x.style.borderColor = 'red';
-}
+// right frame location
 function jump(x){
     parent.frames[2].location = x;
 }

@@ -55,3 +55,6 @@ input[type = "submit"]{
     font-weight: bold;
     font-size: 25px;
 }
+input[type = "submit"]:hover{
+    color: #40E0D0;
+}
