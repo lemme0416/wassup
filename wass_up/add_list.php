@@ -16,6 +16,6 @@
 			$sth->execute(array($_POST['list_name']));
 			echo "<script> parent.frames[2].location.reload(true) </script>";
 		}
-		header("Location: left.php");
+		echo "<script> window.location = 'left.php' </script>";
 	}
 ?>
