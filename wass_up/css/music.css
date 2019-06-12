@@ -5,7 +5,7 @@ html{
 body{
     background-size: cover;
     margin: 0px;
-
+    background-color: #F2F3F5;
 }
 .song_name{
     overflow: hidden;
@@ -26,5 +26,5 @@ input[type = "image"]{
 }
 audio{
     width: 500px;
-    background-color: aquamarine;
+    background-color: #F2F3F5;
 }
