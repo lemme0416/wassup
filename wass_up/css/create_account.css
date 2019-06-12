@@ -3,12 +3,14 @@ body{
   background: red;
   margin: 0px;
 }
+/* text-animation for tag <ul> */
 .text-animation{
   list-style: none;
   width: 400px;
   margin: 25px auto 5px auto; 
   padding: 0px;
 }
+/* text-animation for tag <li> */
 .text-animation li{
   display: inline-block;
   font-family: 'Montserrat';
@@ -25,7 +27,7 @@ body{
 .text-animation.hidden{
   opacity: 0;
 }
-
+/* text-animation for tag <li> position */
 .text-animation.hidden li:nth-child(1){transform: translateY(-100px);}
 .text-animation.hidden li:nth-child(2){transform: translateY(-150px);}
 .text-animation.hidden li:nth-child(3){transform: translateY(-200px);}
@@ -37,6 +39,7 @@ body{
 .text-animation.hidden li:nth-child(8){transform: translateY(-450px);}
 .text-animation.hidden li:nth-child(9){transform: translateY(-500px);}
 
+/* for box div which include form*/
 .box{
   width: 350px;
   margin: 25px auto 10px auto;
@@ -48,7 +51,7 @@ body{
   overflow: hidden;
   text-align: center;
 }
-
+/* for input text and password in box */
 .box input[type = "text"],.box input[type = "password"]{
   width: 60%;
   border:0;
@@ -66,12 +69,11 @@ body{
   font-family: 'Montserrat';
 
 }
-
 .box input[type = "text"]:focus,.box input[type = "password"]:focus{
   width: 80%;
   border-color: rgb(255, 255, 255);
 }
-
+/* for input submit in box */
 .box input[type = "submit"]{
   background: none;
   display: block;
@@ -86,13 +88,12 @@ body{
   cursor: pointer;
   font-family: 'Montserrat';
 }
-
 .box input[type = "submit"]:hover{
   background: rgb(255, 255, 255);
   border: 2px solid rgb(255, 255, 255);
   color: black;
 }
-
+/* for input button in box */
 .box input[type = "button"]{
   background: none;
   display: block;
@@ -107,37 +108,37 @@ body{
   cursor: pointer;
   font-family: 'Montserrat';
 }
-
 .box input[type = "button"]:hover{
   background: rgb(255, 255, 255);
   border: 2px solid rgb(255, 255, 255);
   color: black;
 }
-
+/* for input h2 in box */
 .box h2{
   color: white;
   font-family: 'Montserrat';
   font-size: 18px;
 }
-
+/* for input radio in box */
 .box input[type = "radio"]{
   color: white;
   font-family: 'Montserrat';
   font-size: 12px;
 }
-
+/* for each input radio text in box */
 .options{
     color: white;
     font-family: 'Montserrat';
     font-size: 15px;
   }
-
+/* for input radio text in box */
 .gender{
     color: white;
     font-family: 'Montserrat';
     font-weight: bold;
     font-size: 18px;
 }
+/* if window width < 1350px ;border = 0 */
 @media (max-width: 1350px) {
   .box{
     border: 0px;

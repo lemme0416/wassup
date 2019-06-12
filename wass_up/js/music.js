@@ -70,10 +70,21 @@ function playendedhandler(){
 function showCustomer(str){
   play_mode = str;
   if (str == "single"){
-    document.getElementById("music").loop = true;                                     //
+    document.getElementById("music").loop = true; 
+    document.getElementById("loop").src = "https://i.imgur.com/LvIr9Uu.png";
+    document.getElementById("single").src = "https://i.imgur.com/D0bt3KD.png";
+    document.getElementById("random").src = "https://i.imgur.com/u09pKuP.png";
   }
-  else {
+  else if(str == "loop"){
     document.getElementById("music").loop = false;
+    document.getElementById("loop").src = "https://i.imgur.com/er0TBWN.png";
+    document.getElementById("single").src = "https://i.imgur.com/D0bt3KD.png";
+    document.getElementById("random").src = "https://i.imgur.com/u09pKuP.png";
+  }
+  else{
+    document.getElementById("loop").src = "https://i.imgur.com/LvIr9Uu.png";
+    document.getElementById("single").src = "https://i.imgur.com/j1jzgdj.png";
+    document.getElementById("random").src = "https://i.imgur.com/Z3ZLLhP.png";
   }
 }
 function next(x){
