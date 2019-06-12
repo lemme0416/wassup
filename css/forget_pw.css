@@ -56,7 +56,6 @@ body{
   font-family: 'Montserrat';
   font-size: 15px;
 }
-
 .box input[type = "text"],.box input[type = "password"]{
   width: 60%;
   border:0;
@@ -78,6 +77,7 @@ body{
   width: 80%;
   border-color: rgb(255, 255, 255);
 }
+/* for input submit in box */
 .box input[type = "submit"]{
   background: none;
   display: block;
@@ -97,6 +97,7 @@ body{
   border: 2px solid rgb(255, 255, 255);
   color: black;
 }
+/* for input button in box */
 .box input[type = "button"]{
   background: none;
   display: block;
@@ -116,18 +117,7 @@ body{
   border: 2px solid rgb(255, 255, 255);
   color: black;
 }
-
-.box a:link{
-  color: white;
-  font-family: 'Montserrat';
-  font-size: 12px;
-}
-.box a:visited {
-  color: white;
-  font-family: 'Montserrat';
-  font-size: 12px;
-  }
-
+/* if window width < 1350px ;box's border = 0 */
 @media (max-width: 1350px) {
   .box{
     border: 0px;

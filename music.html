@@ -1,38 +1,36 @@
 <!DOCTYPE html>
 <html>
   <head>
-      <link rel="shortcut icon" href="https://imgur.com/G4KMHP3.png" type="image/x-icon" />
-        
-      <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link rel="shortcut icon" href="https://imgur.com/G4KMHP3.png" type="image/x-icon" />
       
-      <link rel="stylesheet" href="css/music.css">
-      
-      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    
+    <link rel="stylesheet" href="css/music.css">
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>        
-      <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-      
-      <script src="js/music.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>        
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    
+    <script src="js/music.js"></script>
   </head>
-  <body >
-  <!-- song name -->
-  <div class="song_name">
-    <p id = "test">error</p>
-  </div>
-  <!-- 播放 -->
-  <audio id ="music" preload="true" controls = "true" loop = false>
-  Your browser does not support the audio element.
-  </audio>
-  <!-- 各式各樣的功能 -->
-  <img class="loop"   id="loop"        onclick="showCustomer('loop')" class="how_to_play" title="循環" src = "https://i.imgur.com/er0TBWN.png">
-  <img class="single" id="single"      onclick="showCustomer('single')" class="how_to_play" title="單曲循環" src="https://i.imgur.com/j1jzgdj.png">
-  <img class="random" id="random"     onclick="showCustomer('random')" class="how_to_play" title="隨機" src = "https://i.imgur.com/u09pKuP.png">
-  <img class="last"   id="上一首"   onmouseover="previous_hover(this)"  onmouseout="previous(this)"  onclick="backsong()"  title="上一首" class="how_to_play" src="https://i.imgur.com/Ou0uTxe.png">
-  <img class="next"   id="下一首"   onmouseover="next_hover(this)"      onmouseout="next(this)"      onclick="playendedhandler()" title="下一首" class="how_to_play" src="https://i.imgur.com/NvVbqcF.png">
-  <!-- used to debug -->     
-  <p id = "l"></p>
-
-
+  <body>
+    <!-- song name -->
+    <div class="song_name">
+      <p id = "test">error</p>
+    </div>
+    <!-- 播放 -->
+    <audio id ="music" preload="true" controls = "true" loop = false>
+    Your browser does not support the audio element.
+    </audio>
+    <!-- 各式各樣的功能 -->
+    <img class="loop"   id="loop" onclick="showCustomer('loop')" class="how_to_play" title="循環" src = "https://i.imgur.com/er0TBWN.png">
+    <img class="single" id="single" onclick="showCustomer('single')" class="how_to_play" title="單曲循環" src="https://i.imgur.com/j1jzgdj.png">
+    <img class="random" id="random" onclick="showCustomer('random')" class="how_to_play" title="隨機" src = "https://i.imgur.com/u09pKuP.png">
+    <img class="last"   id="previous"  onmouseover="previous_hover(this)"  onmouseout="previous(this)"  onclick="backsong()"  title="上一首" class="how_to_play" src="https://i.imgur.com/Ou0uTxe.png">
+    <img class="next"   id="next"  onmouseover="next_hover(this)"      onmouseout="next(this)"      onclick="playendedhandler()" title="下一首" class="how_to_play" src="https://i.imgur.com/NvVbqcF.png">
+    <!-- used to debug -->     
+    <p id = "l"></p>
   </body>
 </html>

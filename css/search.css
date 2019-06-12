@@ -4,6 +4,8 @@ body {
     background: #240b36;  /* fallback for old browsers */
     overflow: hidden;
 }
+/* css for search box */
+/* https://www.youtube.com/watch?v=v1PeTDrw6OY&t=4s */
 .search-box {
     position: absolute;
     top: 50%;
@@ -16,17 +18,17 @@ body {
     width: 300px;
 
 }
+/* while hover on search box */
 .search-box:hover > .search-txt {
     width: 240px;
     padding: 0 6px;
 
 }
-
 .search-box:hover > .search-btn {
     background: white;
     color: black;
 }
-
+/* css for search button */
 .search-btn {
     color: #e84118;
     float: right;
@@ -41,11 +43,11 @@ body {
     color: white;
     cursor: pointer;    
 }
-
+/* size of search button image */
 .search-btn > i {
     font-size: 15px;    
 }
-
+/* css for search txt */
 .search-txt {
     border: none;
     background: none;
@@ -61,6 +63,7 @@ body {
     font-family: 'Montserrat';
     font-size: 20px;
 }
+/* css for title'wassup' */
 .text{
     list-style: none;
     width: 377px;
@@ -80,6 +83,7 @@ body {
 .text li:last-child{
     margin-right: 0;
 }
+/* while change window width, resize audio's size and position, song_name position, all imgs size and position*/
 @media (max-width: 575.98px) {
     .search-box {
         width: 120px;

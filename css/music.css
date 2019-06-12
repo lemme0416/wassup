@@ -11,6 +11,7 @@ body{
     font-family: 'Montserrat','微軟正黑體';
     display: inline-block;
 }
+/* div for show song name */
 .song_name{
     position: absolute;
     left: 12%;
@@ -19,14 +20,12 @@ body{
     overflow: hidden;
     width: 300px;
 }
+/* <p> in song_name div css */
 .song_name p{
     font-size: 15px;
     font-family: 'Montserrat','微軟正黑體';
 }
-input[type = "image"]{
-    height: 40px;
-    width: 40px;
-}
+/* audio size position */
 audio{
     position: absolute;
     left: 50%;
@@ -36,6 +35,7 @@ audio{
     background-color: #F2F3F5;
     outline: none;
 }
+/* img id=loop css */
 .loop{
     position: absolute;
     left: 75%;
@@ -43,6 +43,7 @@ audio{
     transform: translateX(-50%) translateY(-50%);
     font-family: 'Montserrat','微軟正黑體';
 }
+/* img id=single css */
 .single{
     position: absolute;
     left: 80%;
@@ -50,6 +51,7 @@ audio{
     transform: translateX(-50%) translateY(-50%);
     font-family: 'Montserrat','微軟正黑體';
 }
+/* img id=random css */
 .random{
     position: absolute;
     left: 85%;
@@ -57,6 +59,7 @@ audio{
     transform: translateX(-50%) translateY(-50%);
     font-family: 'Montserrat','微軟正黑體';
 }
+/* img id=previous css */
 .last{
     position: absolute;
     left: 22%;
@@ -64,6 +67,7 @@ audio{
     transform: translateX(-50%) translateY(-50%);
     font-family: 'Montserrat','微軟正黑體';
 }
+/* img id=next css */
 .next{
     position: absolute;
     left: 25%;
@@ -71,11 +75,13 @@ audio{
     transform: translateX(-50%) translateY(-50%);
     font-family: 'Montserrat','微軟正黑體';
 }
+/* all imgs size */
 img{
     width: 40px;
     height: 40px;
     background-color: #F2F3F5;
 }
+/* while change window width, resize audio's size and position, song_name position, all imgs size and position*/
 @media (max-width: 575.98px) {
     .song_name{
         left: 30%;

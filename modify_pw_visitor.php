@@ -19,7 +19,7 @@ session_start();
     </head>
     <body>
         <!-- 各種特效 -->
-        <ul class="text-animation hidden">
+        <ul class="text-animation hidden" onclick="javascript:window.location.href='index.php'">
             <li>M</li>
             <li>o</li>
             <li>d</li>
