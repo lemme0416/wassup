@@ -1,8 +1,5 @@
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-</head>
-
 <?php
+	header("Content-Type:text/html; charset=utf-8");
 	session_start();
 	if(isset($_GET['song_name'])){
 		require_once('login.php');
