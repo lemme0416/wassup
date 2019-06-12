@@ -10,7 +10,8 @@ body{
 .song_name{
     overflow: hidden;
     height: 74.4px;
-
+    width: auto;
+    border-left: 10px solid rgba(0, 0, 0, 0);
 }
 .song_name p{
     display: inline-block;
