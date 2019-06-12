@@ -142,9 +142,9 @@ img{
         width: 30px;
         height: 30px;
     }
-    .loop{left: 85%;}
-    .single{left: 90%;}
-    .random{left: 95%;}  
+    .loop{left: 90%;}
+    .single{left: 94%;}
+    .random{left: 98%;}  
     .last{left: 26%;}
     .next{left: 30%;}
 }
