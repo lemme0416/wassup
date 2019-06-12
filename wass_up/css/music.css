@@ -26,5 +26,5 @@ input[type = "image"]{
 }
 audio{
     width: 500px;
-    color: aquamarine;
+    background-color: aquamarine;
 }
