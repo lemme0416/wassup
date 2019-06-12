@@ -22,11 +22,10 @@
 				$dsn = 'mysql:host=localhost;dbname=wassup';
 				$dbh = new PDO($dsn,$CFG['username'],$CFG['pw']);
 				//將音樂檔名存到music table中
-				$sth=$dbh->prepare('insert into music(name, language) values(:name, :language)');
-				$sth->bindParam(':name', $file_name);
-				if($_POST['langauge']=='asia') $sth->bindParam(':language', 1);
-				else if($_POST['langauge']=='america') $sth->bindParam(':language', 0);
-				$sth->execute();
+				$sth=$dbh->prepare('insert into music(name, language) values(? , ?)');
+				if($_POST['langauge']=='asia') $num = 1;
+				else if($_POST['langauge']=='america') $num = 0;
+				$sth->execute(array($file_name, $num));
 			} else{
 				//錯誤訊息
 				$return_value = 'error';
