@@ -1,6 +1,6 @@
 <?php
     header("Content-Type: text/html; charset=utf-8");
-    session.Clear();
+    unset($_SESSION['login']);
     session_start();
 ?>
 <!DOCTYPE html>
