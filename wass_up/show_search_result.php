@@ -1,23 +1,18 @@
 <html>
     <head>
-        <meta charset="utf-8" />
-        <title>music</title>
-        <style>
-            div{
-                overflow: hidden;
-                background-color: DarkSlateGray;
-                border: 2px solid white;
-                margin: 2px 2px;
-            }
-            body{
-                background-color: lightblue;
-                margin: 0px;
-            }
-            p{
-                text-align: center;
-                color: white;
-            }
-        </style>
+        <link rel="shortcut icon" href="https://imgur.com/G4KMHP3.png" type="image/x-icon" />
+        
+        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+        
+        <link rel="stylesheet" href="css/show_search_result.css">
+        
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>        
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        
+        <script src="js/show_search_result.js"></script>
     </head>
     <body>
         <?php
@@ -31,13 +26,21 @@
                 $sth->execute();
                 
                 while($row = $sth->fetch()){
-                    $row_name = htmlentities($row->name);
-                    echo '<div class="song_div" onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="jump('."'$row_name'".')">
+                    $song_name = $row['name'];
+                    $song_id = $row['id'];
+                    echo '<div>
                     ';
-                    echo"	<p>".$row_name."</p>
-                    ";
-                    echo"</div>
-                    ";            
+                    echo '<img src="https://i.imgur.com/T1iuPh7.png" onmouseover="play_black(this)" onmouseout="play_white(this)" onclick="jump('.$song_id.','."'music'".')">';
+                    echo '<p>'.htmlentities($song_name).'</p>';
+                    echo '<form method="POST" onclick="bubble(event)" id="'.$song_id.'" action="add_to_list.php?song_name='.htmlentities($song_name).'&song_id='.$song_id.'"><input type="submit" value="+" title="Add to the list"></form>';
+                    echo '<select name="list_name" onclick="bubble(event)" form="'.$song_id.'">';
+                    echo '<option value="0">Choose a list</option>';
+                    foreach($arr as $value){
+                        $html_value = htmlentities($value);
+                        echo '<option value='."'$html_value'".'>'.$html_value.'</option>';
+                    }
+                    echo '</select>';
+                    echo '</div>';          
                 ?>
             <?php     
                 }
