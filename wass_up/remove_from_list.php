@@ -4,7 +4,7 @@
 
 <?php
 	session_start();
-	//½T»{¬O§_µn¤J
+	//ï¿½Tï¿½{ï¿½Oï¿½_ï¿½nï¿½J
 	if(!isset($_SESSION['login'])){
 		header("index.php");
 	}
@@ -15,11 +15,11 @@
 			$dbh = new PDO($dsn,$CFG['username'],$CFG['pw']);
 			$list_name = $_GET['list_name'];
 			$song_id = $_GET['song_id'];
-			//±q¼½©ñ²M³æ¤¤§R°£ºq¦±
+			//ï¿½qï¿½ï¿½ï¿½ï¿½Mï¿½æ¤¤ï¿½Rï¿½ï¿½ï¿½qï¿½ï¿½
 			$inst = 'delete from '.$_SESSION['login'].'_list_'.$list_name.' where id='.$song_id .';';
 			$sth = $dbh->prepare($inst);
 			$sth->execute();
-			//¦^¨ì­ì¥»ªº²M³æ
+			//ï¿½^ï¿½ï¿½ì¥»ï¿½ï¿½ï¿½Mï¿½ï¿½
 			$destination = 'Location: list.php?list_name='.$list_name;
 		}
 		header($destination);
