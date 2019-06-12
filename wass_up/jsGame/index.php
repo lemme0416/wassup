@@ -5,7 +5,7 @@
             
             <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
             
-            <link rel="stylesheet" href="css/upload.css">
+            <link rel="stylesheet" href="css/index.css">
             
             <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
             <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -367,6 +367,29 @@
 
                 }
             </script>
+			<script type="text/javascript">
+				$(function(){
+					setTimeout(function(){
+						$('.text-animation').removeClass('hidden');
+					}, 500);
+				});
+				const realFileBtn = document.getElementById("real-file");
+				const customBtn = document.getElementById("custom-button");
+				const customTxt = document.getElementById("custom-text");
+				const fileName = document.getElementById("real-file");
+
+				customBtn.addEventListener("click", function() {
+					realFileBtn.click();
+				});
+
+				realFileBtn.addEventListener("change", function() {
+					if (fileName.value) {
+						customTxt.innerHTML = fileName.files[0].name;
+					} else {
+						customTxt.innerHTML = "No file chosen, yet.";
+					}
+				});				
+			</script>
         </div>
     </body>
 </html>
