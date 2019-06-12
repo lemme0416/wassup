@@ -45,7 +45,7 @@ body{
 .delete_class{
     overflow: hidden;
     background: none;
-    margin: 10px 10px;
+    margin: 20px 10px;
     padding: 0px auto;
 }
 .delete_class input[type = "submit"]{
@@ -61,7 +61,7 @@ body{
     cursor: pointer;
     font-family: 'Montserrat';
     font-weight: bold;
-    font-size: 30px;
+    font-size: 40px;
 }
 .delete_class input[type = "submit"]:hover{
     color: #FF0080;
