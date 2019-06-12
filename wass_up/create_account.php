@@ -60,19 +60,30 @@ session_start();
     $dsn = 'mysql:host=localhost;dbname=wassup';
     $dbh = new PDO($dsn,$CFG['username'],$CFG['pw']);
     if(empty(@$_POST['id']) == false && empty(@$_POST['pw']) == false && empty(@$_POST['nkn']) == false && empty(@$_POST['sex']) == false && empty(@$_POST['security']) == false){
-
-        $sth = $dbh->prepare('insert into users (id,pw,name,gender,problem) values (?,?,?,?,?) ;');
-		$hashed_pw = md5(@$_POST['pw']); //hasing pw
-        $sth->execute(array(@$_POST['id'],$hashed_pw,@$_POST['nkn'],@$_POST['sex'],@$_POST['security']));
-        if(isset($_POST['id'])){
-            $inst = 'create table if not exists '.htmlentities($_POST['id']).'_list (list_name VARCHAR(50), CONSTRAINT list_unique UNIQUE (list_name));';
-            $sth = $dbh->prepare($inst);
-            $sth->execute();
-        }          
-        echo "<script>alert('Registration SUCCESS!')</script>";
-        echo "<script type='text/javascript'>";
-            echo "window.location.href='index.php'";
-        echo "</script>";  
+        $sth2 = $dbh->prepare('select * from users where id = ? ;');
+        $sth2->execute(array(@$_POST['id']));
+        $result = $sth2->fetch(PDO::FETCH_ASSOC);
+        if($result['id'] == $_POST['id']){
+            $sth = $dbh->prepare('insert into users (id,pw,name,gender,problem) values (?,?,?,?,?) ;');
+            $hashed_pw = md5(@$_POST['pw']); //hasing pw
+            $sth->execute(array(@$_POST['id'],$hashed_pw,@$_POST['nkn'],@$_POST['sex'],@$_POST['security']));
+            if(isset($_POST['id'])){
+                $inst = 'create table if not exists '.htmlentities($_POST['id']).'_list (list_name VARCHAR(50), CONSTRAINT list_unique UNIQUE (list_name));';
+                $sth = $dbh->prepare($inst);
+                $sth->execute();
+            }          
+            echo "<script>alert('Registration SUCCESS!')</script>";
+            echo "<script type='text/javascript'>";
+                echo "window.location.href='index.php'";
+            echo "</script>";             
+        }
+        else{
+            echo "<script>alert('Duplicate ID!')</script>";
+            echo "<script type='text/javascript'>";
+                echo "window.location.href='create_account.php'";
+            echo "</script>"; 
+        }
+ 
   
 }
 
