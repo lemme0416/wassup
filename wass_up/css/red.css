@@ -22,7 +22,7 @@ p{
 }
 form{
     display: inline-block;
-    margin: 10.6px 4px;
+    margin: 10.6px 10px 10.6px 4px;
     float: right;
 }
 select{
