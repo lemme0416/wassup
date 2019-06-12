@@ -58,7 +58,7 @@
         <?php     
             }
             if($count == 0){
-                echo '<h2>No Result!</h2>';
+                echo '<div class="no_result"><h2>No Result!</h2></div>';
             }
         }
     ?> 
