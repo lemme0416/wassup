@@ -38,7 +38,7 @@ function startGame() {
     myGameArea.start();
     myGamePiece = new component(50, 50, "startup.png", 10, 225, "image"); 
     myScore = new textcomponent("20px", "Montserrat", "white", 380, 20);
-    myLife = new textcomponent("20px", "Montserrat", "#ffdde1", 380, 40);
+    myLife = new textcomponent("20px", "Montserrat", "#ee9ca7", 380, 40);
 }
 
 var myGameArea = {
