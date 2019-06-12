@@ -13,7 +13,7 @@
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>        
             <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>   
     </head>
-    <body>
+    <body onload="startGame()">
         <div id="stars"></div>
         <div id="stars2"></div>
         <div id="stars3"></div>
@@ -38,7 +38,6 @@
                 var fly = 0;
                 var add_point;
                 var over = false;
-                var div_game = document.getElementById("game_div");
 
                 function startGame() {
                     myGameArea.start();
@@ -55,7 +54,7 @@
                         this.canvas.width = 500;
                         this.canvas.height = 500;
                         this.context = this.canvas.getContext("2d");
-                        div_game.insertBefore(this.canvas, div_game.childNodes[0]);
+                        document.body.insertBefore(this.canvas, body.childNodes[3]);
                         this.frameNo = 0;
                         this.interval = setInterval(updateGameArea, 20);
 

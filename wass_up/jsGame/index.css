@@ -3,7 +3,7 @@ html {
     overflow: hidden;
     background: radial-gradient(ellipse at bottom, #1b2735 0%,#240b36 100%);
   }
-#game_div{
+body{
     text-align: center;
 }
 canvas {
