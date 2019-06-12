@@ -1,33 +1,42 @@
+<!DOCTYPE html>
 <html>
   <head>
-      <script src="js/music.js"></script>
+      <link rel="shortcut icon" href="https://imgur.com/G4KMHP3.png" type="image/x-icon" />
+        
+      <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+      
       <link rel="stylesheet" href="css/music.css">
       
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>        
+      <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+      
+      <script src="js/music.js"></script>
   </head>
-<body >
-<!-- song name -->
-<p id = "test">error</p>
-<!-- 播放 -->
-<audio id ="music" preload="true" controls = "true" loop = false>
-Your browser does not support the audio element.
-</audio>
-<!-- select version
-<select name="how_to_play" id = "playmode" onchange="showCustomer(this.value)">
-  <option value="loop">循環播放</option>
-  <option value="single">單曲循環</option>
-  <option value="random">random</option>
-</select> -->
+  <body >
+  <!-- song name -->
+  <p id = "test">error</p>
+  <!-- 播放 -->
+  <audio id ="music" preload="true" controls = "true" loop = false>
+  Your browser does not support the audio element.
+  </audio>
+  <!-- select version
+  <select name="how_to_play" id = "playmode" onchange="showCustomer(this.value)">
+    <option value="loop">循環播放</option>
+    <option value="single">單曲循環</option>
+    <option value="random">random</option>
+  </select> -->
 
-<input type ="image" value="loop" onclick="showCustomer(this.value)" class="how_to_play" title="循環" src = "player_pic/repeat.png">
-<input type ="image" value="single" onclick="showCustomer(this.value)" class="how_to_play" title="單曲循環" src="player_pic/equalizer.png">
-<input type ="image" value="random" onclick="showCustomer(this.value)" class="how_to_play" title="隨機" src = "player_pic/shuffle.png">
-<input type ="image" value="上一首" onclick="backsong()" src="player_pic/previous.png" title="上一首" class="how_to_play">
-<input type ="image" value="下一首" onclick="playendedhandler()" src="player_pic/next.png" title="下一首" class="how_to_play">
-<!-- used to debug -->     
-<p id = "l"></p>
+  <input type ="image" value="loop" onclick="showCustomer(this.value)" class="how_to_play" title="循環" src = "player_pic/repeat.png">
+  <input type ="image" value="single" onclick="showCustomer(this.value)" class="how_to_play" title="單曲循環" src="player_pic/equalizer.png">
+  <input type ="image" value="random" onclick="showCustomer(this.value)" class="how_to_play" title="隨機" src = "player_pic/shuffle.png">
+  <input type ="image" value="上一首" onclick="backsong()" src="player_pic/previous.png" title="上一首" class="how_to_play">
+  <input type ="image" value="下一首" onclick="playendedhandler()" src="player_pic/next.png" title="下一首" class="how_to_play">
+  <!-- used to debug -->     
+  <p id = "l"></p>
 
 
-</body>
-    
-
+  </body>
 </html>

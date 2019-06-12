@@ -9,3 +9,6 @@ input[type = "image"]{
     height: 40px;
     width: 40px;
 }
+audio{
+    width: 300px;
+}
