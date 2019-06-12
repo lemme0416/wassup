@@ -10,13 +10,13 @@ body{
 .song_name{
     overflow: hidden;
     height: 74.4px;
-    width: auto;
+    width: 300px;
     border-left: 10px solid rgba(0, 0, 0, 0);
 }
 .song_name p{
     display: inline-block;
     float: left;
-    font-size: 25px;
+    font-size: auto;
     font-family: 'Montserrat','微軟正黑體';
 }
 input[type = "image"]{
