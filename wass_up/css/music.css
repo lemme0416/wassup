@@ -72,8 +72,8 @@ audio{
     font-family: 'Montserrat','微軟正黑體';
 }
 img{
-    width: 20px;
-    height: 20px;
+    width: 40px;
+    height: 40px;
 }
 @media (max-width: 575.98px) {
     audio{
