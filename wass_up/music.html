@@ -21,7 +21,7 @@ var loop_or_single = false;
 var i = 0,x=0;
 var length;
 var obj, dbParam, xmlhttp;
-obj = { "table":"music", "id":0 };
+obj = { "table":"music", "id":1 };
 var myObj
 window.onload = play_music(obj)
 function play_music(obj){
@@ -32,9 +32,10 @@ function play_music(obj){
   if (this.readyState == 4 && this.status == 200) {
     myObj = JSON.parse(this.responseText);
     length = myObj.length;
-    var music_name;
+    var music_name = "something bad";
     for (x in myObj){
       if(myObj[x].id == i) music_name = myObj[x].name;
+      document.write()
     }
     document.getElementById("l").innerHTML = myObj[i].name;
     document.getElementById("music").src = "music/"+music_name+".mp3";

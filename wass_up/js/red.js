@@ -6,7 +6,7 @@ function play_white(x){
 }
 function jump(x){
     var address = "music2.php?id=" + x;
-    var obj = {"table":"music", "id":x-1};
+    var obj = {"table":"music", "id":x};
     parent.frames[3].play_music(obj);
 }
 function bubble(event){
