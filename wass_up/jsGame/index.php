@@ -40,16 +40,6 @@ function startGame() {
     myGamePiece = new component(50, 50, "startup.png", 10, 225, "image"); 
     myScore = new textcomponent("20px", "Arial", "black", 380, 20);
     myLife = new textcomponent("20px", "serif", "blue", 380, 40);
-    set_music();
-}
-
-function set_music() {
-    music = document.createElement("Embed");
-    music.src = "music.mp3"
-    music.setAttribute("loop", "loop");
-    music.setAttribute("autoplay", "autoplay");
-    music.setAttribute("hidden", "true");
-    document.body.appendChild(music);
 }
 
 var myGameArea = {
