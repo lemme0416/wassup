@@ -14,7 +14,7 @@
 			$inst = 'insert into '.$_SESSION['login'].'_list(list_name) values (?);';
 			$sth = $dbh->prepare($inst);
 			$sth->execute(array($_POST['list_name']));
-			echo '<script> parent.frames["2"].location.reload(true) </script>';
+			echo '<script> parent.frames[2].location.reload(true) </script>';
 		}
 		header("Location: left.php");
 	}
