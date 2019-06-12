@@ -19,7 +19,7 @@ session_start();
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> 
     </head>
     <body>
-        <ul class="text-animation hidden" window.location='index.php'>
+        <ul class="text-animation hidden" window.location.href='index.php'>
             <li>R</li>
             <li>e</li>
             <li>g</li>
