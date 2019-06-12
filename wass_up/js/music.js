@@ -78,7 +78,7 @@ function showCustomer(str){
   else if(str == "loop"){
     document.getElementById("music").loop = false;
     document.getElementById("loop").src = "https://i.imgur.com/er0TBWN.png";
-    document.getElementById("single").src = "https://i.imgur.com/D0bt3KD.png";
+    document.getElementById("single").src = "https://i.imgur.com/j1jzgdj.png";
     document.getElementById("random").src = "https://i.imgur.com/u09pKuP.png";
   }
   else{
