@@ -53,7 +53,7 @@ body{
     display: block;
     text-align: center;
     border: 2px  rgb(255, 255, 255);
-    margin: 10px auto;
+    margin: auto;
     outline: none;
     color: white;
     border-radius: 24px;
@@ -61,7 +61,7 @@ body{
     cursor: pointer;
     font-family: 'Montserrat';
     font-weight: bold;
-    font-size: 25px;
+    font-size: 30px;
 }
 .delete_class input[type = "submit"]:hover{
     color: #FF0080;
