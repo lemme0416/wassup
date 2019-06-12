@@ -1,13 +1,13 @@
-var loop_or_single = false;
-var i = 0,x=0;
+var loop_or_single = false;                   // 單曲or連續
+var i = 0,x=0;                                // counter
 var length;
 var obj, dbParam, xmlhttp;
 obj = { "table":"music", "id":1 };
-var play_mode = "loop";
+var play_mode = "loop";                       //播放模式
 var myObj
-window.onload = play_music(obj)
-function play_music(obj){
-  dbParam = JSON.stringify(obj);
+window.onload = play_music(obj)               //開場先讀一次資料庫的資料
+function play_music(obj){                     //放音樂的func
+  dbParam = JSON.stringify(obj);              
   var xmlhttp = new XMLHttpRequest();
   i = obj.id;
   xmlhttp.onreadystatechange = function() {
