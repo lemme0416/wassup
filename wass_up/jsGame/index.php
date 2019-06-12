@@ -47,14 +47,14 @@ var myGameArea = {
     title : document.createElement("h3"),
 
     start : function() {
-        var node = document.createTextNode("Star War 87");
+        /*var node = document.createTextNode("Star War 87");
         this.title.appendChild(node);
-        document.body.insertBefore(this.title, document.body.childNodes[0]);
+        document.body.insertBefore(this.title, document.body.childNodes[0]);*/
 
         this.canvas.width = 500;
         this.canvas.height = 500;
         this.context = this.canvas.getContext("2d");
-        document.body.insertBefore(this.canvas, document.body.childNodes[1]);
+        document.body.insertBefore(this.canvas, document.body.childNodes[0]);
         this.frameNo = 0;
         this.interval = setInterval(updateGameArea, 20);
 
