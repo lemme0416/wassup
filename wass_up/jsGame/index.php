@@ -14,9 +14,9 @@
             <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>   
     </head>
     <body onload="startGame()">
-        <div id="stars"></div>
+        <!-- <div id="stars"></div>
         <div id="stars2"></div>
-        <div id="stars3"></div>
+        <div id="stars3"></div> -->
             <script>
                 var myGameArea;
                 var myGamePiece;
@@ -52,7 +52,7 @@
                         this.canvas.width = 500;
                         this.canvas.height = 500;
                         this.context = this.canvas.getContext("2d");
-                        document.body.insertBefore(this.canvas, body.childNodes[3]);
+                        document.body.insertBefore(this.canvas, body.childNodes[0]);
                         this.frameNo = 0;
                         this.interval = setInterval(updateGameArea, 20);
 
