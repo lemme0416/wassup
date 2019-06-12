@@ -1,6 +1,10 @@
+body{
+    overflow: hidden;
+}
 #test{
     display: inline;
-    font-size: 40px;
+    font-size: 25px;
+    margin: auto 2px;
     text-align: center;
     font-family: 'Montserrat','微軟正黑體';
 
