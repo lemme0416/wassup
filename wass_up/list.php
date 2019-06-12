@@ -43,7 +43,7 @@
 			$song_id = $row['id'];
 			echo '<div class="song_div">
 			';
-			echo '<img src="https://i.imgur.com/T1iuPh7.png" onmouseover="play_black(this)" onmouseout="play_white(this)" onclick="jump('."'$song_id'".')">';
+			echo '<img src="https://i.imgur.com/T1iuPh7.png" onmouseover="play_black(this)" onmouseout="play_white(this)" onclick="jump('.$song_id.','."'$list_name'".')">';
 			echo '<p>'.$song_name.'</p>';
 			echo '<form class="delete_song" method="POST" onclick="bubble(event)" action="remove_from_list.php?list_name='.$list_name.'&song_id='.$song_id.'"><input type="submit" value="-"></form>';
 			echo '<form class="add_to_list" method="POST" onclick="bubble(event)" id="'.$song_id.'"action="add_to_list.php?song_name='.$song_name.'&song_id='.$song_id.'"><input type="submit" value="+"></form>';
