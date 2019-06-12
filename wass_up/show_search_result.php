@@ -31,9 +31,9 @@
                 $sth->execute();
 
                 while($row = $sth->fetch()){
-                    echo '<div class="song_div" onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="jump('."'$row->name'".')">
+                    echo '<div class="song_div" onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="jump('."'htmlentities($row->name)'".')">
                     ';
-                    echo"	<p>$row->name</p>
+                    echo"	<p>htmlentities($row->name)</p>
                     ";
                     echo"</div>
                     ";            

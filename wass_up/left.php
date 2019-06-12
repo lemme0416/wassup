@@ -26,7 +26,7 @@ session_start();
 		$name = $dbh->prepare('select * from users where id = ? ;');
 		$name->execute(array($_SESSION['login']));
 		while($row=$name->fetch(PDO::FETCH_ASSOC)){
-			echo '<p class="intro">Hello, '.$row['name'].'</p>';
+			echo '<p class="intro">Hello, '.htmlentities($row['name']).'</p>';
 		}
 	?>
 	</div>
@@ -60,7 +60,7 @@ session_start();
 			$list_name = $row['list_name'];
 			$list_url = 'list.php?list_name='.$list_name;
 			echo '<div class="options_div" onclick="jump('."'$list_url'".')">';
-			echo '<p class="options">'.$list_name.'</p>';
+			echo '<p class="options">'.htmlentities($list_name).'</p>';
 			echo '</div>';	
 		}
 	?>
