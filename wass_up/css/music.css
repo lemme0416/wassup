@@ -32,3 +32,9 @@ audio{
 #playmode{
     display: inline-block;
 }
+#options_div{
+    display: inline-block;
+}
+#options_div p{
+    display: inline-block;
+}
