@@ -11,6 +11,7 @@
 			$dbh = new PDO($dsn,$CFG['username'],$CFG['pw']);
 			//建立播放清單
 			$inst = 'create table if not exists '.$_SESSION['login'].'_list_'.$_POST['list_name'].' (id INT(11), name VARCHAR(100), CONSTRAINT song_unique UNIQUE (id, name));';
+			echo $inst;
 			$sth = $dbh->prepare($inst);
 			$sth->execute();
 			//在清單總Table中加入新Table的資料
