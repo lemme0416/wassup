@@ -38,6 +38,7 @@ var over = false;
 
 
 function startGame() {
+	window.focus();
     myGameArea.start();
     myGamePiece = new component(50, 50, "startup.png", 10, 225, "image"); 
     myScore = new textcomponent("20px", "Montserrat", "white", 380, 20);
