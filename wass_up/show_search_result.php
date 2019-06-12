@@ -36,8 +36,8 @@
                 $sth->execute();
                 
                 while($row = $sth->fetch()){
-                    $song_name = htmlentities($row->name);
-                    $song_id = htmlentities($row->id);
+                    $song_name = $row->name;
+                    $song_id = $row->id;
                     echo '<div>
                     ';
                     echo '<img src="https://i.imgur.com/T1iuPh7.png" onmouseover="play_black(this)" onmouseout="play_white(this)" onclick="jump('.$song_id.','."'music'".')">';
