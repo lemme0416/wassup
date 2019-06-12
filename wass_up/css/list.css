@@ -64,7 +64,7 @@ body{
     margin: 5px auto;
 }
 /* add song to another list */
-.add_to_list form{
+.song_div form{
     display: inline-block;
     margin: 10.6px 4px 10.6px 4px;
     float: right;
@@ -87,11 +87,6 @@ body{
     color: #40E0D0;
 }
 /* delete song from this list */
-.delete_song form{
-    display: inline-block;
-    margin: 10.6px 4px 10.6px 4px;
-    float: right;
-}
 .delete_song input[type = "submit"]{
     background: none;
     display: block;
