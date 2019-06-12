@@ -12,6 +12,3 @@ function jump(x){
 function bubble(event){
     event.cancelBubble = true;
 }
-function alert_success() {
-    alert('Add SUCCESS!');
-}

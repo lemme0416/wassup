@@ -39,7 +39,7 @@
 		';
 		echo '<img src="https://i.imgur.com/T1iuPh7.png" onmouseover="play_black(this)" onmouseout="play_white(this)" onclick="jump('."'$song_id'".')">';
 		echo '<p>'.$song_name.'</p>';
-		echo '<form method="POST" onclick="bubble(event)" id="'.$song_id.'" action="add_to_list.php?song_name='.$song_name.'&song_id='.$song_id.'"><input type="submit" value="+" title="Add to the list" onclick="alert_success()"></form>';
+		echo '<form method="POST" onclick="bubble(event)" id="'.$song_id.'" action="add_to_list.php?song_name='.$song_name.'&song_id='.$song_id.'"><input type="submit" value="+" title="Add to the list"></form>';
 		echo '<select name="list_name" onclick="bubble(event)" form="'.$song_id.'">';
 		echo '<option value="0">Choose a list</option>';
 		foreach($arr as $value){

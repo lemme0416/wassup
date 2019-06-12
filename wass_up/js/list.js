@@ -12,9 +12,3 @@ function jump(x){
 function bubble(event){
     event.cancelBubble = true;
 }
-function alert_success() {
-    alert('Add SUCCESS!');
-}
-function delete_list_success() {
-    alert('Delete SUCCESS!');
-}
