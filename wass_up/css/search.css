@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     background: #240b36;  /* fallback for old browsers */
-    
+    overflow: hidden;
 }
 .search-box {
     position: absolute;
