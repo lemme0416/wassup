@@ -51,7 +51,7 @@ var myGameArea = {
         document.body.insertBefore(this.title, document.body.childNodes[0]);*/
 
         this.canvas.width = 500;
-        this.canvas.height = 500;
+        this.canvas.height = 100%;
         this.context = this.canvas.getContext("2d");
         document.body.insertBefore(this.canvas, document.body.childNodes[0]);
         this.frameNo = 0;
@@ -269,7 +269,7 @@ function updateGameArea() {
     }
     myGameArea.clear();
     if (over) {
-        ctx.fillStyle = 'white';
+        ctx.fillStyle = '#240b36';
         ctx.fillRect(0, 0, 500, 500);
         over = new textcomponent("40px", "serif", "black", 210, 60);
         over.text = "Over!";
