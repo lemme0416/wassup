@@ -313,7 +313,7 @@ function updateGameArea() {
     if ((myGameArea.frameNo == 1 || everyinterval(50))) {
         //implement random moving obstacles
         if (myGameArea.frameNo == 1) {
-            myObstacles.push(new component(10, 300, "green", 400, 0));
+            myObstacles.push(new component(10, 300, "green", 500, 0));
             pause = true;
         }
         else if (myGameArea.frameNo > 1000 && Math.random() > 0.5) {
