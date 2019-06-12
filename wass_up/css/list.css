@@ -67,7 +67,6 @@ img{
 .delete_class form{
     margin: 5px auto;
 }
-
 input[type = "submit"]{
     background: none;
     display: block;
