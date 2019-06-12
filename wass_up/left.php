@@ -63,7 +63,7 @@ session_start();
 			$list_url = 'list.php?list_name='.$list_name;
 			echo '<div class="options_div" onclick="jump('."'$list_url'".')">';
 			echo '<p class="options">'.htmlentities($list_name).'</p>';
-			echo '<img class="options_img" src="list.png">';
+			echo '<img class="options_img" width="50px" src="list.png">';
 			echo '</div>';	
 		}
 	?>
