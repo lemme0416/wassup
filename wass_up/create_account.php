@@ -65,8 +65,9 @@ session_start();
         $result = $sth2->fetch(PDO::FETCH_ASSOC);
         if($result['id'] != $_POST['id']){
             $sth = $dbh->prepare('insert into users (id,pw,name,gender,problem) values (?,?,?,?,?) ;');
-            $hashed_pw = md5(@$_POST['pw']); //hasing pw
-            $sth->execute(array(@$_POST['id'],$hashed_pw,@$_POST['nkn'],@$_POST['sex'],@$_POST['security']));
+            $hashed_pw = md5(@$_POST['pw']); //hashing pw
+			$hashed_security = md5(@$_POST['security']); //hashing security
+            $sth->execute(array(@$_POST['id'],$hashed_pw,@$_POST['nkn'],@$_POST['sex'],$hashed_security));
             if(isset($_POST['id'])){
                 $inst = 'create table if not exists '.htmlentities($_POST['id']).'_list (list_name VARCHAR(50), CONSTRAINT list_unique UNIQUE (list_name));';
                 $sth = $dbh->prepare($inst);

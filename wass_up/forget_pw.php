@@ -53,7 +53,8 @@ session_start();
     $dsn = 'mysql:host=localhost;dbname=wassup';
     $dbh = new PDO($dsn,$CFG['username'],$CFG['pw']);   
     $sth = $dbh->prepare('select count(*) as r from users where id = ? and problem = ? ;');  //確認防盜密碼是否正確
-    $sth->execute(array(@$_POST['id'],@$_POST['security']));                                 
+	$hashed_security = md5(@$_POST['security']); //hashing security
+    $sth->execute(array(@$_POST['id'],$hashed_security));                                 
     $result = $sth->fetch(PDO::FETCH_ASSOC);
     if($result['r'] == 1 ){                                                                  //符合的話進入下個動作
         $_SESSION['login'] = $_POST['id'];
