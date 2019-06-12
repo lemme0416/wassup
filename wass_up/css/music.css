@@ -99,11 +99,11 @@ img{
         left: 95%;
     }  
     .last{
-        left: %;
+        left: 30%;
 
     }
     .next{
-        left: 25%;;
+        left: 35%;;
     }
 }
 @media (min-width: 576px) and (max-width: 767.98px) {
