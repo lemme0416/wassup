@@ -42,7 +42,7 @@ session_start();
 	<div class="options_div" onclick="jump('red.php')">
 		<p class="options">排行榜</p>
 	</div>
-	<div class="options_div" onclick="document.getElementById('modal-wrapper').style.display='block'">
+	<div class="options_div" onclick="input_box()">
 		<p class="options">新增清單</p>
 	</div>
 
@@ -50,7 +50,7 @@ session_start();
 		<form class="modal-content animate" method = "POST" action="add_list.php" >
 			<div onclick="document.getElementById('modal-wrapper').style.display='none'" class="close">&times;</div>
 			<h2>Add new list!</h2>
-			<input type="text" required="true" name="list_name" placeholder="Playlist Name"><br>
+			<input type="text" id="input" required="true" name="list_name" placeholder="Playlist Name"><br>
 			<input type="submit" value="Add">
 		</form>
 	</div>
@@ -67,5 +67,12 @@ session_start();
 			echo '</div>';	
 		}
 	?>
+	<script>
+		function input_box(){
+			document.getElementById('modal-wrapper').style.display='block';
+			document.getElementById('input').value = '';
+			document.getElementById('input').focus();
+		}
+	</script>
 </body>
 </html>
