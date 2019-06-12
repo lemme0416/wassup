@@ -53,7 +53,7 @@
 					<button type="button" id="custom-button">CHOOSE A FILE</button>
 					<span id="custom-text">No file chosen, yet.</span>
 					<p class="styles">Style  :  </p>
-                	<input type = "radio" name = "language" required = "true" value="asia"><a class="options">Asia</a>
+                	<input type = "radio" name = "language" required = "true" value="asia"><a class="options">Asia</a><br>
                 	<input type = "radio" name = "language" value="america"><a class="options">Western Music</a>
 					<input type="submit" value="Upload">
 				</form>
