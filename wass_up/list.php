@@ -38,7 +38,7 @@
 		$sth2 = $dbh->prepare($inst);
 		$sth2->execute();
 		echo '<form method="POST" class="b" action="delete_list.php?list_name='.$list_name.'">';
-		echo '<input type="submit" value="delete list"></form>';
+		echo '<input type="submit" value="delete list" onclick="alert_success()"></form>';
 		while($row=$sth2->fetch(PDO::FETCH_ASSOC)){
 			$song_name = $row['name'];
 			$song_id = $row['id'];
@@ -69,6 +69,9 @@
 		}
 		function bubble(event){
 			event.cancelBubble = true;
+		}
+		function alert_success() {
+			alert('Delete SUCCESS!');
 		}
 	</script>
 	</body>
