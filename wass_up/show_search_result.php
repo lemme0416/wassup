@@ -70,8 +70,8 @@
                 ?>
             <?php     
                 }
-                    else echo "<h2>name doesnt exist</h2>";
             }
+            else echo "<h2>name doesnt exist</h2>";
 
         ?> 
         <script>
