@@ -1,6 +1,8 @@
 <html>
   <head>
       <script src="js/music.js"></script>
+      <link rel="stylesheet" href="css/music.css">
+      
   </head>
 <body >
 <!-- song name -->
@@ -16,11 +18,11 @@ Your browser does not support the audio element.
   <option value="random">random</option>
 </select> -->
 
-<input type ="button" value="loop" onclick="showCustomer(this.value)">
-<input type ="button" value="single" onclick="showCustomer(this.value)">
-<input type ="button" value="random" onclick="showCustomer(this.value)">
-<input type ="button" value="下一首" onclick="playendedhandler()">
-<input type ="button" value="上一首" onclick="backsong()">
+<input type ="image" value="loop" onclick="showCustomer(this.value)" class="how_to_play" src = "player_pic/repeat.png">
+<input type ="image" value="single" onclick="showCustomer(this.value)" class="how_to_play" src="player_pic/equalizer.png">
+<input type ="image" value="random" onclick="showCustomer(this.value)" class="how_to_play" src = "player_pic/shuffle.png">
+<input type ="image" value="下一首" onclick="playendedhandler()" src="player_pic/next.png">
+<input type ="image" value="上一首" onclick="backsong()" src="player png/previous.png">
 <!-- used to debug -->
 <p id = "l"></p>
 

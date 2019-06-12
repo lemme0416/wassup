@@ -3,6 +3,7 @@ var i = 0,x=0;
 var length;
 var obj, dbParam, xmlhttp;
 obj = { "table":"music", "id":1 };
+var play_mode = "loop";
 var myObj
 window.onload = play_music(obj)
 function play_music(obj){
@@ -22,7 +23,7 @@ function play_music(obj){
       }
       //document.write()
     }
-    document.getElementById("l").innerHTML = i;
+    //document.getElementById("l").innerHTML = i;
     document.getElementById("music").src = "music/"+music_name+".mp3";
     document.getElementById("music").loop = false;
     document.getElementById("test").innerHTML = music_name;
@@ -50,7 +51,7 @@ function backsong(){
 }
 function playendedhandler(){
       //random
-      if (document.getElementById("playmode").value == "random") i = getRandom(length);
+      if (play_mode == "random") i = getRandom(length);
       //回到第一手
       else if (i == length-1)i =0;
       else i++;
@@ -62,6 +63,11 @@ function playendedhandler(){
       
     }
 function showCustomer(str){
-  if (str == "single")document.getElementById("music").loop = true;
-  else document.getElementById("music").loop = false;
+  play_mode = str;
+  if (str == "single"){
+    document.getElementById("music").loop = true;
+  }
+  else {
+    document.getElementById("music").loop = false;
+  }
 }
