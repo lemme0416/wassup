@@ -82,6 +82,7 @@ function showCustomer(str){
     document.getElementById("random").src = "https://i.imgur.com/u09pKuP.png";
   }
   else{
+    document.getElementById("music").loop = false;
     document.getElementById("loop").src = "https://i.imgur.com/LvIr9Uu.png";
     document.getElementById("single").src = "https://i.imgur.com/j1jzgdj.png";
     document.getElementById("random").src = "https://i.imgur.com/Z3ZLLhP.png";
