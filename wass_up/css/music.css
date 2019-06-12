@@ -1,8 +1,8 @@
 body{
     overflow: hidden;
 }
-#test{
-    display: inline;
+.song_name{
+    display: inline-block;
     font-size: 25px;
     margin: auto 2px;
     text-align: center;
