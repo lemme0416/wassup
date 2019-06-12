@@ -11,6 +11,8 @@ body{
     overflow-y: hidden;
     margin: auto 2px;
     width: 300px;
+    height: 74.4px;
+
     display: inline-block;
     font-size: 25px;
     padding: auto 2px;
@@ -19,7 +21,6 @@ body{
 }
 .song_name p{
     margin: auto 2px;
-    height: 74.4px;
 }
 input[type = "image"]{
     height: 40px;
