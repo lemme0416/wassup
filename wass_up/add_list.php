@@ -12,9 +12,9 @@
 			//建立播放清單
 			$replaced_list_name = str_replace(" ","_",$_POST['list_name']);
 			$table_name = $_SESSION['login'].'_list_'.$replaced_list_name;
-			$inst = 'create table if not exists ? (id INT(11), name VARCHAR(100), CONSTRAINT song_unique UNIQUE (id, name));';
+			$inst = 'create table if not exists '.$table_name.' (id INT(11), name VARCHAR(100), CONSTRAINT song_unique UNIQUE (id, name));';
 			$sth = $dbh->prepare($inst);
-			$sth->execute(array($table_name));
+			$sth->execute();
 			//在清單總Table中加入新Table的資料
 			$inst = 'insert into '.$_SESSION['login'].'_list(list_name) values (?);';
 			$sth = $dbh->prepare($inst);
