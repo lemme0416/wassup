@@ -5,7 +5,7 @@ require_once('login.php');
 $dsn = 'mysql:host=localhost;dbname=wassup';
 $dbh = new PDO($dsn,$CFG['username'],$CFG['pw']);
 //table name 不能用?去頂 改用字串接起來
-$str = 'select name from '.$obj->table.' order by id;';
+$str = 'select * from '.$obj->table.' order by id;';
 $sth = $dbh->prepare($str);
 $sth->execute();
 

@@ -18,7 +18,7 @@ Your browser does not support the audio element.
 </body>
 <script>
 var loop_or_single = false;
-var i = 0;
+var i = 0,x=0;
 var length;
 var obj, dbParam, xmlhttp;
 obj = { "table":"music", "id":0 };
@@ -32,10 +32,14 @@ function play_music(obj){
   if (this.readyState == 4 && this.status == 200) {
     myObj = JSON.parse(this.responseText);
     length = myObj.length;
-    //document.getElementById("l").innerHTML = this.responseText;
-    document.getElementById("music").src = "music/"+myObj[i].name+".mp3";
+    var music_name;
+    for (x in myObj){
+      if(myObj[x].id == i) music_name = myObj[x].name;
+    }
+    document.getElementById("l").innerHTML = myObj[i].name;
+    document.getElementById("music").src = "music/"+music_name+".mp3";
     document.getElementById("music").loop = false;
-    document.getElementById("test").innerHTML = myObj[i].name;
+    document.getElementById("test").innerHTML = music_name;
     document.getElementById("music").addEventListener('ended',playendedhandler, false);
     document.getElementById("music").play();
     
