@@ -2,6 +2,8 @@
     display: inline;
     font-size: 40px;
     text-align: center;
+    font-family: 'Montserrat','微軟正黑體';
+
 }
 input[type = "image"]{
     height: 40px;
