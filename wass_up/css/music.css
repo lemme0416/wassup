@@ -3,8 +3,8 @@ body{
 }
 .song_name{
     overflow-y: hidden;
+    margin: auto 2px;
     width: 300px;
-    height: 88px;
     display: inline-block;
     font-size: 25px;
     padding: auto 2px;
