@@ -107,7 +107,7 @@ var myGameArea = {
     clear : function() {
         //clear the current canvas status
         ctx = myGameArea.context;
-        ctx.fillStyle = 'radial-gradient(ellipse at bottom, #1b2735 0%,#240b36 100%)';
+        ctx.fillStyle = '#1b2735';
         ctx.fillRect(0, 0, 500, 500);
     },
     stop : function() {
