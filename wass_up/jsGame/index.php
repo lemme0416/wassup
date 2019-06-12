@@ -333,8 +333,8 @@ function updateGameArea() {
         else {
             var gap = Math.random() * 50 + 90;
             var gap_y = Math.random() * (500 - gap + 20) - 25;
-            myObstacles.push(new component(10, gap_y, "green", 510, 0));
-            myObstacles.push(new component(10, 500 - (gap_y + gap), "green", 510, gap_y + gap));
+            myObstacles.push(new component(10, gap_y, "green", 610, 0));
+            myObstacles.push(new component(10, 500 - (gap_y + gap), "green", 610, gap_y + gap));
         }
     }
     for (i = 0; i < myObstacles.length; i += 1) {
