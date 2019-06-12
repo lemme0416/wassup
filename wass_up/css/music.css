@@ -149,5 +149,20 @@ img{
     .next{left: 30%;}
 }
 @media (min-width: 1200px) {
-
+    .song_name{
+        left: 15%;
+    }
+    audio{
+        left: 60%;
+        width: 600px;
+    }
+    img{
+        width: 30px;
+        height: 30px;
+    }
+    .loop{left: 90%;}
+    .single{left: 94%;}
+    .random{left: 98%;}  
+    .last{left: 26%;}
+    .next{left: 30%;}
 }  
