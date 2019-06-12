@@ -20,11 +20,6 @@ body{
     font-family: 'Microsoft JhengHei';
     cursor: default;
 }
-.song_div form{
-    display: inline-block;
-    margin: 10.6px 10px 10.6px 4px;
-    float: right;
-}
 .song_div select{
     display: inline-block;
     margin: 17.6px 2.5px 17.6px 2.5px;
@@ -69,6 +64,11 @@ body{
     margin: 5px auto;
 }
 /* add song to another list */
+.add_to_list form{
+    display: inline-block;
+    margin: 10.6px 4px 10.6px 4px;
+    float: right;
+}
 .add_to_list input[type = "submit"]{
     background: none;
     display: block;
@@ -87,6 +87,11 @@ body{
     color: #40E0D0;
 }
 /* delete song from this list */
+.delete_song form{
+    display: inline-block;
+    margin: 10.6px 4px 10.6px 4px;
+    float: right;
+}
 .delete_song input[type = "submit"]{
     background: none;
     display: block;
