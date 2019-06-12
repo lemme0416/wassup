@@ -63,6 +63,7 @@
 	}
 	function bubble(event){
 		event.cancelBubble = true;
+		alert('Add SUCCESS!');
 	}
 </script>
 </body>
