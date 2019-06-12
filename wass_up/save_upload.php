@@ -33,7 +33,7 @@
 			}
 			//返回上傳頁面以及訊息
 			$inst = "Location: upload.php?value=".$return_value;
-			header($inst); 			
+			//header($inst); 			
 		}
 
 	}
