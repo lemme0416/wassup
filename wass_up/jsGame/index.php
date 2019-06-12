@@ -107,7 +107,7 @@ var myGameArea = {
     clear : function() {
         //clear the current canvas status
         ctx = myGameArea.context;
-        ctx.fillStyle = '#1b2735';
+        ctx.fillStyle = '#240b36';
         ctx.fillRect(0, 0, 500, 500);
     },
     stop : function() {
