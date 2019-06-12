@@ -43,7 +43,8 @@
 		echo '<select name="list_name" onclick="bubble(event)" form="'.$song_id.'">';
 		echo '<option value="0">Choose a list</option>';
 		foreach($arr as $value){
-			echo '<option value='."'htmlentities($value)'".'>'.htmlentities($value).'</option>';
+			$html_value = htmlentities($value);
+			echo '<option value='."'$html_value'".'>'.$html_value.'</option>';
 		}
 		echo '</select>';
 		echo '</div>';
