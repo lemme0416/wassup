@@ -133,7 +133,7 @@ html {
 .options{
   color: white;
   font-family: 'Montserrat';
-  font-size: 12px;
+  font-size: 15px;
 }
   @media (max-width: 1350px) {
     .box{
