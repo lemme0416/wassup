@@ -34,8 +34,11 @@ function play_music(obj){
     length = myObj.length;
     var music_name = "something bad";
     for (x in myObj){
-      if(myObj[x].id == i) music_name = myObj[x].name;
-      document.write()
+      if(myObj[x].id == i){ 
+        music_name = myObj[x].name;
+        break;
+      }
+      //document.write()
     }
     document.getElementById("l").innerHTML = myObj[i].name;
     document.getElementById("music").src = "music/"+music_name+".mp3";
