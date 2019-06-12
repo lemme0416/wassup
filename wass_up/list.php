@@ -42,7 +42,7 @@
 		while($row=$sth2->fetch(PDO::FETCH_ASSOC)){
 			$song_name = $row['name'];
 			$song_id = $row['id'];
-			echo '<div>
+			echo '<div class="song_div">
 			';
 			echo '<img src="https://i.imgur.com/T1iuPh7.png" onmouseover="play_black(this)" onmouseout="play_white(this)" onclick="jump('."'$song_id'".')">';
 			echo '<p>'.$song_name.'</p>';

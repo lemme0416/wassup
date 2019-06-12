@@ -2,7 +2,7 @@ body{
     background: radial-gradient(ellipse at bottom, #3d4f64 0%,#240b36 100%);
     margin: 0px;
 }
-div{
+.song_div{
     overflow: hidden;
     background: #C04848;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #480048, #C04848);  /* Chrome 10-25, Safari 5.1-6 */
@@ -55,6 +55,10 @@ img{
     font-family: 'Montserrat';
     font-weight: bold;
     font-size: 25px;
+}
+.delete_class form{
+    display: inline-block;
+    margin: 5px auto;
 }
 input[type = "submit"]{
     background: none;
