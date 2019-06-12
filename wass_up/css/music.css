@@ -127,7 +127,7 @@ img{
     .loop{left: 85%;}
     .single{left: 90%;}
     .random{left: 95%;}  
-    .last{left: 30%;}
+    .last{left: 31%;}
     .next{left: 35%;}
 }
 @media (min-width: 992px) and (max-width: 1199.98px) {
