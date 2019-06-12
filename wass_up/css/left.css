@@ -14,10 +14,6 @@ body{
     color: white;
     cursor: default;
 }
-.options_div:hover > .options_img{
-    color: rgb(206, 206, 206);
-    cursor: default;
-}
 /* for every p in div in left */
 .options{
     display: inline-block;
@@ -29,7 +25,6 @@ body{
 }
 /* for list icon */
 .options_img {
-    color: 
     margin: 11.8px 10px 11.8px 0px;
     float: left;
     width: 30px;
