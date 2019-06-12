@@ -77,7 +77,7 @@ img{
 }
 @media (max-width: 575.98px) {
     .song_name{
-        left: 15%;
+        left: 20%;
     }
     audio{
         left: 60%;
