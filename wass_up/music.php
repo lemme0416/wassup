@@ -5,9 +5,12 @@ require_once('login.php');
 $dsn = 'mysql:host=localhost;dbname=wassup';
 $dbh = new PDO($dsn,$CFG['username'],$CFG['pw']);
 //table name 不能用?去頂 改用字串接起來
-$str = 'select * from '.$obj->table.' order by id;';
+if ($obj->lan == 2){
+    $str = 'select * from '.$obj->table.' order by id;';    
+}
+else $str = 'select * from '.$obj->table.' where language = ?;';
 $sth = $dbh->prepare($str);
-$sth->execute();
+$sth->execute(array($obj->lan));
 
 $result = $sth->fetchAll();
 

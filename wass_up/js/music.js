@@ -2,7 +2,7 @@ var loop_or_single = false;                   // 單曲or連續
 var i = 0,x=0;                                // counter
 var length;
 var obj, dbParam, xmlhttp;
-obj = { "table":"music", "id":1 };
+obj = { "table":"music", "id":1, "lan":2};//0->eu 1->asia 2->all
 var play_mode = "loop";                       //播放模式
 var myObj
 window.onload = play_music(obj)               //開場先讀一次資料庫的資料
@@ -14,23 +14,22 @@ function play_music(obj){                     //放音樂的func
   if (this.readyState == 4 && this.status == 200) {   
     myObj = JSON.parse(this.responseText);    
     length = myObj.length;
-    var music_name = "something bad";
+    var music_name = "something bad";           
+    //O(n) search id 
     for (x in myObj){
       if(myObj[x].id == i){ 
         music_name = myObj[x].name;
         i = x;
         break;
       }
-      //document.write()
     }
     //撥放器的相關設定
     //document.getElementById("l").innerHTML = i;
     document.getElementById("music").src = "music/"+music_name+".mp3";
-    //是否單曲循環
-    document.getElementById("music").loop = false;
-    document.getElementById("test").innerHTML = music_name;
+    document.getElementById("music").loop = false;                                            //是否單曲循環
+    document.getElementById("test").innerHTML = music_name;                                   //show music name
     document.getElementById("music").addEventListener('ended',playendedhandler, false);
-    document.getElementById("music").play();
+    document.getElementById("music").play();                                                  //自動播放
     
   }
 };
