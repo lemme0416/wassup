@@ -1,4 +1,8 @@
-﻿<?php
+﻿<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+
+<?php
 	session_start();
 	//確認是否登入
 	if(!isset($_SESSION['login'])){

@@ -1,3 +1,7 @@
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+
 <?php
 	session_start();
 	//½T»{¬O§_µn¤J
