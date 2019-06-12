@@ -34,7 +34,5 @@ audio{
 }
 #options_div{
     display: inline-block;
-}
-#options_div p{
-    display: inline-block;
+    font-family: 'Montserrat','微軟正黑體';
 }
