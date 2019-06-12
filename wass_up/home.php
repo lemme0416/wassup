@@ -22,7 +22,7 @@ if (isset($_SESSION['login'])=='') {
         <frame src="search.php" name="top" noresize="noresize">
         <frameset cols="12*,50*">
             <frame src="left.php" name="left">
-            <frame src="yellow.php" name="right">
+            <frame src="jsGame/index.php" name="right">
         </frameset>
         <frame src="music.html" name="music" >
     </frameset>
