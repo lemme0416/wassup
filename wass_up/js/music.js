@@ -77,11 +77,27 @@ function showCustomer(str){
     document.getElementById("music").loop = false;
   }
 }
+function next(x){
+  x.src="https://i.imgur.com/NvVbqcF.png";
+}
+function previous(x){
+  x.src="https://i.imgur.com/Ou0uTxe.png";
+}
+function repeat(x){
+  x.src="https://i.imgur.com/LvIr9Uu.png";
+}
+function shuffle(x){
+  x.src="https://i.imgur.com/u09pKuP.png";
+}
+function single(x){
+  x.src="https://i.imgur.com/j1jzgdj.png";
+}
+
 function next_hover(x){
   x.src="https://i.imgur.com/gjTSx0j.png";
 }
 function previous_hover(x){
-  x.src="https://i.imgur.com/mnnnqoo.png";
+  x.src="https://i.imgur.com/xJzQBta.png";
 }
 function repeat_hover(x){
   x.src="https://i.imgur.com/er0TBWN.png";
