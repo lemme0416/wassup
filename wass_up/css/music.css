@@ -145,7 +145,7 @@ img{
     .loop{left: 85%;}
     .single{left: 90%;}
     .random{left: 95%;}  
-    .last{left: 25%;}
+    .last{left: 26%;}
     .next{left: 30%;}
 }
 @media (min-width: 1200px) {
