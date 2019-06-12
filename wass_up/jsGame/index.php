@@ -230,7 +230,7 @@ function kbcontrol(){
     //implement different keyboard control
     if (left == true && right == false) {
         myGamePiece.speedX = -5;
-        myGamePiece.image.src = "https://i.imgur.com/0mhGU3N.png";
+        myGamePiece.image.src = "startup_back.png";
         fly = 0;
     }
     else if (right == true && left == false) {
