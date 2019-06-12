@@ -54,8 +54,9 @@
     $dbh = new PDO($dsn,$CFG['username'],$CFG['pw']);
     if(empty(@$_POST['npw']) == false && empty(@$_POST['npw2']) == false){
         if(@$_POST['npw'] == @$_POST['npw2']){
+			$hashed_pw = md5(@$_POST['npw']);				//hashing pw
             $sth = $dbh->prepare('update  users set pw = ? where id = ?');
-            $sth->execute(array(@$_POST['npw'],$_SESSION['login']));
+            $sth->execute(array($hashed_pw,$_SESSION['login']));
             echo "<script>alert('Password has been modified!')</script>";
             echo "<script type='text/javascript'>";
                 echo "window.parent.location.href='home.php'";
