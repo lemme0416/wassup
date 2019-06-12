@@ -37,6 +37,12 @@ audio{
     outline: none;
 }
 #playmode{
-    display: inline-block;
+    position: absolute;
+    left: 70%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
     font-family: 'Montserrat','微軟正黑體';
+}
+#loop{
+
 }
