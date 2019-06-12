@@ -59,7 +59,7 @@ audio{
 }
 .last{
     position: absolute;
-    left: 20%;
+    left: 22%;
     top: 50%;
     transform: translateX(-50%) translateY(-50%);
     font-family: 'Montserrat','微軟正黑體';
