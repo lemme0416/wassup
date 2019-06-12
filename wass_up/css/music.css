@@ -34,6 +34,7 @@ audio{
 }
 #options_div{
     display: inline-block;
+    width: 300px;
     font-family: 'Montserrat','微軟正黑體';
     float: right;
 }
