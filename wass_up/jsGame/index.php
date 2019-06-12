@@ -13,6 +13,9 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>   
 </head>
 <body onload="startGame()">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
 <script>
 var myGameArea;
 var myGamePiece;
@@ -50,8 +53,8 @@ var myGameArea = {
         this.title.appendChild(node);
         document.body.insertBefore(this.title, document.body.childNodes[0]);*/
 
-        this.canvas.width = 600;
-        this.canvas.height = 600;
+        this.canvas.width = 500;
+        this.canvas.height = 500;
         this.context = this.canvas.getContext("2d");
         document.body.insertBefore(this.canvas, document.body.childNodes[0]);
         this.frameNo = 0;
@@ -333,8 +336,8 @@ function updateGameArea() {
         else {
             var gap = Math.random() * 50 + 90;
             var gap_y = Math.random() * (500 - gap + 20) - 25;
-            myObstacles.push(new component(10, gap_y, "green", 610, 0));
-            myObstacles.push(new component(10, 500 - (gap_y + gap), "green", 610, gap_y + gap));
+            myObstacles.push(new component(10, gap_y, "green", 510, 0));
+            myObstacles.push(new component(10, 500 - (gap_y + gap), "green", 510, gap_y + gap));
         }
     }
     for (i = 0; i < myObstacles.length; i += 1) {
