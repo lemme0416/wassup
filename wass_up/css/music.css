@@ -5,6 +5,7 @@ html{
 body{
     background-size: cover;
     margin: 0px;
+    height: 74.4px;
     background-color: #F2F3F5;
     font-family: 'Montserrat','微軟正黑體';
 
@@ -33,4 +34,5 @@ audio{
 }
 #playmode{
     display: inline-block;
+    font-family: 'Montserrat','微軟正黑體';
 }
