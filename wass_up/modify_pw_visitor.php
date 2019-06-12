@@ -18,6 +18,7 @@ session_start();
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>    
     </head>
     <body>
+        <!-- 各種特效 -->
         <ul class="text-animation hidden">
             <li>M</li>
             <li>o</li>
@@ -27,6 +28,7 @@ session_start();
             <li>y</li>
             <li>!</li>
         </ul>
+        <!-- 修改密碼的地方 -->
         <div class="box">        
             <form method="POST">
                 <input type = "password" name = "npw" required = "true" placeholder="New Password"><br>
@@ -34,6 +36,7 @@ session_start();
                 <input type = "submit" value ="Confirm">
             </form>
         </div>
+        <!-- 各式動畫 -->
         <script type="text/javascript">
             $(function(){
                 setTimeout(function(){
@@ -47,16 +50,18 @@ session_start();
     require_once('login.php');
     $dsn = 'mysql:host=localhost;dbname=wassup';
     $dbh = new PDO($dsn,$CFG['username'],$CFG['pw']);
-    if(empty(@$_POST['npw']) == false && empty(@$_POST['npw2']) == false){
-        if(@$_POST['npw'] == @$_POST['npw2']){
+    if(empty(@$_POST['npw']) == false && empty(@$_POST['npw2']) == false){// 確認密碼是否都有填
+        if(@$_POST['npw'] == @$_POST['npw2']){                  //兩次密碼484一樣
 			$hashed_pw = md5(@$_POST['npw']);					//hashing pw
-            $sth = $dbh->prepare('update  users set pw = ? where id = ?');
+            $sth = $dbh->prepare('update  users set pw = ? where id = ?');//修改密碼
             $sth->execute(array($hashed_pw,$_SESSION['login']));
+            //告知成功修改並重新倒回登入頁面
             echo "<script>alert('Password has been modified!')</script>";
             echo "<script type='text/javascript'>";
                 echo "window.location.href='index.php'";
             echo "</script>";  
         }
+        //發出警告訊息
         else echo "<script>alert('The passwords you typed do not match. Please retype the new password.')</script>";
     }
 ?> 
