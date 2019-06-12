@@ -21,7 +21,7 @@
 				require_once('login.php');
 				$dsn = 'mysql:host=localhost;dbname=wassup';
 				$dbh = new PDO($dsn,$CFG['username'],$CFG['pw']);
-				//將音樂檔名存到music table中
+				//將音樂檔名存到music table中,資料包括檔名以及分類
 				$sth=$dbh->prepare('insert into music(name, language) values(? , ?)');
 				if($_POST['language']=='asia') $num = 1;
 				else if($_POST['language']=='america') $num = 0;
@@ -32,7 +32,7 @@
 			}
 			//返回上傳頁面以及訊息
 			$inst = "Location: upload.php?value=".$return_value;
-			//header($inst); 			
+			header($inst); 			
 		}
 
 	}
