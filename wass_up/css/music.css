@@ -38,7 +38,35 @@ audio{
 }
 .loop{
     position: absolute;
-    left: 70%;
+    left: 75%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-family: 'Montserrat','微軟正黑體';
+}
+.single{
+    position: absolute;
+    left: 80%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-family: 'Montserrat','微軟正黑體';
+}
+.random{
+    position: absolute;
+    left: 85%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-family: 'Montserrat','微軟正黑體';
+}
+.last{
+    position: absolute;
+    left: 20%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-family: 'Montserrat','微軟正黑體';
+}
+.next{
+    position: absolute;
+    left: 30%;
     top: 50%;
     transform: translateX(-50%) translateY(-50%);
     font-family: 'Montserrat','微軟正黑體';
