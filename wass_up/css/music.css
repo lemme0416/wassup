@@ -12,12 +12,11 @@ body{
 }
 .song_name{
     position: absolute;
-    left: 10%;
+    left: 12%;
     top: 50%;
     transform: translateX(-50%) translateY(-50%);
     overflow: hidden;
     width: 300px;
-    border-left: 10px solid rgba(0, 0, 0, 0);
 }
 .song_name p{
     font-size: 15px;
