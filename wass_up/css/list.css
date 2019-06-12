@@ -42,6 +42,11 @@ img{
     float: left;
 }
 .delete_class{
+    overflow: hidden;
+    background: none;
+    margin: 3px 5px;
+}
+.delete_class input[type = "submit"]{
     background: none;
     display: block;
     text-align: center;
@@ -56,10 +61,14 @@ img{
     font-weight: bold;
     font-size: 25px;
 }
+.delete_class input[type = "submit"]:hover{
+    color: #FF0080;
+}
 .delete_class form{
     display: inline-block;
     margin: 5px auto;
 }
+
 input[type = "submit"]{
     background: none;
     display: block;
