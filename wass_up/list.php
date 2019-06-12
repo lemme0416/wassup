@@ -37,8 +37,8 @@
 		$inst = 'select * from '.$_SESSION['login'].'_list_'.$list_name;
 		$sth2 = $dbh->prepare($inst);
 		$sth2->execute();
-		echo '<form method="POST" class="delete_class" action="delete_list.php?list_name='.$list_name.'">';
-		echo '<input type="submit" value="Delete This List"></form><br><br>';
+		echo '<div class="delete_class"><form method="POST" action="delete_list.php?list_name='.$list_name.'">';
+		echo '<input type="submit" value="Delete This List"></form></div>';
 		while($row=$sth2->fetch(PDO::FETCH_ASSOC)){
 			$song_name = $row['name'];
 			$song_id = $row['id'];
