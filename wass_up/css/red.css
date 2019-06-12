@@ -22,7 +22,7 @@ p{
 }
 form{
     display: inline-block;
-    margin: 14.6px 2.5px 14.6px 2.5px;
+    margin: auto 2.5px;
     float: right;
 }
 select{
@@ -47,4 +47,6 @@ input[type = "submit"]{
     transition: 0.25s;
     cursor: pointer;
     font-family: 'Montserrat';
+    font-weight: bold;
+    font-size: 25px;
 }
