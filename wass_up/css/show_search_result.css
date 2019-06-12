@@ -62,9 +62,13 @@ h2{
     color: white;
     font-family: 'Montserrat';
     font-weight: bold;
-    font-size: 25px;
+    font-size: 50px;
     text-align: center;
 }
 .no_result{
-    margin: auto;
+  background: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
 }
