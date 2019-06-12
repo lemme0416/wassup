@@ -75,7 +75,7 @@ audio{
     audio{
         width: 300px;
     }
-    input [type ="image"]{
+    img{
         width: 20px;
         height: 20px;
     }
