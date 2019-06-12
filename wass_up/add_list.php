@@ -22,6 +22,6 @@
 			echo "<script> parent.frames[2].location.reload(true) </script>";
 		}
 		//回到原本的列表
-		echo "<script> window.location = 'left.php' </script>";
+		//echo "<script> window.location = 'left.php' </script>";
 	}
 ?>
