@@ -1,4 +1,5 @@
 <?php
+	//確認是否登入
 	session_start();
 	if(!isset($_SESSION['login'])){
 		header("Location: index.php");
@@ -26,19 +27,23 @@
 		$_SESSION['last'] = 'list.php?list_name='.$_GET['list_name'];
 		$dsn = 'mysql:host=localhost;dbname=wassup';
 		$dbh = new PDO($dsn,$CFG['username'],$CFG['pw']);
+		//選取所有播放清單的名字
 		$inst = 'select * from '.$_SESSION['login'].'_list;';
 		$sth1 = $dbh->prepare($inst);
 		$sth1->execute();
 		$arr = array();
+		//將所有播放清單的名字放置於陣列中
 		while($col=$sth1->fetch(PDO::FETCH_ASSOC)){
 			array_push($arr, $col['list_name']);
 		}
 		$list_name = $_GET['list_name'];
+		//顯示指定清單的歌曲
 		$inst = 'select * from '.$_SESSION['login'].'_list_'.$list_name;
 		$sth2 = $dbh->prepare($inst);
 		$sth2->execute();
 
 		while($row=$sth2->fetch(PDO::FETCH_ASSOC)){
+			//為每首歌曲創建icon，以及從清單中刪除，和加入別的清單的功能。利用GET、POST傳遞必要參數(song_id，song_name...等等)
 			$song_name = $row['name'];
 			$song_id = $row['id'];
 			echo '<div class="song_div">
@@ -55,6 +60,7 @@
 			echo '</select>';
 			echo '</div>';
 		}
+		//連到刪除清單頁面，點擊可刪除清單
 		echo '<div class="delete_class"><form method="POST" action="delete_list.php?list_name='.$list_name.'">';
 		echo '<input type="submit" value="Delete This List"></form></div>';
 	?>
