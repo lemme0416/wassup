@@ -77,3 +77,18 @@ function showCustomer(str){
     document.getElementById("music").loop = false;
   }
 }
+function next_hover(x){
+  x.src="https://i.imgur.com/gjTSx0j.png";
+}
+function previous_hover(x){
+  x.src="https://i.imgur.com/mnnnqoo.png";
+}
+function repeat_hover(x){
+  x.src="https://i.imgur.com/er0TBWN.png";
+}
+function shuffle_hover(x){
+  x.src="https://i.imgur.com/Z3ZLLhP.png";
+}
+function single_hover(x){
+  x.src="https://i.imgur.com/D0bt3KD.png";
+}

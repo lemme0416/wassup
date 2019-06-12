@@ -25,11 +25,11 @@
   Your browser does not support the audio element.
   </audio>
 
-  <img class="loop" value="loop" onclick="showCustomer(this.value)" class="how_to_play" title="循環" src = "player_pic/repeat.png">
-  <img class="single" value="single" onclick="showCustomer(this.value)" class="how_to_play" title="單曲循環" src="player_pic/single.png">
-  <img class="random" value="random" onclick="showCustomer(this.value)" class="how_to_play" title="隨機" src = "player_pic/shuffle.png">
-  <img class="last" value="上一首" onclick="backsong()" src="player_pic/previous.png" title="上一首" class="how_to_play">
-  <img class="next" value="下一首" onclick="playendedhandler()" src="player_pic/next.png" title="下一首" class="how_to_play">
+  <img class="loop" value="loop" onmouseover="repeat_hover(this)" onclick="showCustomer(this.value)" class="how_to_play" title="循環" src = "https://i.imgur.com/LvIr9Uu.png">
+  <img class="single" value="single" onmouseover="single_hover(this)" onclick="showCustomer(this.value)" class="how_to_play" title="單曲循環" src="https://i.imgur.com/j1jzgdj.png">
+  <img class="random" value="random" onmouseover="random_hover(this)" onclick="showCustomer(this.value)" class="how_to_play" title="隨機" src = "https://i.imgur.com/u09pKuP.png">
+  <img class="last" value="上一首" onmouseover="last_hover(this)" onclick="backsong()"  title="上一首" class="how_to_play" src="https://i.imgur.com/war7cpq.png">
+  <img class="next" value="下一首" onmouseover="next_hover(this)" onclick="playendedhandler()" title="下一首" class="how_to_play" src="https://i.imgur.com/NvVbqcF.png">
   <!-- used to debug -->     
   <p id = "l"></p>
 
