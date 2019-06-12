@@ -33,53 +33,51 @@
 	?>
 
 	<body>
-		<section class="wrapper">
-			<div id="stars"></div>
-			<div id="stars2"></div>
-			<div id="stars3"></div>
-			<div id="title">
-				<ul class="text-animation hidden">
-                    <li>U</li>
-                    <li>p</li>
-                    <li>l</li>
-                    <li>o</li>
-                    <li>a</li>
-                    <li>d</li>
-                    <li>!</li>
-				</ul>
-				<div class="box">
-					<form action="save_upload.php"  method="post" enctype="multipart/form-data">
-						<h2>Select music to upload :</h2>
-						<input type="file" name="uploaded_file" id="real-file" hidden="hidden" accept=".mp3">
-						<button type="button" id="custom-button">CHOOSE A FILE</button>
-						<span id="custom-text">No file chosen, yet.</span>
-						<input type="submit" value="Upload">
-					</form>
-				</div>
-				<script type="text/javascript">
-                    $(function(){
-                        setTimeout(function(){
-                            $('.text-animation').removeClass('hidden');
-                        }, 500);
-                    });
-					const realFileBtn = document.getElementById("real-file");
-					const customBtn = document.getElementById("custom-button");
-					const customTxt = document.getElementById("custom-text");
-					const fileName = document.getElementById("real-file");
-
-					customBtn.addEventListener("click", function() {
-						realFileBtn.click();
-					});
-
-					realFileBtn.addEventListener("change", function() {
-						if (fileName.value) {
-							customTxt.innerHTML = fileName.files[0].name;
-						} else {
-							customTxt.innerHTML = "No file chosen, yet.";
-						}
-					});				
-				</script>
+		<div id="stars"></div>
+		<div id="stars2"></div>
+		<div id="stars3"></div>
+		<div id="title">
+			<ul class="text-animation hidden">
+				<li>U</li>
+				<li>p</li>
+				<li>l</li>
+				<li>o</li>
+				<li>a</li>
+				<li>d</li>
+				<li>!</li>
+			</ul>
+			<div class="box">
+				<form action="save_upload.php"  method="post" enctype="multipart/form-data">
+					<h2>Select music to upload :</h2>
+					<input type="file" name="uploaded_file" id="real-file" hidden="hidden" accept=".mp3">
+					<button type="button" id="custom-button">CHOOSE A FILE</button>
+					<span id="custom-text">No file chosen, yet.</span>
+					<input type="submit" value="Upload">
+				</form>
 			</div>
-		</section>
+			<script type="text/javascript">
+				$(function(){
+					setTimeout(function(){
+						$('.text-animation').removeClass('hidden');
+					}, 500);
+				});
+				const realFileBtn = document.getElementById("real-file");
+				const customBtn = document.getElementById("custom-button");
+				const customTxt = document.getElementById("custom-text");
+				const fileName = document.getElementById("real-file");
+
+				customBtn.addEventListener("click", function() {
+					realFileBtn.click();
+				});
+
+				realFileBtn.addEventListener("change", function() {
+					if (fileName.value) {
+						customTxt.innerHTML = fileName.files[0].name;
+					} else {
+						customTxt.innerHTML = "No file chosen, yet.";
+					}
+				});				
+			</script>
+		</div>
 	</body>
 </html>

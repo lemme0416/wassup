@@ -31,10 +31,10 @@ session_start();
 	?>
 	</div>
 	<div class="options_div" onclick = "javascript:parent.location.href='index.php'">
-		<p class="options" >Log out</p>
+		<p class="options" >登出</p>
 	</div>
 	<div class="options_div" onclick="jump('modify_pw.php')">
-		<p class="options" onclick="jump('modify_pw.php')">Modify Password</p>
+		<p class="options" onclick="jump('modify_pw.php')">修改密碼</p>
 	</div>
 	<div class="options_div" onclick="jump('upload.php')">
 		<p class="options">上傳音樂</p>
