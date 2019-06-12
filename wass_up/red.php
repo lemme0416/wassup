@@ -37,7 +37,7 @@
 		$song_id = $row['id'];
 		echo '<div>
 		';
-		echo '<img src="https://i.imgur.com/T1iuPh7.png" onmouseover="play_black(this)" onmouseout="play_white(this)" onclick="jump('.$song_id.',"music")">';
+		echo '<img src="https://i.imgur.com/T1iuPh7.png" onmouseover="play_black(this)" onmouseout="play_white(this)" onclick="jump('.$song_id.','."'music'".')">';
 		echo '<p>'.htmlentities($song_name).'</p>';
 		echo '<form method="POST" onclick="bubble(event)" id="'.$song_id.'" action="add_to_list.php?song_name='.htmlentities($song_name).'&song_id='.$song_id.'"><input type="submit" value="+" title="Add to the list"></form>';
 		echo '<select name="list_name" onclick="bubble(event)" form="'.$song_id.'">';
