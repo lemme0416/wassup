@@ -36,6 +36,7 @@ function play_music(obj){
     for (x in myObj){
       if(myObj[x].id == i){ 
         music_name = myObj[x].name;
+        i = x;
         break;
       }
       //document.write()
@@ -67,7 +68,9 @@ function backsong(){
       
 }
 function playendedhandler(){
+      //random
       if (document.getElementById("playmode").value == "random") i = getRandom(length);
+      //回到第一手
       else if (i == length-1)i =0;
       else i++;
       document.getElementById("music").loop = false;
