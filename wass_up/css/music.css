@@ -73,7 +73,7 @@ audio{
 }
 @media (max-width: 575.98px) {
     audio{
-        width: 100px;
+        width: 300px;
     }
 }
 @media (min-width: 576px) and (max-width: 767.98px) {
