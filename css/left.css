@@ -6,7 +6,6 @@ body{
 }
 /* for every div in left */
 .options_div{
-    width: 179.6px;
     overflow-x: hidden;
     border-left: 10px solid rgba(0, 0, 0, 0);
 }
