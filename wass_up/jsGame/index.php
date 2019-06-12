@@ -37,8 +37,8 @@ var over = false;
 function startGame() {
     myGameArea.start();
     myGamePiece = new component(50, 50, "startup.png", 10, 225, "image"); 
-    myScore = new textcomponent("20px", "Arial", "black", 380, 20);
-    myLife = new textcomponent("20px", "serif", "blue", 380, 40);
+    myScore = new textcomponent("20px", "Montserrat", "white", 380, 20);
+    myLife = new textcomponent("20px", "Montserrat", "#ffdde1", 380, 40);
 }
 
 var myGameArea = {
@@ -271,13 +271,13 @@ function updateGameArea() {
     if (over) {
         ctx.fillStyle = '#240b36';
         ctx.fillRect(0, 0, 500, 500);
-        over = new textcomponent("40px", "serif", "black", 210, 60);
+        over = new textcomponent("40px", "Montserrat", "white", 210, 60);
         over.text = "Over!";
         over.update();
-        score = new textcomponent("20px", "serif", "black", 195, 230);
+        score = new textcomponent("20px", "Montserrat", "white", 195, 230);
         score.text = "Your score: " + points.toString();
         score.update();
-        hint = new textcomponent("20px", "serif", "black", 140, 270);
+        hint = new textcomponent("20px", "Montserrat", "white", 140, 270);
         hint.text = "Press enter to start a new game";
         hint.update();
         return;
