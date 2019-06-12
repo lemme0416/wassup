@@ -62,17 +62,10 @@ session_start();
 			$list_name = $row['list_name'];
 			$list_url = 'list.php?list_name='.$list_name;
 			echo '<div class="options_div" onclick="jump('."'$list_url'".')">';
-			echo '<p class="options">'.htmlentities($list_name).'</p>';
 			echo '<img class="options_img" width="50px" src="list.png">';
+			echo '<p class="options">'.htmlentities($list_name).'</p>';
 			echo '</div>';	
 		}
 	?>
-	<script>
-		function input_box(){
-			document.getElementById('modal-wrapper').style.display='block';
-			document.getElementById('input').value = '';
-			document.getElementById('input').focus();
-		}
-	</script>
 </body>
 </html>

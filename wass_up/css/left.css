@@ -25,6 +25,7 @@ body{
 }
 /* for list icon */
 .options_img {
+    margin: 0 5px;
     float: left;
 }
 /* for "hello, name" */
