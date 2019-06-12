@@ -19,6 +19,7 @@ body{
 }
 .song_name p{
     margin: auto 2px;
+    height: 74.4px;
 }
 input[type = "image"]{
     height: 40px;
