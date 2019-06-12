@@ -230,12 +230,12 @@ function kbcontrol(){
     //implement different keyboard control
     if (left == true && right == false) {
         myGamePiece.speedX = -5;
-        myGamePiece.image.src = "startup_back.png";
+        myGamePiece.image.src = "https://i.imgur.com/0mhGU3N.png.png";
         fly = 0;
     }
     else if (right == true && left == false) {
         myGamePiece.speedX = 5;
-        myGamePiece.image.src = "startup_forward.png";
+        myGamePiece.image.src = "https://i.imgur.com/gTrpKnr.png";
         fly = 0;
     }
     else {
@@ -243,17 +243,17 @@ function kbcontrol(){
     }
     if (up == true && down == false) {
         myGamePiece.speedY = -5;
-        myGamePiece.image.src = "startup_up.png";
+        myGamePiece.image.src = "https://i.imgur.com/Dx9cvEb.png";
         fly = 1;
     }
     else if (down == true && up == false) {
         myGamePiece.speedY = 5;
-        myGamePiece.image.src = "startup_down.png";
+        myGamePiece.image.src = "https://i.imgur.com/3sZHfeI.png";
         fly = 2;
     }
     else if ((left == true && right == true) || (left == false && right == false)) {
         myGamePiece.speedY = 0;
-        myGamePiece.image.src = "startup.png";
+        myGamePiece.image.src = "https://i.imgur.com/pTzRpWv.png";
         fly = 0;
     }
     else {
