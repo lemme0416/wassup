@@ -42,7 +42,7 @@ session_start();
 	<div class="options_div" onclick="jump('red.php')">
 		<p class="options">排行榜</p>
 	</div>
-	<div class="options_div" onclick="document.getElementById('modal-wrapper').style.display='block'">
+	<div class="options_div" onclick="input_box()">
 		<p class="options">新增清單</p>
 	</div>
 
@@ -67,5 +67,11 @@ session_start();
 			echo '</div>';	
 		}
 	?>
+	<script>
+		function input_box(){
+			document.getElementById('modal-wrapper').style.display='block';
+			document.getElementById('modal-wrapper').focus();
+		}
+	</script>
 </body>
 </html>
