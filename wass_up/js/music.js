@@ -2,7 +2,7 @@ var loop_or_single = false;                   // 單曲or連續
 var i = 0,x=0;                                // counter
 var length;
 var obj, dbParam, xmlhttp;
-obj = { "table":"music", "id":1 };
+obj = { "table":"music", "id":1, "lan":2};//0->eu 1->asia 2->all
 var play_mode = "loop";                       //播放模式
 var myObj
 window.onload = play_music(obj)               //開場先讀一次資料庫的資料
