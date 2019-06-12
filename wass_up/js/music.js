@@ -1,5 +1,3 @@
-
-<script>
 var loop_or_single = false;
 var i = 0,x=0;
 var length;
@@ -67,4 +65,3 @@ function showCustomer(str){
   if (str == "single")document.getElementById("music").loop = true;
   else document.getElementById("music").loop = false;
 }
-</script>
