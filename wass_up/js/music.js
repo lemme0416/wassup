@@ -44,7 +44,8 @@ function getRandom(x){
 function backsong(){
   if (play_mode == "random") i = getRandom(length);                                 //if random
       else if (i == 0)i =length-1;                                                  //if first song
-      else i--;                                     
+      else i--;
+      document.getElementById("single").src = "https://i.imgur.com/j1jzgdj.png";
       document.getElementById("music").loop = false;                                //輪流播放
       document.getElementById("music").src = "music/"+myObj[i].name+".mp3";         
       document.getElementById("test").innerHTML = myObj[i].name;                    //music name
@@ -59,6 +60,7 @@ function playendedhandler(){
       //回到第一首
       else if (i == length-1)i =0;
       else i++;
+      document.getElementById("single").src = "https://i.imgur.com/j1jzgdj.png";
       document.getElementById("music").loop = false;                                 //輪流播放
       document.getElementById("music").src = "music/"+myObj[i].name+".mp3";          
       document.getElementById("test").innerHTML = myObj[i].name;                     
