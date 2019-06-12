@@ -63,7 +63,7 @@ session_start();
         $sth2 = $dbh->prepare('select * from users where id = ? ;');
         $sth2->execute(array(@$_POST['id']));
         $result = $sth2->fetch(PDO::FETCH_ASSOC);
-        if($result['id'] == $_POST['id']){
+        if($result['id'] != $_POST['id']){
             $sth = $dbh->prepare('insert into users (id,pw,name,gender,problem) values (?,?,?,?,?) ;');
             $hashed_pw = md5(@$_POST['pw']); //hasing pw
             $sth->execute(array(@$_POST['id'],$hashed_pw,@$_POST['nkn'],@$_POST['sex'],@$_POST['security']));
