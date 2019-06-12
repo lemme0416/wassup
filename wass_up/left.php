@@ -70,6 +70,7 @@ session_start();
 	<script>
 		function input_box(){
 			document.getElementById('modal-wrapper').style.display='block';
+			document.getElementById('input').value = '';
 			document.getElementById('input').focus();
 		}
 	</script>
