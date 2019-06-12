@@ -29,11 +29,12 @@
                 $sth = $dbh->prepare("SELECT * FROM music WHERE name like '%$str%'");
                 $sth->setFetchMode(PDO:: FETCH_OBJ);
                 $sth->execute();
-
+                
                 while($row = $sth->fetch()){
-                    echo '<div class="song_div" onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="jump('."'htmlentities($row->name)'".')">
+                    $row_name = htmlentities($row->name);
+                    echo '<div class="song_div" onmouseover="color_deep(this)" onmouseout="color_shallow(this)" onclick="jump('."'$row_name'".')">
                     ';
-                    echo"	<p>htmlentities($row->name)</p>
+                    echo"	<p>".$row_name."</p>
                     ";
                     echo"</div>
                     ";            
