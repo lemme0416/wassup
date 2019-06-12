@@ -24,6 +24,7 @@ body{
 }
 /* for list icon */
 .options_img {
+    display: inline-block;
     margin: 11.8px 10px 11.8px 0px;
     float: left;
     width: 30px;
