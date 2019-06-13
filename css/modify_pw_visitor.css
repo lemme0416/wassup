@@ -6,7 +6,7 @@ body{
 /* text-animation for tag <ul> */
 .text-animation{
   list-style: none;
-  width: 318px;
+  width: 360px;
   margin: 25px auto 5px auto; 
   padding: 0px;
 }
