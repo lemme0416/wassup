@@ -10,8 +10,8 @@
 	}
 	if(!empty($_FILES['uploaded_file'])){
 		//確認檔案類型，若錯誤則回傳錯誤訊息
-		if($_FILES['uploaded_file']['type']!='audio/mp3'){
-			header("Location: upload.php?value=wrong_type"); 
+		if($_FILES['uploaded_file']['type']!='audio/mp3' && $_FILES['uploaded_file']['type']!='audio/mpeg'){
+			header("Location: upload.php?value=wrong_type_".$_FILES['uploaded_file']['type']); 
 		}
 		else{
 			$path = "music/";
@@ -22,6 +22,7 @@
 				//成功訊息
 				$return_value = 'success';
 				$file_name = basename( $_FILES['uploaded_file']['name'], '.mp3');
+				console_log($file_name);
 				require_once('login.php');
 				$dsn = 'mysql:host=localhost;dbname=wassup';
 				$dbh = new PDO($dsn,$CFG['username'],$CFG['pw']);
@@ -38,6 +39,10 @@
 			$inst = "Location: upload.php?value=".$return_value;
 			header($inst); 			
 		}
-
+	}
+	else{
+		//返回上傳頁面以及訊息
+		$inst = "Location: upload.php?value=empty_file";
+		header($inst);
 	}
 ?>

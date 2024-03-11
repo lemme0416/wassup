@@ -1,3 +1,4 @@
 <?php
-$CFG['username'] = 'wassup';
-$CFG['pw'] = 'Eoo9xN4vJ';
+$CFG['username'] = 'root';
+$CFG['pw'] = 'huang1999';
+?>
