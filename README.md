@@ -5,13 +5,13 @@
 
 If you use our website and set up it 
 
-1. 建立php可執行的環境 [參考網站](https://www.tad0616.net/modules/tad_book3/html.php?tbdsn=450)
+1. 建立 php 可執行的環境 [參考網站](https://www.tad0616.net/modules/tad_book3/html.php?tbdsn=450)
 2. [download mysql](https://dev.mysql.com/downloads/installer/)
-    - 包括server, workbench, router...等等.
-3. 建立與server的連線後，用workbench創建一個mysql database(schema)，並取名為wassup
-4. 在wassup database中設置名為 [users](#users_table) 與 [music](#music_table) 的 table (相關參數往後閱讀)
-5. 複製login_template.php並命名為login.php，並填入mysql server連線的username及password
-    - Note: login.php因存有帳密被列為ignore file(.gitignore)，不會上傳
+    - 包括 server, workbench, router...等等.
+3. 建立與 server 的連線後，用 workbench 創建一個 mysql database(schema)，並取名為 wassup
+4. 在 wassup database 中設置名為 [users](#users_table) 與 [music](#music_table) 的 table (相關參數往後閱讀)
+5. 複製 login_template.php 並命名為 login.php，並填入 mysql server 連線的 username 及 password
+    - Note: login.php 因存有帳密被列為 ignore file(.gitignore)，不會上傳
 6. :congratulations: 基本的資料庫設置完成了
 
 
