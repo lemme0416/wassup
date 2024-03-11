@@ -29,6 +29,9 @@
 			else if($_GET['value']=='success'){
 				echo "<script>alert('Uploaded!')</script>";
 			}
+			else{
+				echo "<script>alert('".$_GET['value']."')</script>";
+			}
 		}
 	?>
 
@@ -49,7 +52,7 @@
 			<div class="box">
 				<form action="save_upload.php"  method="post" enctype="multipart/form-data">
 					<h2>Select music to upload :</h2>
-					<input type="file" name="uploaded_file" id="real-file" hidden="hidden" accept=".mp3">
+					<input type="file" name="uploaded_file" required = "true" id="real-file" hidden="hidden" accept=".mp3">
 					<button type="button" id="custom-button">CHOOSE A FILE</button>
 					<span id="custom-text">No file chosen, yet.</span>
 					<p class="styles">Style  :  </p>
