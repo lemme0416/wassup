@@ -12,7 +12,9 @@ If you use our website and set up it
 4. 在 wassup database 中設置名為 [users](#users_table) 與 [music](#music_table) 的 table (相關參數往後閱讀)
 5. 複製 login_template.php 並命名為 login.php，並填入 mysql server 連線的 username 及 password
     - Note: login.php 因存有帳密被列為 ignore file(.gitignore)，不會上傳
-6. :congratulations: 基本的資料庫設置完成了
+6. 在 wassup/ 底下建立 music/ 資料夾，用以存放音檔
+    - 同樣不會上傳
+7. :congratulations: 基本的資料庫設置完成了
 
 
 ## users_table
